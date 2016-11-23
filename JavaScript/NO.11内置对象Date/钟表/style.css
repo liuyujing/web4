@@ -1,0 +1,55 @@
+/*div {*/
+    /*!*使元素变形*!*/
+    /*!*旋转：rotate*!*/
+    /*!*放大缩小：scale*!*/
+    /*transform: rotate(120deg);*/
+    /*!*width: 200px;*!*/
+    /*!*height: 200px;*!*/
+
+    /*width: 10px;*/
+    /*height: 200px;*/
+    /*background: #36a1ff;*/
+
+    /*!*设置变形的原点*!*/
+    /*transform-origin: 0 100%;*/
+    /*position: absolute;*/
+    /*left: 300px;*/
+/*}*/
+
+.clock-clockView {
+    width: 300px;
+    height: 300px;
+    border: 5px solid #36a1ff;
+    background: #eeeeee;
+    position: relative;
+    border-radius: 150px;
+}
+
+.clock-pointerView {
+    position: absolute;
+    transform-origin: 0 100%;
+}
+
+.clock-clockView .clock-hourPointView{
+    width: 10px;
+    height: 70px;
+    background: #5a5a5a;
+    left: 145px;
+    top: 80px;
+}
+
+.clock-clockView .clock-minPointView{
+    width: 5px;
+    height: 90px;
+    background: #fb7435;
+    left: 148px;
+    top: 60px;
+}
+
+.clock-clockView .clock-secPointView{
+    width: 2px;
+    height: 140px;
+    background: #ce0015;
+    left: 149px;
+    top: 10px;
+}

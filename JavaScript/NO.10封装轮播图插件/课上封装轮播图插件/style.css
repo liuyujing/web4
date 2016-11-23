@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.lunBoTu-beiJingTu {
+    width: 700px;
+    height: 500px;
+    margin: 50px auto 0;
+    position: relative;
+    background: #403f3b;
+    border: 3px solid #d2d2d2;
+}
+
+.lunBoTu-danShiTu {
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+.lunBoTu-danShiTu img {
+    width: 490px;
+    height: 490px;
+    border: 5px dotted #eeeeee;
+}
+
+.lunBoTu-kongZhi {
+    font-size: 40px;
+    color: #eeeeee;
+    position: absolute;
+    top: 50%;
+}
+
+.lunBoTu-kongZhi-zuo {
+    left: 5%;
+}
+
+.lunBoTu-kongZhi-you {
+    right: 5%;
+}

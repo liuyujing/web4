@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--<script src="main.js"></script>-->
+
+</head>
+<body>
+
+<!--<input type="text">-->
+
+    <!--<p>-->
+        <!--&lt;!&ndash;<script>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;</script>&ndash;&gt;-->
+    <!--</p>-->
+
+
+    <!--<script src="main.js"></script>-->
+
+
+    <script>
+        //使用强制模式 如果忘记添加var 就会报错
+    "use strict";
+//        rrr = 23;
+
+
+//        var name = "小明";
+//        name = "小李";
+//        var WIDTH = 300;
+
+//        var 关键字  保留字 特殊意义 -> 创建一个变量
+//        name 标识符 用来代表 某个值（"小明"）的一个 特殊文字
+//        变量：值可以被改变的 标识符
+//        常量：值是固定的 标识符
+//    定义 常量 变量的公式： var 变量名 = 值;
+
+//        var age = 10;
+//        var b;
+
+
+//      可以通过log 在浏览器的控制台中  输出一个变量的值
+//        console.log(b);
+//        console.log(age);
+
+//        var b;
+//        console.log(b);
+
+
+//    var aa = "123";
+//    var aa = "234";
+//    var aa;
+//console.log(aa);
+
+//var 123er = 123;
+//var ### = 123;
+
+//var var = 12;
+
+//var _vv = "22";
+//
+//var v1 = 123;
+//
+//var verson = 1.0;
+//var banBen = 1.0;//尽量不使用拼音
+
+
+//1.定义变量 不要重名
+//2.不可纯数字或以数字开头
+//3.不可使用特殊字符 定义变量名(不可以出现在 变量名中)
+//4.不可以使用 系统提供的 关键字 或者保留字  作为变量名
+//5.可以使用_开头 定义变量名
+//6.可以使用字母开头 定义变量名
+//7.定义变量名  要见名知意
+//8.在变量名是多个单词的情况下 使用 驼峰命名法(第一个单词字母小写 从第二个开始 单词首字母大写)
+
+
+//单行注释
+/*
+* 多行注释
+* 多行注释
+* */
+
+
+//console.log()
+
+//var a = 100;
+//输出在 文档上面
+//document.write(a);
+
+//弹出一个弹出框
+//弹出框 会阻断 代码继续执行
+//alert(a);
+//弹出框 带取消 或者 确定 按钮
+//confirm(a);
+
+//弹出一个弹出框 让用户输入一个值
+        /*
+a = prompt("请输入a的值");
+console.log(a);
+console.error(a);
+
+
+
+var yyyy = 10;
+
+//        a = 10;
+//        "fdgg";
+//        232;
+
+
+        var aaa = "123";
+        var ttt = '你好';
+        var fff = "不好";
+        var nnn = 123;
+        var nn = 0.123;
+
+        var rr = true;
+*/
+//数据类型
+//        String:字符串（一段文字）"" ''
+//        Number:数字 八进制 十六进制
+//        Boolean:波尔 只有两个值  true(是 真) false（否 假）
+
+//      undefined 未定义值的
+//      null 空的  不存在
+
+//        [1,4,5,7];
+//        var obj = {"name":"xiaoming","age":30};
+
+//        var func = function () {
+//
+//        };
+
+//        复合类型
+//        Array 数组
+//        Object 对象
+//        function 函数
+
+
+
+
+
+//        var a = 10;
+//        var b = 20;
+//
+////        var a = 10,b = 20;
+////        console.log(a+b);
+//        var r = a+b;
+//        console.log(r);
+//
+////        数字  和  字符串 相加  会得到 一个字符串
+//        var c = "30";
+//        console.log(c+a);
+
+//        398 * 3
+//        398 * 3  +45
+//        a = 10 b = 44 c = 67 计算平局值
+
+//        var rr = 398 * 3;
+//        var r = 45 + 398 * 3;
+//        var a = 10;
+//        var b = 44;
+//        var c = 67;
+//
+//        var avg = (a+b+c)/3;
+//        console.log(avg);
+
+
+//        var a = 10;
+//        让a加5 在赋值给a
+//        a = a+5;
+//        console.log(a);
+//        a += 5;
+//        console.log(a);
+
+//        b = 30   b自加55
+//        c = 50   c乘以3 再赋值给c
+
+//        var b = 30;
+//        b += 55;
+//
+//        var c = 50;
+//        c *= 3;
+
+
+//        var a = 10;
+//        a++;
+//        ++a;
+//        console.log(a);
+
+//        var b = a++ + 10;
+//        console.log(b);
+//        console.log(a);
+
+//        ✭✭✭✭✭
+//        ++或--在前  先自加减 再运算
+//        ++或--在后  先运算 再自加减
+
+
+//        判断 两个变量的值  是不是  相同
+//        ==
+//        ===
+//        var a = 33;
+//        var b = 33;
+//        var b = "33";
+
+//        var r = a == b;
+//        console.log(r);
+
+//        === 必须 值 和类型  都相同
+//        var r = a === b;
+//        console.log(r);
+
+//        判断两个值  是不是  不相同
+//        !=
+//        !==
+//        console.log(a!==b);
+
+//        var s1 = "nihao";
+//        var s2 = "nihao";
+//        var r = s1 !== s2;
+//        console.log(r);
+
+//        var a = 55;
+//        var b = 60;
+//
+//        console.log(a !== b);
+
+
+//        > <  <= >=
+//        var a = 10;
+//        var b = 20;
+//        console.log(a > b);
+//
+//        console.log((a+b) > 50);
+//        console.log((a+b) > (a*3));
+
+
+//        var a = 10;
+//        var b = 20;
+//        var c = 12;
+
+//        console.log(a>b && b>c);
+//        console.log(a>b || b>c);
+
+//        var r = true;
+//        console.log(!r);
+
+
+//        var a = "33.33";
+//        var b = 33;
+//        var r = parseInt(a)+b;
+//        parseFloat()
+//        console.log(r);
+
+
+
+//        ("555"-33)*"2.5"
+//        var r = (parseInt("555")-33)*parseFloat("2.5");
+//    console.log(r);
+
+//        if 假入 如果
+//        else 否则
+
+//      如果 表达式 是真的 就执行 花括号里面的代码
+//      如果 表达式 是真的 就忽略
+//        if (表达式){
+//
+//        }
+
+
+//        var a = 10;
+//        var b = 20;
+//        如果a大于b就弹出结果
+//        if (a>b){
+//            alert(a+b);
+//        }
+
+//        如果a大于b就弹出结果
+//        否则 就执行else 里面的代码
+//        if (a>b){
+//            alert(a+b);
+//        }else {
+//            alert("a不大于b");
+//        }
+
+
+//        var m = prompt("请输入一个数字");
+//        console.log(m);
+
+//        var a,b,c;
+//    让用户输入三个值 如果a>b 并且 b>c 就计算平均数
+//        var a, b, c;
+//        a = parseFloat(prompt());
+//        b = parseFloat(prompt());
+//        c = parseFloat(prompt());
+//
+//        if (a > b && b > c) {
+//            console.log((a + b + c) / 3);
+//        }
+
+//    三目运算
+//        如果a>b 就弹出 "是" 否则 就弹出 "否"
+//        var a = 10;
+//        var b = 20;
+//        if (a>b){
+//            alert("是");
+//        }else {
+//            alert("否");
+//        }
+
+//        公式：表达式?结果1:结果2;
+//        a>b ? alert("是"): alert("否");
+//
+//        var r = a>b ? a+b:a-b;
+//        console.log(r);
+
+//    法定结婚年龄：22 20 让用户输入
+//    如果 符合法定年龄 就弹出合法
+//    不满足 弹出 再等几年
+//    使用三目运算
+
+//        var boyAge = parseInt(prompt("请输入男孩的年龄"));
+//        var girlAge = parseInt(prompt("请输入女孩的年龄"));
+//        var r = boyAge > 22 && girlAge > 20;
+//        r?alert("合法"):alert("再等几年");
+
+//        alert(r?"合法":"再等几年");
+
+//        if (0){
+//            if (false){
+//                if(true){
+//
+//                }
+//            }
+//        }else{}
+
+//        如果男孩年龄  或者女孩年龄 不满足  提示不满足的一方
+//        如果都满足  再提示合法
+
+        /*
+        var boyAge = parseInt(prompt("请输入男孩的年龄"));
+        var girlAge = parseInt(prompt("请输入女孩的年龄"));
+
+        if (boyAge>22&&girlAge>20){
+            alert("合法");
+        }else {
+            if (boyAge<=22&&girlAge<=20){
+                alert("都不合法");
+            }else {
+                if (boyAge>22){
+                    alert("女孩再等几年");
+                }else {
+                    alert("男孩再等几年");
+                }
+            }
+        }
+*/
+
+//        if (true/false){
+//
+//        }
+//        switch 哪个？
+//        问 变量 他得值 是哪一个 值
+//        选择 满足的值 对应的case
+//        break 跳出花括号
+//        switch (变量){
+//            case xx:
+//                break;
+//            case xx:
+//                break;
+//            default:
+//        }
+
+        /*
+        var a = prompt("请输入一个内容");
+        switch (a){
+//            default:
+//                console.log("未收录对话内容");
+//                break;
+            case "你好":
+                console.log("很好！");
+                break;
+            case "你写作业了吗":
+                console.log("写完了");
+                break;
+            case "吃了么":
+                console.log("吃了");
+                break;
+            default:
+                console.log("未收录对话内容");
+        }
+*/
+
+
+//        作业:
+
+
+//        1.找出最大值  a=50 b=30 c=45
+        /*
+        var a=50,b=30,c=45;
+        var max;
+        max = a>=b?a:b;
+        max = max>=c?max:c;
+        alert(max);
+*/
+//    2.交换 a=20 b=30 的值
+        /*
+        var a = 20;
+        var b = 30;
+        var temp = a;
+        a = b;
+        b = temp;
+        console.log(a, b);
+        */
+//    3.写一个计算器 + - * /  用户输入符号 和数字 得到计算结果
+        /*
+        var num1 = parseFloat(prompt("请输入第一个数字"));
+        var c = prompt("请输入一个计算方式");
+        var num2 = parseFloat(prompt("请输入第二个数字"));
+        var r = 0;
+        switch (c){
+            case "+":
+                r = num1 + num2;
+                break;
+            case "-":
+                r = num1 - num2;
+                break;
+            case "*":
+                r = num1 * num2;
+                break;
+            case "/":
+                r = num1 / num2;
+                break;
+
+            default:
+                alert("不存在 这种计算方式");
+        }
+        console.log(num1+c+num2+"="+r);
+*/
+//        4.用户输入 一个面额  输出由多少个100元 50元 20元 10元 5元 1元 组成
+        var money = parseInt(prompt("请输入您的钱数"));
+        var yiBai = parseInt(money/100);
+        var wuShi = parseInt((money%100)/50);
+        var erShi = parseInt(((money%100)%50)/20);
+        var shi = parseInt((((money%100)%50)%20)/10);
+        var wu = parseInt(((((money%100)%50)%20)%10)/5);
+        var yi = ((((money%100)%50)%20)%10)%5;
+        console.log(yiBai,wuShi,erShi,shi,wu,yi);
+
+    </script>
+
+
+</body>
+</html>

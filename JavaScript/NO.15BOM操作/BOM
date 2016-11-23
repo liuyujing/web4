@@ -1,0 +1,105 @@
+BOM
+	Window
+		document
+		prompt()输入 返回给 用户输入的内容
+		setInterval(function,毫秒数)定时 循环执行定时器中的方法
+		clearInterval(定时器对象名) 清除定时器的方法
+		setTimeout(function,毫秒数) 设置时间完成之后 去执行某个方法 （不会重复去执行）
+		clearTimeout(定时器对象名)
+
+		alert()弹框
+		confirm()带取消确定的弹出框 返回一个bool值 false：点击取消 true:确定
+
+		print() 打印
+
+
+
+		✭✭✭✭✭open(URL,name,specs)->window：打开一个窗口
+			URL:网址
+			name:可选 可以是任意的名字
+				_blank 新的窗口
+				_parent 父框架打开
+				_self 替换当前页面
+				_top 最顶层的窗口
+
+			specs:可选 指定窗口的样式
+				width: width=?
+				height: height=?
+				left: left=? 新窗口距离屏幕左侧的位置
+				top: top=? 新窗口距离屏幕顶部的位置
+		closed	用来判断是否关闭了窗口 false未关闭
+		close()	关闭窗口
+
+		moveBy(x,y)把窗口的坐标 移动到指定位置
+		moveTo(x,y)把窗口的原点位置 移动到指定位置
+
+		resizeTo(宽，高)调整窗口的大小
+        onresize:检测窗口大小的变化
+
+		scrollBy(offsetX,offsetY)
+		scrollTo(x,y)
+
+		案例：
+		键盘控制弹出窗口移动 大小
+		慢慢移动到窗口顶部
+
+	Navigator navigator
+		appCodeName	返回浏览器的代码名
+		appName	返回浏览器的名称
+		appVersion	返回浏览器的平台和版本信息
+
+		✭✭✭✭✭cookieEnabled	返回指明浏览器中是否启用 cookie 的布尔值
+
+		✭✭✭✭✭platform	返回运行浏览器的操作系统平台
+		✭✭✭✭✭userAgent	返回由客户机发送服务器的user-agent 头部的值 不同Agent下看到的内容不一样 比如电商的PC端和移动端显示的内容不一样 就可以根据它 来区分
+		✭✭✭✭✭onLine 是否在线 可用于判断是否有网
+		geolocation 地理定位
+			判断浏览器是否支持：navigator.geolocation
+			获得位置信息
+				getCurrentPosition(successCallback,errorCallback) 只会调用一次
+				watchPosition(successCallback,errorCallback)会返回一个ID 不止调用一次
+					clearWatch(watchId)
+			error.code
+				PositionError.prototype.PERMISSION_DENIED = 1;
+				PositionError.prototype.POSITION_UNAVAILABLE = 2;
+				PositionError.prototype.TIMEOUT = 3;
+				PERMISSION_DENIED 用户拒绝
+				POSITION_UNAVAILABLE 位置信息不可用
+				TIMEOUT 超时
+
+			Geoposition:位置
+				coords
+					latitude 纬度
+					longitude 经度
+					heading 航向
+					speed 速度
+					accuracy：精准度
+					altitude：海拔
+					altitudeAccuracy：海拔的精准度
+				timestamp定位的时间戳
+	Screen screen
+		availHeight	返回屏幕的高度（不包括Windows任务栏）
+		availWidth	返回屏幕的宽度（不包括Windows任务栏）
+		colorDepth 设备调色板的比特深度
+		✭✭✭✭✭height	返回屏幕的总高度
+		✭✭✭✭✭width	返回屏幕的总宽度
+		pixelDepth	返回屏幕的颜色分辨率（每象素的位数）
+	History✭✭✭✭✭
+		back()	加载 history 列表中的前一个 URL
+		forward()	加载 history 列表中的下一个 URL
+		go(index)	加载 history 列表中的某个具体页面 从0开始
+	Location 对象属性
+		✭✭✭✭✭hash	返回一个URL的锚部分
+		host	返回一个URL的主机名和端口
+		hostname	返回URL的主机名
+		href	返回完整的URL
+		pathname	返回的URL路径名。
+		port	返回一个URL服务器使用的端口号
+		protocol	返回一个URL协议
+		✭✭✭✭✭search	返回一个URL的查询部分？
+
+		assign(URL)	载入一个新的文档
+		reload(bool)	重新载入当前文档
+		replace(newURL)	用新的文档替换当前文档
+闭包
+

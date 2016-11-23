@@ -1,0 +1,12 @@
+instanceof：判断对象是否属于某个原型
+consturctor：构造器
+prototype：注意引用类型的对象 会被共享在堆中/查看类的原型对象
+__proto__：查找对象的原型对象
+hasOwnProperty：判断是本地属性还是 继承prototype的属性
+
+in：某个属性是否在对象中
+for in 查看遍历对象的所有属性
+多文件的引用
+类（静态）属性 方法
+继承
+多态

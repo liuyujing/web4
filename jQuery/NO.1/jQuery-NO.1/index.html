@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #list-container {
+            width: 100px;
+        }
+        .list {
+
+            display: none;
+        }
+
+        .list li {
+            width: 100px;
+            height: 40px;
+            border-bottom: 1px solid #d2d2d2;
+            background: #36a1ff;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        #list-container .show {
+            display: block;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-bottom: 1px solid #d2d2d2;
+            background: #36a1ff;
+
+        }
+
+        .card{
+            width: 200px;
+            height: 200px;
+            background: #36a1ff;
+            margin: 0 auto;
+        }
+
+        .change li {
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            line-height: 150px;
+            font-size: 30px;
+            display: block;
+            float: left;
+            background: #36a1ff;
+            border: 2px solid #ffe10c;
+        }
+    </style>
+</head>
+<body>
+<input class="choose" type="checkbox">web前端
+<input class="choose" type="checkbox">iOS
+<input class="choose" type="checkbox">Andriod
+<input class="choose" type="checkbox">Java
+
+<button class="all">全选</button>
+<button class="inverse">反选</button>
+
+<br>
+
+<div id="list-container">
+    <span class="show">web前端</span>
+    <ul class="list">
+        <li>web前端</li>
+        <li>iOS</li>
+        <li>Andriod</li>
+        <li>Java</li>
+    </ul>
+</div>
+
+<div class="card"></div>
+
+<ul class="change">
+    <li>111</li>
+    <li>222</li>
+    <li>333</li>
+    <li>444</li>
+    <li>555</li>
+</ul>
+
+<script src="jquery-3.1.1.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

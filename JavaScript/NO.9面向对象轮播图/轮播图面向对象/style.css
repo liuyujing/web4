@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#view1 {
+    width: 1000px;
+    height: 600px;
+    position: relative;
+}
+
+#view2 {
+    position: relative;
+}
+
+.preButton {
+    font-size: 40pt;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+
+.nextButton {
+    font-size: 40pt;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+}

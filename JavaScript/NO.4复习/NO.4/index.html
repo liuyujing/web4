@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 600px;
+            background: #2c2c2c;
+            margin: 10px auto;
+            padding: 5px;
+        }
+        .title {
+            color: #d2d2d2;
+            text-align: center;
+        }
+        .guess-box,.anser-box {
+            width: 400px;
+            height: 150px;
+            margin: 30px auto 0;
+        }
+        #guess-view{
+            width: 120px;
+            height: 120px;
+            margin: 5px auto;
+            background: #36a1ff;
+            color: #eeeeee;
+            font-size: 30px;
+            text-align: center;
+            line-height: 120px;
+            border-radius: 60px;
+        }
+        .anser-view {
+            width: 120px;
+            height: 120px;
+            float: left;
+            margin: 5px 5px;
+            background: #36a1ff;
+            color: #eeeeee;
+            font-size: 30px;
+            text-align: center;
+            line-height: 120px;
+            border-radius: 60px;
+        }
+
+        .control-box {
+            width: 400px;
+            height: 50px;
+            background: #5c5c5c;
+            margin-bottom: 90px;
+        }
+
+        .control {
+            float: left;
+            width: 100px;
+            height: 40px;
+            background: #d2d2d2;
+            text-align: center;
+            line-height: 40px;
+            margin: 5px 15px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">猜颜色</h1>
+
+    <div class="control-box">
+        <p class="control" id="score-label">0分</p>
+        <p class="control" id="control-button">开始</p>
+        <p class="control" id="time-lable">60秒</p>
+    </div>
+
+    <hr>
+
+    <div class="guess-box">
+        <div id="guess-view">红色</div>
+    </div>
+    <hr>
+    <div class="anser-box">
+        <div class="anser-view">黑色</div>
+        <div class="anser-view">红色</div>
+        <div class="anser-view">白色</div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

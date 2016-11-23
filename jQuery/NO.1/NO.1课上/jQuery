@@ -1,0 +1,65 @@
+查找元素：$("选择器")
+创建元素：$("<div>1232131</div>")
+添加元素：append
+删除：remove() 
+
+
+
+#id	$("#lastname")	id="lastname" 的元素
+.class	$(".intro")	所有 class="intro" 的元素
+element	$("p")	所有 <p> 元素
+.class.class	$(".intro.demo")	所有 class="intro" 且 class="demo" 的元素
+ 	 	 
+
+:first	$("p:first")	第一个 <p> 元素
+:last	$("p:last")	最后一个 <p> 元素
+:even	$("tr:even")	所有偶数 <tr> 元素
+:odd	$("tr:odd")	所有奇数 <tr> 元素
+ 	 	 
+:eq(index)	$("ul li:eq(3)")	列表中的第四个元素（index 从 0 开始）
+:gt(no)	$("ul li:gt(3)")	列出 index 大于 3 的元素
+:lt(no)	$("ul li:lt(3)")	列出 index 小于 3 的元素
+:not(selector)	$("input:not(:empty)")	所有不为空的 input 元素
+
+事件
+bind(types, data, fn)
+unbind(types, fn )
+delegate(selector, types, data, fn )
+undelegate
+on(type,[selector],[data],fn)
+off( types, selector, fn )
+one(type,[selector],[data],fn)
+
+addClass() - 向被选元素添加一个或多个类
+removeClass() - 从被选元素删除一个或多个类
+toggleClass() - 对被选元素进行添加/删除类的切换操作
+css() - 设置或返回样式属性
+prop()
+attr()
+
+html()
+text()
+
+
+//hide 隐藏(动画的持续时间,回调函数)
+//show 显示(动画的持续时间,回调函数)
+
+//fadeIn 淡入(动画的持续时间,回调函数);
+//fadeOut 淡出(动画的持续时间,回调函数);
+//fadeTo 淡入淡出的程度 (动画的持续时间,不透明度的值,变化的方式,回调方法)
+// linear 匀速进行动画
+// swing 曲线的进行动画 动画的每一帧 都不是平均的速度
+//fadeToggle 淡入淡出的开关 显示的时候（opacity） 执行淡出 不显示的时候（opacity） 执行淡入
+
+
+//slideUp 向上回收动画 (动画的持续时间,回调函数)
+//slideDown 向下弹出动画 (动画的持续时间,回调函数)
+//slideToggle 向上向下动画 (动画的持续时间,回调函数)
+
+
+animate 可以自己去设置动画改变的属性 （需要产生动画的属性，动画的持续时间，变化方式，回调方法）
+
+stop(clearQueue,gotoEnd)
+	clearQueue 清空动画  true 会清除整个动画队列 只要是这个元素中的动画 就不再继续执行
+	gotoEnd 直接执行到结束 true
+

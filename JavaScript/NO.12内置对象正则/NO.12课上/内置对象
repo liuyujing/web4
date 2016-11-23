@@ -1,0 +1,144 @@
+
+RegExp：正则对象 一般用于校验 表单的内容
+
+	new RegExp(表达式, 属性);
+	/表达式/属性
+	
+	正则表达式基本语法
+		1.^ 匹配字符串的开始 
+		2.$ 匹配字符串的结束
+		3.. 匹配任意字符
+		4.{3} 最少要匹配的次数
+		5.i 属性 忽略大小写 
+		6.g 属性 全局匹配 只能用于replace match
+	详细语法
+		方括号用于查找某个范围内的字符：
+			[erty]	查找方括号之间的任何字符。
+			[^abc]	查找任何不在方括号之间的字符。
+
+			[0-9]	查找任何从 0 至 9 的数字。
+			[a-z]	查找任何从小写 a 到小写 z 的字符。
+			[A-Z]	查找任何从大写 A 到大写 Z 的字符。
+			[A-z]	查找任何从大写 A 到小写 z 的字符。
+
+			(国家|人民|钱财)	查找任何指定的选项。
+		
+		元字符（Metacharacter）是拥有特殊含义的字符：
+			.	匹配任意字符 也可查找前或后的一个字符 /.牛掰/ /前端./
+			\w	查找单词字符（dfhhjuyrbf32456）汉字不是。
+			\W	查找非单词字符 特殊字符 @#$%
+			\d	查找数字。
+			\D	查找非数字字符。
+			\s	查找空白字符。  
+			\S	查找非空白字符。
+			\b	匹配单词边界 /\bucai/ /ucai\b/ 
+			\B	匹配非单词边界
+			\n	查找换行符
+		
+		量词	
+			^字符 匹配开头/^www/
+			字符$ 匹配结尾/www$/
+			字符+ 1后面跟着至少1次3 /13+/
+			字符* 1后面跟着至少0次3 /13*/
+			字符? 1后面跟着至少0次3 /13?/
+			字符{X}	x 是一个非负整数 是至少匹配的次数 /w{3}/
+			字符{X,} 最少有几个字符
+			字符{X,Y} 至少有x到y个字符 /w{1,3}/
+	
+	字符串支持正则的方法
+		search	搜索匹配的内容在哪一个位置
+		match	找到匹配的内容
+		replace	替换	
+
+	正则校验方法：
+	test: 得到boolean
+	exec：得到数组
+
+	练习：
+		开头字母
+		全部数字组成的11位数
+
+		开头数字
+		以cn com org 结束
+		26个英文字母的小写组成
+		只能输入数字和英文
+		
+		只能大写字母开头 必须由字母数字组成
+		校验用户名：只能输入3-10个以以大写字母开头 必须由字母数字组成
+		校验密码：只能输入6-15个非特殊字符
+
+		手机号
+		邮箱
+
+
+
+
+DOM Element
+	element.cloneNode(boolean)	克隆某个元素
+		false:只克隆元素 不克隆元素里面的内容
+		true:即克隆元素 又克隆里面的内容
+		不管是false||true  都不会去克隆 事件
+	createTextNode：创建文本节点
+
+	element.parentNode	返回元素的父节点
+	element.firstChild	返回元素的第一个子节点
+	element.lastChild	返回的最后一个子元素
+	element.focus()	设置文档或元素获取焦点
+	
+	element.hasAttribute()	如果元素中存在指定的属性返回 true，否则返回false。
+	element.hasAttributes()	如果元素有任何属性返回true，否则返回false。
+	element.hasChildNodes()	返回一个元素是否具有任何子元素
+
+	
+	element.insertBefore()	现有的子元素之前插入一个新的子元素
+		父节点.insertBefore(插入的子节点,参考位置节点);
+
+
+	
+	element.nodeType	返回元素的节点类型
+		元素：1
+		属性：2
+		文本节点：3
+
+	element.nodeValue	返回元素的节点值
+		只能获得文本节点里面的值
+		如果节点是元素节点  nodeValue永远都是null
+
+	
+	element.removeAttribute()	从元素中删除指定的属性
+	element.removeAttributeNode()	删除指定属性节点并返回移除后的节点。
+
+	element.removeChild(子元素的名字)	删除一个子元素
+
+
+	element.removeEventListener()	移除由 addEventListener() 方法添加的事件句柄
+	element.replaceChild(newNode,oldNode)	替换一个子元素
+	element.scrollHeight	返回整个元素的高度（包括带滚动条的隐蔽的地方）
+	element.scrollLeft	返回当前视图中的实际元素的左边缘和左边缘之间的距离
+	element.scrollTop	返回当前视图中的实际元素的顶部边缘和顶部边缘之间的距离
+	element.scrollWidth	返回元素的整个宽度（包括带滚动条的隐蔽的地方）
+	element.setAttribute()	设置或者改变指定属性并指定值。
+	element.setAttributeNode()	设置或者改变指定属性节点。
+	element.textContent	设置或返回一个节点和它的文本内容
+
+----------------------------	
+DOM Event
+	鼠标
+		onclick	单击  点击 松手的时候 触发
+		ondblclick 双击  触发	
+		onmousedown	鼠标按钮被按下	
+		
+		onmouseenter	当鼠标指针移动到元素上时触发。
+		onmouseleave	当鼠标指针移出元素时触发	
+		onmousemove	鼠标被移动。	
+		onmouseover	鼠标移到某元素之上。
+		onmouseout	鼠标从某元素移开。	
+		onmouseup	鼠标按键被松开。
+	键盘
+		onkeydown	某个键盘按键被按下。
+		onkeypress	某个键盘按键被按下并松开。	
+		onkeyup	某个键盘按键被松开。
+
+	stopPropagation:防止事件冒泡
+
+

@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+img {
+    width: 800px;
+    height: 600px;
+}
+.carousel-bg-view {
+    width: 800px;
+    height: 600px;
+    margin: 50px auto 0;
+    background: #2c2c2c;
+    position: relative;
+}
+.carousel-left-control,
+.carousel-right-control{
+    font-size: 30px;
+    position: absolute;
+    color: white;
+    top: 50%;
+    cursor: pointer;
+}
+.carousel-left-control{
+    left: 5%;
+}
+.carousel-right-control{
+    right: 5%;
+}

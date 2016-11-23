@@ -1,0 +1,21 @@
+数组
+	遍历
+	forEach
+	length 长度
+	indexOf
+	lastIndexOf
+	push 在最后添加
+	pop 删除最后一个
+	splice 删除 替换
+	unshift 在第一个位置添加
+	shift 删除第一个位置元素 
+	slice 截取
+	concat 合并两个数组
+	sort 排序
+	reverse 反转数组
+	join 转成字符串
+
+	案例：点击按钮 对表格排序 
+	反转  "hello world"
+函数
+

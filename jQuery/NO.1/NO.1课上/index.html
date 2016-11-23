@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .list li ,.change-position li,.slide li{
+            width: 100px;
+            height: 100px;
+            background: #000;
+            margin:0 2px;
+            display: block;
+            /*float: left;*/
+            color: white;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .nor {
+            width: 200px;
+            height: 200px;
+            background: #ff5831;
+        }
+
+        .hightLight {
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            border: 2px solid #ff5831;
+        }
+
+        .animate {
+            width: 200px;
+            height: 200px;
+            background: #36a1ff;
+        }
+
+        .slideView,.card {
+            width: 200px;
+            height: 200px;
+            background: #ffc919;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="class1">123</div>
+
+<ul class="list">
+    <li class="selected"></li>
+    <li></li>
+    <li></li>
+    <li class="selected"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li class="selected"></li>
+</ul>
+
+
+<div class="nor"></div>
+
+
+
+<ul class="change-position">
+    <li>111</li>
+    <li>222</li>
+    <li>333</li>
+    <li>444</li>
+    <li>555</li>
+</ul>
+
+
+<input class="options" type="checkbox">数学
+<input class="options" type="checkbox">语文
+<input class="options" type="checkbox">物理
+<input class="options" type="checkbox">化学
+<br>
+
+<button class="all">全选</button>
+<button class="inrever">反选</button>
+<!--全选/取消 反选-->
+
+<div class="animate"></div>
+
+<button class="fadeButton">淡入淡出</button>
+
+
+<!--<div class="slide"></div>-->
+
+<ul class="slide">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+
+<div class="slideView"></div>
+<button class="slide-control">上下动画</button>
+
+<button class="stop-animate">停止动画</button>
+
+
+<div class="card"></div>
+
+<script src="jquery-3.1.1.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

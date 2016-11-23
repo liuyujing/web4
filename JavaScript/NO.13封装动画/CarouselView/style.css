@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.carowselView-bacfgroundView {
+    width: 700px;
+    height: 500px;
+    margin: 50px auto 0;
+    background: #403f3b;
+    position: relative;
+}
+
+.carowselView-contentView {
+    width:500px;
+    display: block;
+    margin: 0 auto;
+}
+.carowselView-contentView img {
+    width: 494px;
+    height: 494px;
+    border: 3px solid #d2d2d2;
+}
+
+.carowselView-controlButton{
+    color: #d2d2d2;
+    position: absolute;
+    font-size: 40px;
+    top:50%;
+}
+
+.carowselView-pre {
+    left: 5%;
+}
+
+.carowselView-next {
+    right: 5%;
+}

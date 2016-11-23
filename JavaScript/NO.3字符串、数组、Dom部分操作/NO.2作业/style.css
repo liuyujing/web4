@@ -1,0 +1,12 @@
+div {
+    width: 100px;
+    height: 100px;
+    background: #36a1ff;
+    border: 2px solid #449bd2;
+    text-align: center;
+    line-height: 100px;
+    float: left;
+    margin-left: 10px;
+    color: white;
+    font-size: 35px;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button id="pre">上一页</button>
+
+<script>
+
+    document.getElementById("pre").onclick = function () {
+//        history.back();
+//        encodeURIComponent()
+        console.log(decodeURIComponent(location.search));
+    };
+
+</script>
+</body>
+</html>

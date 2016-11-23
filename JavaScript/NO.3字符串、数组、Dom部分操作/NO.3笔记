@@ -1,0 +1,22 @@
+NO.3
+小案例
+	1.点击切换图片
+	2.点击变圆 变方
+	3.变圆的时候 添加边框 
+	4.切换颜色 
+	5.改变大小
+	6.添加transition
+	7.添加transform
+字符串处理
+	"我是'字符串'"
+	转义符 \ '\"引用的内容\"'
+	length：字符串的长度
+	indexOf字符的位置
+	charAt 通过位置 获得内容
+	replace 替换字符
+	search 搜索字符串
+	substr 从开始位置 到指定长度 截取字符串
+	substring 从开始位置 到结束位置 截取字符串
+	toLowerCase 小写
+	toUpperCase 大写
+	split()分割字符串

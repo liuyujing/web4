@@ -1,0 +1,305 @@
+HTML？CSS？JS（JavaScript）？
+	HTML：网页控件元素
+	CSS：美化这些控件元素的代码（层叠样式表）
+	javascript：交互事件 逻辑处理 
+javaScript的组成
+	EcmaScript: 标准化出来的js 叫做EcmaScript
+		简介：
+			ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会,英文名称是European Computer Manufacturers Association）通过ECMA-262标准化的脚本程序设计语言
+			在万维网上应用广泛，它往往被称为JavaScript或JScript，但实际上后两者是ECMA-262标准的实现和扩展
+		版本：
+			ECMAScript 1 1997年06月
+			ECMAScript 2 1998年06月
+			ECMAScript 3 1999年12月
+			ECMAScript 4 夭折
+			ECMAScript 5 2009年12月（5.0） 2011年6月（5.1）
+			ECMAScript 6 2015年6月17日
+	DOM:文档对象模型
+		是什么？
+			1.（Document Object Model）文档对象模型
+		可以干什么？
+			2.DOM实际上是以面向对象方式描述的文档模型，以一种独立于平台和语言的方式访问和修改一个文档的内容和结构
+			3.动态地访问和更新文档的内容、结构和样式
+	BOM:（Browser Object Model）浏览器对象模型
+		1.可以与浏览器进行交互
+		2.window是BOM中最常用的对象
+		3.可以通过window看到浏览器里面的内容 也可以通过window去修改浏览器里面的内容
+
+-----------------------
+回顾：
+	JS：逻辑、交互
+	三个组成部分:
+		ECMAScript
+		DOM
+		BOM
+
+javaScript-NO.1基础语法
+	JavaScript 简介
+		1.JavaScript是一门脚本语言，被广泛的应用到Web开发中，与java没有任何关系 JavaScript越来越重要
+		2.特点
+			1）不需要预编译 他是一个解释性的脚本语言
+			2）可给HTML添加交互行为
+			3）可以直接嵌入HTML页面，写成单独的js文件有利于结构和行为的分离
+			4）✭✭✭✭✭跨平台 可在多平台下运行 Windows、Linux、Mac、Android、iOS
+			5）✭✭✭✭✭HTML5开发的移动应用 交互逻辑甚至界面都是基于JavaScript。
+			6）✭✭✭✭✭Node.js把JavaScript引入到了服务器端 JavaScript已经是全栈开发的语言
+
+		3.在HTML中的使用方法
+			1）可直接嵌到元素中
+			<div><script></script></div>
+			2）可放置到header中
+				<script src="路径"></script>
+				1>HTML是从上往下去解析 放到header中在解析到js文件的时候 在body中定义的元素还未出现  这时候会找不到那个元素
+				2>这里面一般写 调用的时候才会使用到的js
+			3）可放置到body中
+			三种引入方式的区别	
+				1.放到元素中  只在元素中起作用
+				2.放到head中 可能找不到body中的元素（因为先执行的js）(onload)
+				3.body 底部 最后执行js文件 文档中的内容（元素） 可以得到
+				
+				执行顺序
+
+	基本语法
+		1.每写完一段代码 都需要在这段代码的后面添加";"分号，但这并不是强制性的要求，如果未添加，浏览器在执行的时候会自动在每个语句的结尾补上";" 表示这段代码（话）结束了
+		2.如果一段代码之后 想继续跟一段代码  可以使用","号隔开 最后再添加";"
+		3.变量与常量  标识 var
+			1）变量常量的声明使用var 来声明 
+				1>在js最开始的时候 为了让人们更容易学习 并不强制添加var
+				2>不添加var 的变量 会成为全局的变量  导致不小心再去别的地方 声明相同名字变量 会把前面的变量内容 更改
+				3>可使用 "use strict"; strict模式 强制使用var
+			2）变量 是一个内容（值）可以被改变的 标识
+				1.只声明 未赋值 会是 undefined
+				2.变量重名 
+					重名的变量未赋值 无效  
+					有新值 会覆盖
+			3）常量 是用来 标识 一个固定内容（值） 注意：ECMAScript中没有真正意义的常量
+			4）变量的作用域
+				1.从声明位置开始  变量在这个位置之后 才会起作用
+				2.如果在花括号外部声明的 声明位置开始到后面 包含花括号内部也可以使用
+				3.声明在花括号内部的  只能在本个花括号内 使用
+		4.✭✭✭✭✭注意
+			1）标点符号 以及运算符或其他符号 要全部使用英文输入法
+			2）第一个字符必须是字母
+			3）后面的字符必须是字母、数字或下划线
+			4）区分大小写
+			5）见名知意
+			6）驼峰命名法：第一个单词的《首字母》 《小写》 其他单词的 《首字母》 《大写》
+			7）注意 不可以让两个 在相同花括号内部的 变量 是相同的名字 全局变量 也不可以 有两个相同的名字
+			8）不可以 保留字作为变量名
+				break、delete、function、return、typeof、case、do、if、switch、var、catch、else、in、this、void、continue、false、instanceof、throw、while、debugger、finally、new、true、const、with、default、for、null、try
+		5.输出函数（方法 工具）log() 是控制台命令console中的方法 （log() 是BOM里面的内容）
+			window.console.log("需要输出的内容，就会显示在浏览器的控制台中");
+			作用：用来调试代码 不会被显示到HTML文档中 
+			注意：✭✭✭✭✭用来调试的代码 也会影响代码的执行效率 所以在发布的时候 需要把调试代码注释掉
+			其他：
+				1）error 提示错误
+				2）info 提示信息
+				3）warn 提示警告
+				4）dir 分目录
+				5）group 分组
+			write()会直接在文档中显示
+			alert
+			confirm
+			prompt()输入函数
+		6.注释
+			//
+			/**/
+	数据类型
+		1.String 字符串类型  使用"" 或者 ''包起来的内容 是字符串 '1'这个1被单引号包起来了 所以他是一个字符串
+		2.Number 数字 不区分浮点 -1 11 0.333
+			十进制
+			十六进制
+			八进制
+			特殊值
+				Infinity 无穷大
+				Nan  no a nubmer 不是一个数字 isNan 来检测是不是一个数值
+		3.Boolean 波尔类型 true/false 真假 是否  非真即假 常用于条件判断的时候使用 
+		4.null 空 变量存在 但是！变量没有值
+		5.undefined 未定义 变量根本不存在  没有定义的类型
+		6.复合数据类型
+			1.Array 数组 有顺序 并且 连续的 容器
+			2.函数
+			3.Object 对象	
+	运算符
+		算术运算符
+			+ 
+			-
+			* 乘
+			/ 除
+			%
+		赋值运算符
+			= 把右面的值 赋值给 左面的变量，这时候左面变量的值就会更新为 右面的值 
+			+=
+			-=
+			*=
+			/=
+		自增自减运算符
+			++
+			--
+			++、--在前先自加减后运算、在后先运算后自加减
+		关系运算符 ✭✭✭✭✭ 会得到一个Boolean值
+			== 对比两个变量的值 是否是相同的 不管是不是同一个类型 
+			=== 对比两个变量的值  必须是相同类型 两个值 也是相同的  才会为真true
+			!= 对比两个变量的值 是否是不相同的 不管是不是同一个类型 
+			!== 对比两个变量的值  必须是相同类型 两个值 也是不相同的  才会为真true
+			> 
+			<
+			>= 
+			<=
+		逻辑运算符 ✭✭✭✭✭
+			&&  左面表达式   和 右面表达式  都同时满足的时候   才是真的   《并且》 两个条件 都要符合的时候  才会是真true
+			|| 《或者》 只要满足 其中一个条件 即可（真的/true）
+			！《取反》 《真 即是 假》《假 即是 真》
+		三目运算
+			?: ♫♫♫♫♫♫♫♫♫♫
+			?询问表达式 是不是成立
+			:表示有两个选择  冒号前后各一个选择
+			公式：表达式?第一个结果:第二个结果
+			if(表达式成立){
+				第一个结果
+			}else{
+				第二个结果
+			}
+	数据的类型转换
+		1.parseInt 转换成一个整数类型 会忽略掉 小数点后面的内容
+		2.parseFloat 转换成一个 小数（浮点）类型
+			2.1 两个的区别   精准度不一样
+			2.2 parseInt("111");
+
+		3.数字与字符串相加 就会转成字符串
+		4. 在条件语句中  0 Nan 空字符串 undefined null 都会被转成false
+
+
+	流程控制语句
+		if(如果) else（否则）
+			公式：if (表达式){功能代码}
+			如果表达式 是真的  就会  进入 花括号内部 执行里面的代码 
+			如果是假的 就忽略花括号
+
+			公式：if(表达式){表达式成立进入}else{如果不成立就会进入这个花括号}
+
+		三目运算
+			? 是询问表达式
+			: 表示有两个可选择的结果  冒号前面一个 冒号后面一个
+			公式：表达式 ? 如果真的会执行第一个位置:如果假的会执行第二个位置
+		switch(表达式){
+			case xx:
+				xx可以是数字、字符串、Bool值、对象、数组... 
+			break;
+			default: 注意放置到最上面需要break;
+		}
+			1.switch：哪一种情况？
+			2.case: 其中的某一种情况 
+			3.break 跳出switch的花括号 不再继续往下执行
+			4.default 默认 在不满足所有case条件的情况下 会执行default后面的内容
+	循环语句：
+		在符合某些条件的时候  会不断的去执行里面的代码
+
+
+		for
+		公式：for (初始化变量;判断条件;改变变量的值) {}
+
+
+		while
+		do while
+
+
+		不断的去执行 某段代码 就是一个循环
+		让某些代码 不断去循环 带有for/while的语句  就是循环语句
+		for 
+			公式：for (var i=0;i<100;i++){循环的内容}
+				1.把变量i当做一个是否循环的标志 一般会在声明的位置 给他一个初始值
+				2.i<100 是否需要循环的判断条件
+				3.i++ 每执行 一次循环  都自加 一次
+				4.✭✭✭✭✭除了最后一个语句 前两个是有;号的
+		for in 数组的时候去讲 
+		while 
+			公式：while(条件){符合条件 循环代码}
+			for while 都是循环语句  有什么区别 ✭✭✭✭✭
+				1.for 是在使用之前 知道 要循环多少次的时候 使用
+				2.while 是不确定循环的次数的时候  使用
+		do while：在不知道 循环次数的时候 使用 ✭✭✭✭✭
+			while 和 do while 区别
+				1.do while 不管条件 是不是满足 先去 执行一次  但是 他不会影响总共的 执行次数
+				2.while 条件必须满足 才回去 执行 
+			公式：do{循环代码}while(条件)
+	跳出的标识符
+		break ：跳出循环 ✭✭✭✭✭跳出整个循环
+		continue：继续  跳过符合条件的  继续执行 ✭✭✭✭✭仅仅跳出一次符合条件的
+		一般是循环语句 和 if结合使用的时候   去使用
+	流程控制语句与循环语句的嵌套使用
+
+
+作业：
+	1.找出最大值  a=50 b=30 c=45
+	var a=50, b=30, c=45;
+	var max = a>=b?a:b;
+	max = max>=c?max:c;
+	console.log(max);
+
+	2.交换 a=20 b=30 的值
+	var a=20, b=30;
+	var temp = a;
+	a = b;
+	b = temp;
+	console.log("a:"+a+"b:"+b);
+
+
+	3.写一个计算器 + - * /  用户输入符号 和数字 得到计算结果
+	var c = prompt("输入符号");
+	var a = parseFloat(prompt("输入第一个数字"));
+	var b = parseFloat(prompt("输入第二个数字"));
+
+	switch (c){
+		case "+":
+			var r = a+b;
+			console.log(a+c+b+"="+r);
+			break;
+		case "-":
+			var r = a-b;
+			console.log(a+c+b+"="+r);
+			break;
+		case "*":
+			var r = a*b;
+			console.log(a+c+b+"="+r);
+			break;
+		case "/":
+			var r = a/b;
+			console.log(a+c+b+"="+r);
+			break;
+	}
+
+
+	4.用户输入 一个面额  输出由多少个100元 50元 20元 10元 5元 1元 组成 
+	var a = parseFloat(prompt("输入总额"));
+	var bai = parseInt(a/100);
+	var wuShi = parseInt(parseInt(a%100)/50);
+	var erShi = parseInt(parseInt(parseInt(a%100)%50)/20);
+	var shi = parseInt(parseInt(parseInt(parseInt(a%100)%50)%20)/10);
+
+	5.让用户输入一个季节  输出对应季节的特征
+	var a = prompt("输入季节");
+	switch (a){
+		case "春":
+			console.log("春");
+			break;
+		case "夏":
+			console.log("夏");
+			break;
+		case "秋":
+			console.log("秋");
+			break;
+		case "冬":
+			console.log("冬");
+			break;
+		default:
+			console.log("输入错误");
+	}
+
+
+
+
+
+
+
+

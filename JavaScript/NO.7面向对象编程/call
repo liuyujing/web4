@@ -1,0 +1,9 @@
+call apply
+	可用于执行另外的函数
+	(调用者的对象，参数)
+	可以改变this的指向
+	call 只能一个个去穿参数
+	apply 可以直接传arguments
+callee:被调用者
+caller:调用者
+
