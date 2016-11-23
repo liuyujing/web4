@@ -1,6 +1,6 @@
 # web4
 web前端四期班课上代码
-
+[课上视频](链接: https://pan.baidu.com/s/1eSNuCKi 密码: x8un)
 
 ## JavaScript
 ### 1. NO.1基础语法
