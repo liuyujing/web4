@@ -85,6 +85,11 @@ web前端四期班课上代码
 >3. 用户登录 退出
 >4. 查看用户信息（主页） 如果登录了 显示用户信息 如果没有登录 显示未登录
 
+### 4.jQuery插件解读 封装jQuery插件
+
+>**作业:**
+>
+>1. 模仿图书的网站 根据API写界面http://apistore.baidu.com/apiworks/servicedetail/979.html
 
 
  

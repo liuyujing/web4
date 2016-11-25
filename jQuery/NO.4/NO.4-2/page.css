@@ -1,0 +1,9 @@
+.pageControl li {
+    width: 50px;
+    height: 30px;
+    display: block;
+    float: left;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+}
