@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="jQuery/jquery-ui.css">
+    <link rel="stylesheet" href="jQuery/jquery-ui.theme.min.css">
+
+    <style>
+        .effect,.drag,.drop {
+            width: 100px;
+            height: 100px;
+            background: #cccccc;
+        }
+
+        .change {
+            width: 200px;
+            height: 200px;
+            background-color: #00f;
+        }
+
+        .selectView ,.sortView{
+            list-style: none;
+            font-size: 30px;
+        }
+        .selectView li,.sortView li{
+            width: 100px;
+            height: 100px;
+            float: left;
+            text-align: center;
+
+            line-height: 100px;
+        }
+        .selectView .ui-selecting{
+            background-color: #FECA40;
+        }
+
+        .selectView .ui-selected {
+            background-color: #F39814;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="drag">drag</div>
+<div class="drop">drop</div>
+
+<div class="effect"></div>
+
+<div class="btn">按钮</div>
+
+<div class="accordion">
+    <h1>1111</h1>
+    <p>12312341231</p>
+    <h1>222</h1>
+    <p>222222222222222</p>
+    <h1>3333</h1>
+    <p>333333333333</p>
+</div>
+
+<div class="tabs">
+    <ul>
+        <li><a href="#tab1">11111</a></li>
+        <li><a href="#tab2">22222</a></li>
+        <li><a href="#tab3">33333</a></li>
+    </ul>
+
+    <div id="tab1"><p>1111111111111111</p></div>
+    <div id="tab2"><p>2222222222222</p></div>
+    <div id="tab3"><p>3333333333333</p></div>
+</div>
+
+<ol class="selectView">
+    <li class="ui-state-default">111</li>
+    <li class="ui-state-default">222</li>
+    <li class="ui-state-default">333</li>
+    <li class="ui-state-default">444</li>
+    <li class="ui-state-default">555</li>
+    <li class="ui-state-default">666</li>
+</ol>
+
+<ul class="sortView">
+    <li class="ui-state-default">111</li>
+    <li class="ui-state-default">222</li>
+    <li class="ui-state-default">333</li>
+    <li class="ui-state-default">444</li>
+    <li class="ui-state-default">555</li>
+    <li class="ui-state-default">666</li>
+</ul>
+
+<label for="search">搜索</label>
+<input id="search" type="text">
+
+<input type="text" class="date">
+
+<div class="alert"><p>这是一个对话框</p></div>
+
+<script src="jQuery/external/jquery/jquery.js"></script>
+<script src="jQuery/jquery-ui.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="jquery/jquery-ui.css">
+
+    <style>
+        .effect,.blind {
+            width: 200px;
+            height: 200px;
+            background-color: #1cbbff;
+        }
+
+        .effectAction {
+            border-radius: 100px;
+            background-color: #ffb100;
+        }
+
+        .effectAction2 {
+            width: 400px;
+            height: 400px;
+        }
+
+        .dropActive {
+            border: 2px solid #ffb100;
+        }
+
+
+        .dragView {
+            width: 100px;
+            height: 100px;
+            background-color: #ff004c;
+        }
+
+        .dropView {
+            width: 200px;
+            height: 200px;
+            background-color: #ffb100;
+        }
+
+        .canDragView div{
+            width: 100px;
+            height: 150px;
+            background-color: #ff5831;
+            margin-left: 2px;
+            float: left;
+        }
+
+        .canDropView div{
+            margin-left: 2px;
+            width: 200px;
+            height: 200px;
+            background-color: #29ff55;
+            float: left;
+        }
+
+        .accordion {
+            clear: both;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="effect"></div>
+
+
+<div class="blind"></div>
+
+<button class="control">动画控制</button>
+
+
+<!--可以拖拽的视图-->
+<div class="dragView">可拖拽视图</div>
+<!--可以放置的视图-->
+<div class="dropView">可放置视图</div>
+
+
+<div class="canDragView">
+    <div class="mathBook">数学</div>
+    <div class="webBook">web前端</div>
+    <div class="tianLongBaBu">天龙八部</div>
+    <div class="englishBook">英语课本</div>
+    <div class="itTall">IT技术杂谈</div>
+</div>
+
+<div class="canDropView">
+    <div class="book">教科书</div>
+    <div class="IT">IT技术</div>
+    <div class="story">小说</div>
+</div>
+
+<div class="accordion">
+    <h3>标题1</h3>
+    <div><p>内容1</p></div>
+
+    <h3>标题2</h3>
+    <div><p>内容2</p></div>
+
+    <h3>标题3</h3>
+    <div><p>内容3</p></div>
+
+    <h3>标题4</h3>
+    <div><p>内容4</p></div>
+
+    <h3>标题5</h3>
+    <div><p>内容5</p></div>
+</div>
+
+
+<label for="input">内容:</label>
+<input id="input" type="text">
+
+
+<label for="date">日期:</label>
+<input id="date" type="text">
+
+
+<div class="tabsContainer">
+
+    <ul>
+        <li><a href="#num1">首页</a></li>
+        <li><a href="#num2">新闻</a></li>
+        <li><a href="#num3">IT</a></li>
+    </ul>
+
+    <div id="num1">
+        <p>一大段内容11111</p>
+    </div>
+
+    <div id="num2">
+        <p>一大段内容22222</p>
+    </div>
+    <div id="num3">
+        <p>一大段内容33333</p>
+    </div>
+</div>
+
+
+<script src="jquery/jquery.js"></script>
+<script src="jquery/jquery-ui.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

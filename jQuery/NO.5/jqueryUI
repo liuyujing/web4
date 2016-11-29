@@ -1,0 +1,43 @@
+jqueryUI
+
+Effect:
+	.addClass( 类选择器的名字 ,动画的持续时间 ,动画每桢的变化方式easying ,动画完成时的回调 )
+	toggleClass
+	
+	效果
+		blind  百叶窗 参数：direction
+		bounce  弹跳 times: 弹跳的次数,distance:弹跳的距离
+		explode 爆炸 pieces：平方数
+
+		绑定一种效果：effect( 动画的名字 , 可选项 动画的持续时间 ,动画完成时触发的回调函数 )
+		开关效果：toggle()
+
+	可拖拽 可放置 交互
+		可拖拽:dragable()
+			axis:x y 只能往X Y方向拖动
+			grid:让可拖拽的元素  以网格的方式移动 [x,y]
+			scope:给拖动 防止的元素 进行分组
+			drag:被拖动的时候  调用
+			start:获得 开始 拖动的状态
+			stop:获得 结束拖动的状态
+		可放置:dropable()
+			scope：分组
+			drop：检测防止的状态
+			out：检测移出去的状态
+			activate：可拖拽元素  拖拽时候的状态
+
+	折叠面板
+		accordion()
+		active:可以设置 当前展开的是哪一个元素 false
+		animate:更改折叠面板的动画效果
+		activate：可以获得到  折叠时 触发的事件 （得到具体折叠的元素）
+		beforeActivate：获得折叠之前的状态
+
+	自动完成控件
+		autocomplete()
+		source:指定  自动完成提示的数组
+		change:当输入框 里面的内容  更改的时候 触发
+		select:选择下拉列表 之后触发
+
+
+

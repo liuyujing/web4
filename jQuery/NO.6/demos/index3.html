@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="jquery-ui.min.css">
+
+    <style>
+        .header {
+            width: 100%;
+            height: 44px;
+            background-color: #03a4ff;
+            position: fixed;
+            left: 0;
+            top:0;
+            display: none;
+        }
+        .content {
+            height: 3000px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header"></div>
+<div class="content"></div>
+
+<script src="jquery-3.1.1.js"></script>
+<script src="jquery-ui.min.js"></script>
+
+<script>
+
+    $(window).scroll(function () {
+        var self = $(this);
+        var header = $(".header");
+        if (self.scrollTop()>100){
+            header.fadeIn();
+        }else {
+            header.fadeOut();
+        }
+        console.log("scrollTop",$(document).scrollTop());
+        console.log("doc height",$(document).height());
+        console.log("win height",$(window).height());
+        if ($(document).scrollTop()>=$(document).height()-$(window).height()){
+            alert("jiazai");
+        }
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .container {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #ffb100;
+            margin: 20px auto;
+            padding: 2px;
+            overflow: auto;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    width 宽 不包含margin padding border
+    height 高 不包含margin padding border
+
+    scrollWidth 包含padding
+    scrollHeight 包含padding
+
+    scrollTop x
+    scrollLeft y
+
+    clientWidth 包含padding
+    clientHeight 包含padding
+
+    offsetWidth 包含padding border
+    offsetHeight 包含padding border
+
+    screenTop
+    screenLeft
+    screen.availWidth
+    screen.availHeight
+
+    width 宽 不包含margin padding border
+    height 高 不包含margin padding border
+
+    scrollWidth 包含padding
+    scrollHeight 包含padding
+
+    scrollTop x
+    scrollLeft y
+
+    clientWidth 包含padding
+    clientHeight 包含padding
+
+    offsetWidth 包含padding border
+    offsetHeight 包含padding border
+
+    screenTop
+    screenLeft
+    screen.availWidth
+    screen.availHeight
+
+    width 宽 不包含margin padding border
+    height 高 不包含margin padding border
+
+    scrollWidth 包含padding
+    scrollHeight 包含padding
+
+    scrollTop x
+    scrollLeft y
+
+    clientWidth 包含padding
+    clientHeight 包含padding
+
+    offsetWidth 包含padding border
+    offsetHeight 包含padding border
+
+    screenTop
+    screenLeft
+    screen.availWidth
+    screen.availHeight
+</div>
+
+
+<script>
+    var div = document.querySelector(".container");
+    div.onscroll = function () {
+        console.log("scrollWidth:",this.scrollWidth);
+        console.log("scrollHeight:",this.scrollHeight);
+    };
+
+
+    console.log("clientWidth:",div.clientWidth);
+    console.log("clientHeight:",div.clientHeight);
+
+    console.log("offsetWidth:",div.offsetWidth);
+    console.log("offsetHeight:",div.offsetHeight);
+
+
+</script>
+
+</body>
+</html>

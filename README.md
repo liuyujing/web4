@@ -91,5 +91,18 @@ web前端四期班课上代码
 >
 >1. 模仿图书的网站 根据API写界面http://apistore.baidu.com/apiworks/servicedetail/979.html
 
+### 5.jQueryUI
+>**作业:**
+>1. 使用jQuery实现导航菜单
 
+### 6.练习案例
+1. 图片导航
+2. 吸顶
+3. 横向 纵向 菜单
+4. 加载更多
+>**作业:**
+>1. QQ的聊天列表
+node 写服务端
+接口:getFriendList?id=21
+返回数据类型:[{groupName:"好友",friends:[{nick:"。",isOnline:false,status:"好饿"},{nick:"。",isOnline:false,status:"好饿"}]},{groupName:"同事",friends:[{nick:"。",isOnline:false,status:"好饿"},{nick:"。",isOnline:false,status:"好饿"}]}];
  

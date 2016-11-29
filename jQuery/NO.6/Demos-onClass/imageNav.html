@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="jquery-ui.min.css">
+
+    <style>
+
+        .nav-container {
+            list-style: none;
+        }
+        .nav-item {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #cccccc;
+            background-color: #03a4ff;
+            float: left;
+            margin:5px 5px;
+            text-align: center;
+            line-height: 150px;
+            position: relative;
+        }
+
+        .nav-item p {
+            position: absolute;
+            width: 150px;
+            height: 25px;
+            bottom: 0;
+            background-color: #cccccc;
+            margin: 0;
+            line-height: 25px;
+            display: none;
+        }
+
+        .nav-item-actitve {
+            background-color: #ffb100;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<div class="container"></div>
+
+
+<script src="jquery-3.1.1.js"></script>
+<script src="jquery-ui.min.js"></script>
+
+<script>
+
+//    window.cc = window.cc||{};
+
+    (function () {
+
+        $.fn.imageNav = function (list) {
+
+            var container = $("<ul class='nav-container'></ul>");
+
+            $(list).each(function () {
+                var item = $("<li class='nav-item'><img src="+this.image+" alt='' width='80px'><span>"+this.title+"</span><p>"+this.message+"</p></li>");
+                container.append(item);
+
+//                添加鼠标移入移出事件
+                item.hover(function () {
+                    $(this).addClass("nav-item-actitve",200);
+                    $(this).find("p").toggle("clip",300);
+
+                },function () {
+                    $(this).removeClass("nav-item-actitve");
+                    $(this).find("p").toggle("clip",300);
+                });
+            });
+
+            this.append(container);
+        };
+
+        $(".container").imageNav([{
+            image:"3437690_04.png",
+            title:"京东",
+            message:"限时特价"
+        },{
+            image:"111.png",
+            title:"JS",
+            message:"限时特价"
+        },{
+            image:"3437690_04.png",
+            title:"京东",
+            message:"限时特价"
+        },{
+            image:"3437690_04.png",
+            title:"京东",
+            message:"限时特价"
+        },{
+            image:"3437690_04.png",
+            title:"京东",
+            message:"限时特价"
+        }]);
+    })();
+
+</script>
+
+</body>
+</html>

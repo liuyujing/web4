@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <link rel="stylesheet" href="jquery-ui.theme.min.css">
+
+    <style>
+        .container {
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        #student, #test {
+            text-align: center;
+        }
+
+        .choose {
+            width: 300px;
+            height: 300px;
+            border-radius: 150px;
+            background-color: #103e6c;
+            border: 2px solid #ffb100;
+            margin: 0 auto;
+            line-height: 300px;
+            font-size: 30px;
+            color: #ffb100;
+        }
+
+        .startAnimation {
+            /*
+            rotation动画的名字
+             1s 动画执行的时间
+             linear 动画执行的方式
+             infinite 动画执行的次数
+            */
+            -webkit-animation: rotation 1s linear infinite;
+        }
+
+        /*帧动画*/
+        @-webkit-keyframes rotation {
+            0%{
+                -webkit-transform: rotate(0deg);
+            }
+            50%{
+                -webkit-transform: rotate(180deg);
+            }
+            100%{
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <ul>
+        <li><a href="#student">抽选学生</a></li>
+        <li><a href="#test">抽选题目</a></li>
+    </ul>
+
+    <div id="student">
+        <h2>抽选学生</h2>
+        <div class="choose student">正在抽选中...</div>
+    </div>
+    <div id="test">
+        <h2>抽选题目</h2>
+        <div class="choose test">正在抽选中...</div>
+    </div>
+</div>
+
+<script src="jquery.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

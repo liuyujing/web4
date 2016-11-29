@@ -1,0 +1,37 @@
+.imageNav-bgView {
+    padding: 5px;
+    border: 2px solid #cccccc;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.imageNav-item {
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    float: left;
+    border: 1px solid #cccccc;
+    line-height: 100px;
+    border-radius: 3px;
+    position: relative;
+    margin: 10px 10px;
+}
+
+.imageNav-item-active {
+    background-color: #ffc919;
+}
+
+.imageNav-item p{
+    display: none;
+    background-color: #ff5831;
+    color: white;
+    padding: 0;
+    margin: 0;
+    height:25px;
+    width: 150px;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    line-height: 25px;
+}

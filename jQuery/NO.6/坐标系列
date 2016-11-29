@@ -1,0 +1,27 @@
+
+width 宽 不包含margin padding border
+height 高 不包含margin padding border
+
+doucment的高度 
+
+
+
+scrollWidth 包含padding
+scrollHeight 包含padding
+
+
+
+scrollTop x
+scrollLeft y
+
+clientWidth 包含padding
+clientHeight 包含padding
+
+offsetWidth 包含padding border
+offsetHeight 包含padding border
+
+screenTop
+screenLeft
+screen.availWidth
+screen.availHeight
+

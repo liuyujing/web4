@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav-container {
+            margin: 50px auto;
+            padding: 0 40px;
+            width: 800px;
+            height: 44px;
+            list-style: none;
+            border-bottom: 1px solid #cccccc;
+        }
+        .nav-container li{
+            padding: 0 10px;
+            height: 40px;
+            line-height: 40px;
+            margin-left: 5px;
+            color: #ffffff;
+            float: left;
+            text-align: center;
+            background-color: #ff5831;
+            position: relative;
+        }
+        .nav-item-active {
+            opacity: 0.7;
+        }
+
+        .icon {
+            position: absolute;
+            right: 15px;
+            color: #cccccc;
+
+        }
+
+        .nav-bottomListView {
+            list-style: none;
+            display: none;
+            padding-top: 10px;
+        }
+        .nav-bottomListView li {
+            clear: left;
+            padding: 0;
+            margin: 0;
+            background-color: #ffb100;
+            border-bottom: 1px solid #cccccc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav"></div>
+
+<script src="jquery-3.1.1.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script>
+    (function () {
+        $.fn.nav = function (list,selectedCallBack) {
+            function createView() {
+                var container = $("<ul class='nav-container'></ul>");
+                $(list).each(function () {
+                    var item = $("<li><p>"+this.title+"</p></li>");
+                    var width = (800-25*list.length)/list.length;
+                    item.css("width",width+"px");
+
+                    if (this.contents.length>0){
+                        var icon = $("<span class='icon'>△</span>");
+                        item.find("p").append(icon);
+                        var bottomListView = $("<ul class='nav-bottomListView'></ul>");
+
+                        $(this.contents).each(function () {
+                           var bottomItem = $("<li>"+this.title+"</li>");
+                            bottomItem.css("width",width+"px");
+                            bottomListView.append(bottomItem);
+                            bottomItem.hover(function () {
+                                $(this).addClass("nav-item-active");
+                            },function () {
+                                $(this).removeClass("nav-item-active");
+                            });
+                            bottomItem.click(function () {
+                                if (selectedCallBack){
+                                    selectedCallBack($(this).text());
+                                }
+                            });
+                        });
+                        item.find("p").append(bottomListView);
+                    }
+                    container.append(item);
+
+                    item.hover(function () {
+                        $(this).addClass("nav-item-active");
+                        $(this).find(".icon").text("▽");
+                        bottomListView.slideToggle();
+                    },function () {
+                        $(this).removeClass("nav-item-active");
+                        $(this).find(".icon").text("△");
+                        bottomListView.slideToggle();
+                    });
+                });
+                return container;
+            }
+
+            this.append(createView());
+        };
+
+        $(".nav").nav([{title:"新闻",contents:[{title:"111"},{title:"222"}]}],function (data) {
+            alert(data);
+        });
+
+    })();
+</script>
+
+</body>
+</html>
