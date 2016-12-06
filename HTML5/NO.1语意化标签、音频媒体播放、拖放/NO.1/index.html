@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        header {
+
+        }
+        nav {
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="header"></div>
+<header></header>
+
+<header></header>
+<nav class="top-nav"></nav>
+
+<aside>
+    <header></header>
+    <nav></nav>
+    <section>
+        <article></article>
+
+        <article></article>
+    </section>
+</aside>
+
+fgdhdfghd
+<blockquote>
+    123124234
+</blockquote>
+
+<!--<div></div>-->
+
+ghdfghfg
+
+<details open="open">
+    <h3>11111</h3>
+    <p>ewrtyu</p>
+</details>
+
+<mark>2345678</mark>
+
+<!--<div>-->
+    <!--<header></header>-->
+<!--</div>-->
+
+<section>
+
+    <ul><li><data value="1">html5火了</data></li></ul>
+    <ul><li><data value="2">html5火了</data></li></ul>
+    <ul><li><data value="3">html5火了</data></li></ul>
+    <ul><li><data value="4">html5火了</data></li></ul>
+    <ul><li><data value="5">html5火了</data></li></ul>
+
+</section>
+
+<footer></footer>
+
+
+<form oninput="chooseColor.value = color.value">
+    <label for="user">用户名:</label>
+    <input id="user" type="password">
+
+    <label for="color">请选择颜色:</label>
+    <input id="color" type="color" name="color">
+    <output name="chooseColor"></output>
+</form>
+
+
+<!--使用output获得 两个input值的和-->
+
+<form oninput="result.value = parseFloat(num1.value)+parseFloat(num2.value)">
+
+    <input type="text" name="num1">
+    <input type="text" name="num2">
+
+    <output name="result"></output>
+
+</form>
+
+
+<form oninput="bbb.value = input.value">
+    <input name="aaa" type="text">
+    <output name="bbb"></output>
+</form>
+
+<input type="date">
+<input type="month">
+<input type="week">
+
+<form>
+    <input type="email">
+    <input type="file" accept="image/jpeg">
+
+    <input type="image" src="bd_logo1.png">
+    <input type="number">
+    <input type="search">
+    <input type="time">
+    <input type="tel">
+    <input type="submit">
+
+    <input id="range" type="range" min="0" max="1000" value="20" step="5">
+
+</form>
+
+<!--0-1-->
+<meter min="0" max="100" value="80" low="30" high="70"></meter>
+
+<!--max="100"-->
+<progress value="0.5"></progress>
+
+<object data="bd_logo1.png"></object>
+<!--<object data="一次就好.mp3"></object>-->
+<!--<object data="main.js"></object>-->
+
+<!--<embed src="一次就好.mp3">-->
+    <!--<source src="一次就好.mp3">-->
+    <!--<source src="一次就好.ogg">-->
+<!--</embed>-->
+<!--<embed src="20161206101949HTML5简介及语意化标签1.mp4" width="500" height="500"></embed>-->
+<!--<embed src="bd_logo1.png">-->
+
+
+    <audio id="audioPlayer" controls="controls" autoplay="autoplay">
+        <source src="一次就好.mp3">
+        <source src="一次就好.ogg">
+    </audio>
+
+
+
+<script>
+
+    var audio = document.getElementById("audioPlayer");
+//    console.log(audio.duration);
+//    currentTime:获得设置 当前播放的时间
+
+    audio.currentTime = 100;
+
+    audio.addEventListener("canplay",function (event) {
+        console.log(this.duration);
+
+    });
+
+//    显示 音频的 总时长：03：20
+//    显示 当前播放的时间：00：27
+
+
+
+    document.getElementById("range").onchange = function () {
+        console.log(this.value);
+    }
+
+
+</script>
+
+</body>
+</html>

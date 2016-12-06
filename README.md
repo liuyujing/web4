@@ -105,4 +105,17 @@ web前端四期班课上代码
 node 写服务端
 接口:getFriendList?id=21
 返回数据类型:[{groupName:"好友",friends:[{nick:"。",isOnline:false,status:"好饿"},{nick:"。",isOnline:false,status:"好饿"}]},{groupName:"同事",friends:[{nick:"。",isOnline:false,status:"好饿"},{nick:"。",isOnline:false,status:"好饿"}]}];
- 
+
+## HTML5
+### 1.NO.1语意化标签、音频媒体播放、拖放
+>**作业:**
+>音乐播放器
+    * 可拖拽多个外部音频文件 进行播放
+    * 可以循环播放 单曲播放 随机播放
+    * 可以快进 回退
+    * 静音 
+    * 调节音量 
+    * 播放暂停 
+    * 显示播放的时间 
+    * 显示总时长 
+    * 显示音量的值
