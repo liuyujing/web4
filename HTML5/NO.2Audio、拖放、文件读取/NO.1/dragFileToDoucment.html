@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<audio id="audioPlayer" controls="controls"></audio>
+
+<script>
+
+    function init() {
+
+        var audioPlayer = document.getElementById("audioPlayer");
+
+        document.addEventListener("dragover",function (event) {
+            event.preventDefault();
+
+        });
+        
+        document.addEventListener("drop",function (event) {
+            event.preventDefault();
+            console.log(event.dataTransfer.files);
+
+            var file = event.dataTransfer.files[0];
+//            文件列表中 存储的是  file对象
+//            file：type->文件的类型
+//            file:name->文件名
+            if (file.type == "audio/mp3"){
+                audioPlayer.src = file.name;
+            }
+
+
+        });
+
+    }
+
+    init();
+
+    /*
+    * 作业:
+    * 音乐播放器
+    *
+    * 可拖拽多个外部音频文件 进行播放
+    * 可以循环播放 单曲播放 随机播放
+    * 可以快进 回退
+    * 静音 调节音量 播放暂停 显示播放的时间 显示总时长 显示音量的值
+    * */
+</script>
+
+
+
+</body>
+</html>

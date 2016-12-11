@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .dropBox{
+            width: 300px;
+            height: 300px;
+            border: 2px solid #cccccc;
+        }
+    </style>
+</head>
+<body>
+<img id="dragImage" src="bd_logo1.png" alt="" draggable="true">
+<section class="dropBox"></section>
+<script>
+    (function(){
+        function init(){
+            var image=document.getElementById("dragImage");
+            var dropBox=document.querySelector(".dropBox");
+
+            image.addEventListener("dragstart",function(event){
+                console.log("dragstart");
+                dropBox.style.borderColor="red";
+                event.dataTransfer.setData("text",this.id);
+
+
+            });
+            image.addEventListener("dragend",function(event){
+                console.log("dragend");
+                dropBox.style.borderColor="#cccccc";
+
+
+
+            });
+            dropBox.addEventListener("dragover",function(event){
+                event.preventDefault();
+                console.log("dragover");
+                var result=event.dataTransfer.getData("text");
+            });
+            dropBox.addEventListener("drop",function(event){
+                this.appendChild(document.getElementById(event.dataTransfer.getData("text")));
+
+            });
+
+
+
+        }
+        init();
+    })();
+</script>
+</body>
+</html>

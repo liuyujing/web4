@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<section>
+
+    <h3 class="audioName"></h3>
+    <audio class="audioPlayer" controls loop autoplay></audio>
+    <button class="pre">上一曲</button>
+    <button class="next">下一曲</button>
+    <select class="chooseLoopType">
+        <option value="0">单曲循环</option>
+        <option value="1">顺序播放</option>
+        <option value="2">随机播放</option>
+    </select>
+
+</section>
+
+
+<!--可以创建每一条音频的视图-->
+<script src="AudioFileCell.js"></script>
+<!--创建音频播放列表-->
+<script src="AudioFileListView.js"></script>
+<!--音频播放器操作相关-->
+<script src="AudioPlayer.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

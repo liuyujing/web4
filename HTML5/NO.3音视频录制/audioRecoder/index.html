@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button id="recoderButton">录制</button>
+
+<audio id="audioPlayer"></audio>
+
+<script>
+    (function () {
+        var recoderButton = document.getElementById("recoderButton");
+        var audioPlayer = document.getElementById("audioPlayer");
+
+        navigator.getUserMedia = (navigator.getUserMedia ||
+        navigator.webkitGetUserMedia ||
+        navigator.mozGetUserMedia ||
+        navigator.msGetUserMedia);
+
+        if (navigator.getUserMedia){
+
+            console.log("浏览器支持~");
+
+            var buffers = [];
+            function onSuccess(stream) {
+                var recoder = new MediaRecorder(stream);
+
+                recoderButton.onclick = function () {
+                    if (recoderButton.textContent == "录制"){
+                        recoderButton.textContent = "停止";
+                        recoder.start();
+                    }else {
+                        recoderButton.textContent = "录制";
+                        recoder.stop();
+                    }
+                };
+
+                recoder.onstop = function (event) {
+
+                    var blob = new Blob(buffers,{type:"audio/mp3"});
+                    buffers = [];
+
+                    var audioUrl = URL.createObjectURL(blob);
+                    audioPlayer.src = audioUrl;
+                    audioPlayer.controls = true;
+                };
+
+                recoder.ondataavailable = function (event) {
+                    buffers.push(event.data);
+                };
+
+            }
+
+            function onError(error) {
+
+            }
+
+            navigator.getUserMedia({audio:true},onSuccess,onError);
+
+
+        }else {
+            console.log("浏览器不支持~");
+        }
+
+    })();
+</script>
+
+</body>
+</html>

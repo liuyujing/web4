@@ -107,7 +107,7 @@ node 写服务端
 返回数据类型:[{groupName:"好友",friends:[{nick:"。",isOnline:false,status:"好饿"},{nick:"。",isOnline:false,status:"好饿"}]},{groupName:"同事",friends:[{nick:"。",isOnline:false,status:"好饿"},{nick:"。",isOnline:false,status:"好饿"}]}];
 
 ## HTML5
-### 1.NO.1语意化标签、音频媒体播放、拖放
+### 1. NO.1语意化标签、音频媒体播放、拖放
 >**作业:**
 >音乐播放器
     * 可拖拽多个外部音频文件 进行播放
@@ -119,3 +119,11 @@ node 写服务端
     * 显示播放的时间 
     * 显示总时长 
     * 显示音量的值
+
+### 2. NO.3音视频录制
+>**作业:**
+
+### 3. NO.4Cancas
+>**作业:**
+>1. 画太极图 -> 并保存成图片
+>2. 完善画板 往画板中添加图片 和 文字 可以更改画笔的大小 可以选择矩形 圆形 三角形  添加到画板中

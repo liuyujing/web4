@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<section>
+    <audio id="audioPlayer" src="一次就好.mp3" controls="controls" autoplay="autoplay"></audio>
+    <span id="currentTimeLable">00:00</span>
+    <input type="range" id="timeRange">
+    <span id="finishTimeLable">00:00</span>
+</section>
+<script>
+    (function () {
+
+        function init() {
+            var audio = document.getElementById("audioPlayer");
+            var finishTimeLable = document.getElementById("finishTimeLable");
+            var timeRange = document.getElementById("timeRange");
+            audio.oncanplay = function () {
+                var allTime = this.duration;
+                var min = parseInt(allTime/60);
+                var sec = parseInt(allTime-min*60);
+                finishTimeLable.textContent = ""+min+":"+sec+"";
+                timeRange.max = allTime;
+                timeRange.value = this.currentTime;
+            }
+        }
+
+        init();
+        
+    })();
+</script>
+</body>
+</html>

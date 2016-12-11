@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    document.ondragover = function (event) {
+        event.preventDefault();
+    };
+
+    document.ondrop = function (event) {
+        event.preventDefault();
+        if (event.dataTransfer.files){
+            console.log(event.dataTransfer.files);
+            for (var i=0;i<event.dataTransfer.files.length;i++){
+                var img = document.createElement("img");
+                img.src = event.dataTransfer.files[i].name;
+                console.log("in",img);
+                document.body.appendChild(img);
+            }
+        }
+    }
+</script>
+</body>
+</html>

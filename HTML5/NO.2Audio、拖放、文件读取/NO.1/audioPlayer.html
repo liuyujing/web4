@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<section>
+
+    <audio id="audioPlayer" src="一次就好.mp3"></audio>
+
+    <span id="currentTimeLabel">00:00</span>
+    <span id="durationLabel">00:00</span>
+
+    <button id="playControlButton">播放</button>
+
+    <input type="range" id="volumeRange">
+
+</section>
+
+
+<script>
+    (function () {
+
+        function init() {
+
+            var audioPlayer = document.getElementById("audioPlayer");
+            var durationLabel = document.getElementById("durationLabel");
+            var playControlButton = document.getElementById("playControlButton");
+            var currentTimeLabel = document.getElementById("currentTimeLabel");
+
+            audioPlayer.volume = 0.5;
+            var volumeRange = document.getElementById("volumeRange");
+            volumeRange.value = audioPlayer.volume*100;
+
+            volumeRange.addEventListener("change",function () {
+//                音量的值 0.0 - 1.0
+                var volume = this.value/100;
+
+                audioPlayer.volume = volume;
+            });
+
+//            初始化定时器
+            var timer = null;
+
+
+            playControlButton.addEventListener("click",function () {
+
+                if (this.textContent=="播放"){
+                    this.textContent = "暂停";
+                    audioPlayer.play();
+                    timer = setInterval(function () {
+                        currentTimeLabel.textContent = timeFormat(audioPlayer.currentTime);
+                    },1000);
+                }else {
+                    this.textContent = "播放";
+                    audioPlayer.pause();
+                    clearInterval(timer);
+                    timer = null;
+                }
+
+            });
+
+            audioPlayer.addEventListener("ended",function () {
+                clearInterval(timer);
+                timer = null;
+                currentTimeLabel.textContent = "00:00";
+            });
+
+            audioPlayer.addEventListener("canplay",function () {
+
+                durationLabel.textContent = timeFormat(this.duration);
+
+            });
+
+
+        }
+
+        /*
+        * timeFormat: 转换时间格式
+        * duration:总时长
+        * return->  转换好 时间格式的 字符串
+        * */
+        function timeFormat(duration) {
+//            09:03
+//            计算分钟数
+            var minTime = parseInt(duration/60);
+//            计算秒数:总时长-总分数（分钟数*60秒）
+            var secTime = parseInt(duration-minTime*60);
+            var timeString = (minTime>=10?minTime:"0"+minTime+"")+":"+(secTime>=10?secTime:"0"+secTime+"");
+
+            return timeString;
+        }
+
+
+        init();
+
+    })();
+</script>
+
+</body>
+</html>

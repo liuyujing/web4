@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .painter {
+            position: relative;
+        }
+        #canvas {
+            border: 1px solid #cccccc;
+        }
+
+        .tools {
+            width: 50px;
+            height: 50px;
+            background-color: #cccccc;
+            position: absolute;
+            left: 800px;
+        }
+
+        .eraser {
+            top:10px;
+        }
+        .lineColor {
+            top: 100px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="painter">
+    <canvas id="canvas"></canvas>
+
+    <p class="tools eraser"></p>
+    <input type="color" class="tools lineColor">
+
+</div>
+
+<script src="painer.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

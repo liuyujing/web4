@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        section {
+            position: relative;
+        }
+
+        .painter {
+            border: 1px solid #cccccc;
+        }
+
+        .control {
+            position: absolute;
+            left: 810px;
+        }
+
+        .chooseColor {
+            top: 50px;
+        }
+
+        .allClearButton {
+            top: 100px;
+        }
+
+        .saveButton {
+            top: 150px;
+        }
+
+        .eraserButton {
+            width: 50px;
+            height: 50px;
+            background-color: #cccccc;
+            top: 200px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+<section>
+
+    <canvas class="painter" height="800" width="800"></canvas>
+    <input class="control chooseColor" type="color">
+    <button class="control allClearButton">清除画板</button>
+    <button class="control saveButton">保存</button>
+    <p class="control eraserButton">橡皮擦</p>
+</section>
+
+
+<script src="Painter.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
