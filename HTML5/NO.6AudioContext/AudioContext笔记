@@ -1,0 +1,106 @@
+AudioContext(导演) 音频的上下文  所有的操作 都需要 通过他来操作 -> 不再需要创建audio标签
+
+连接流程:输入口 -> 效果器->其他效果器->输出口->播放
+
+
+播放步骤：
+1.创建AudioContext 上下文
+2.获得音频流或者音频文件数据，可通过媒体采集或者XMLHTTPRequest（responseType必须是arraybuffer）获得
+3.创建缓冲区资源对象 设置对应的audioBuffer
+4.音频数据解码 -> audioBuffer
+5.开始连接音频节点 如果想直接播放 连接到目标节点 destination
+6.开始播放start
+
+
+
+AudioNode 音频节点 通过AudioContext.createBuffer方法创建或者使用AudioContext.decodeAudioData方法解码音轨来创建
+AudioContext 可以通过AudioBuffer对象来播放和处理包含在内的音频数据
+connect 连接各个节点
+disconnect 断开连接节点
+start 开始播放
+stop 停止
+suspend()暂停
+resume() 重启
+
+bufferSource.onended是否播放完毕
+
+createBufferSource() 播放 处理 音频
+decodeAudioData（bufferArray,callback）：音频解码获得音频流
+destination:输出口节点
+
+
+
+createGain：增益 在原有的音量基础之上  继续添加音量 （不要过渡添加）会有损波形
+gain.value
+createConvolver:回旋混响  混响是给音频 添加空间感的效果（大房间 小房间 大厅）
+buffer
+
+createDelay（delaytime）延迟 
+
+createStereoPanner 立体声 声相
+	pan.value -1 1
+
+
+
+createDynamicsCompressor() 压缩器
+threshold门限 阀值  -100 - 0 信号电平可以进入电路的最小电平
+knee 压缩的强度 0 - 40
+ratio 比率  1 and 20
+attack 起始缓冲 0-1
+release 结束缓冲 0 - 1
+
+
+createWaveShaper()非线性失真效果器
+oversample 采样变化比例
+	none
+	2x 2倍
+	4x 4倍
+curve 曲线
+
+
+变声 ：EQ均衡器
+
+createBiquadFilter:滤波器 目的 过滤掉 某一部分的频率 低频噪音<400（环境音 电流声音）  也可以 过滤人耳听不到的声音频率
+
+	音频相关：http://wenku.baidu.com/link?url=nPvnB6EqAzQR3t1nCD59cnL3vauRIpOuxZM0HZ0xEB2if7RqfqfWE0kZ-8qM9gmhNuiJ3XhO6MY_0Vg5t4IU_O9y5Hx4ivLn9DeZnizQNoi
+	声音的组成：http://rainwater99.blog.sohu.com/166865769.html
+
+
+	frequency:频率 默认350 http://wenku.baidu.com/link?url=Jrj0X2zzmKJvs8TTGIfdYWZhcvNe8yOTeTEGBZ8ViI0-vwUQ-q2lA6W623e_GxpPZVcPsulgSqMP2A4wvXBgOB0fONBA3Vuxi5KjipKjqyu
+
+	detune:失谐器可以复制输入进来的信号，然后将复制的信号极其微小地改变其音调，最后将复制的信号与原信号混合在一起
+
+	Q：质量 0.0001 to 1000
+	gain -40 to 40
+	type:http://wenku.baidu.com/link?url=XbeGFlS75hdUJ559MDkksoniZj1oSG_53-eYYi1d6HuwOsF_T9-21Kwpc2d1UPB1OdfhXmjBjKsxZbZb0QHSt2YgcDCzTYB57fGUdxduYo7
+		lowpass 低通 只允许 低频通过  过滤高频
+		highpass 高通 
+		bandpass 带通 只允许 区间范围内的通过
+		lowshelf 低架
+		highshelf 高架
+		peaking 脉冲削尖 过滤 嚣叫的频率
+		notch 陷波 滤波 过滤凹下的 这部分频率
+		allpass 全部通过
+
+
+createAnalyser() 获得 频谱
+
+
+analyser.fftSize = 2048;
+var bufferLength = analyser.frequencyBinCount;获得频率的长度
+var dataArray = new Uint8Array(bufferLength);
+analyser.getByteTimeDomainData(dataArray);
+
+
+
+createIIRFilter()：滤波器
+
+createOscillator()震荡器
+createChannelMerger()合成多个音频流通道
+createChannelSplitter()访问的音频流的单独的通道并分别对他们进行处理
+
+
+作业：
+1、通过滑杆 设置 生相
+2. 通过滑杆 设置 压缩器的  各个参数
+
