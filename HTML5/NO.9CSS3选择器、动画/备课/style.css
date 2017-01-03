@@ -1,0 +1,194 @@
+
+li {
+    width: 200px;
+    height: 44px;
+}
+/*h1~p{*/
+    /*color: #ff5831;*/
+/*}*/
+
+/*ul input[type]{*/
+    /*color: crimson;*/
+/*}*/
+
+/*ul input[type="text"]{*/
+    /*color: crimson;*/
+/*}*/
+
+/*h3[class~="title"] {*/
+    /*color: cadetblue;*/
+/*}*/
+
+/*h3[class|="title"] {*/
+    /*color: cadetblue;*/
+/*}*/
+
+/*h3[class*="title"] {*/
+    /*color: cadetblue;*/
+/*}*/
+
+/*h3[class^="title"] {*/
+    /*color: cadetblue;*/
+/*}*/
+
+/*h3[class$="title"] {*/
+    /*color: cadetblue;*/
+/*}*/
+
+/*????空格 和没有空格 后代选择器last-child*/
+/*li:first-child {*/
+    /*color: brown;*/
+/*}*/
+
+/*.content li:last-child {*/
+    /*color: blueviolet;*/
+/*}*/
+
+/*a:only-of-type{*/
+    /*color: #ff004c;*/
+/*}*/
+
+/*a:first-of-type {*/
+    /*color: brown;*/
+/*}*/
+
+/*a:last-of-type {*/
+    /*color: brown;*/
+/*}*/
+
+/*a:nth-of-type(2) {*/
+    /*color: brown;*/
+/*}*/
+
+/*a:nth-last-of-type(1){*/
+    /*color: brown;*/
+/*}*/
+
+/*a:only-child {*/
+    /*color: brown;*/
+/*}*/
+
+/*a:nth-child(1) {*/
+    /*color: brown;*/
+/*}*/
+
+/*:root {*/
+    /*background: #ff5831;*/
+/*}*/
+
+/*li:empty {*/
+    /*background: brown;*/
+/*}*/
+
+/*:target {*/
+    /*color: brown;*/
+/*}*/
+
+/*:enabled {*/
+    /*color: brown;*/
+/*}*/
+
+/*:disabled {*/
+    /*border: 1px solid brown;*/
+/*}*/
+
+/*input:checked {*/
+    /*transform: scale(1.5);*/
+/*}*/
+
+/*.content:not(a) {*/
+    /*color: brown;*/
+/*}*/
+
+/*::selection {*/
+    /*color: brown;*/
+/*}*/
+
+/*input:out-of-range {*/
+    /*color: brown;*/
+/*}*/
+
+/*input:in-range {*/
+    /*color: brown;*/
+/*}*/
+
+/*input:read-only {*/
+    /*color: brown;*/
+/*}*/
+
+/*input:read-write {*/
+    /*color: brown;*/
+/*}*/
+
+/*input:optional {*/
+    /*color: brown;*/
+/*}*/
+
+/*input:invalid {*/
+    /*color: brown;*/
+/*}*/
+
+/*.border p {*/
+    /*width: 200px;*/
+    /*height: 200px;*/
+    /*background-color: #103e6c;*/
+    /*!*border-radius: 100px;*!*/
+    /*!*box-shadow: 1px -5px 5px brown;*!*/
+    /*border: 10px solid transparent;*/
+    /*border-image: url("border.png") 30 round;*/
+
+/*}*/
+
+.animation p {
+    width: 200px;
+    height: 200px;
+    background-color: #103e6c;
+
+    /*background: linear-gradient(60deg,red,blue);*/
+    /*background: radial-gradient(red,blue);*/
+}
+.animation p:hover {
+
+    animation-name: changColor;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count:2;
+    animation-direction: alternate;
+}
+
+@keyframes changColor {
+    /*0% {*/
+        /*background-color: #ff004c;*/
+    /*}*/
+    /*50% {*/
+        /*background-color: #fff;*/
+    /*}*/
+    /*100% {*/
+        /*background-color: #103e6c;*/
+    /*}*/
+
+    from {
+        background-color: #ff5831;
+        border-radius: 0;
+    }
+    to {
+        background-color: #ffc919;
+        border-radius: 100px;
+    }
+}
+
+
+
+.row1 h3 {
+    column-span: all;
+    background-color: #6537ff;
+}
+.row1 {
+    width: 100%;
+    column-count: 3;
+    column-rule-width: 30px;
+}
+
+.row1 p {
+    column-width: 200px;
+}

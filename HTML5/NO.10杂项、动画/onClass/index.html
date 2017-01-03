@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="border">
+
+    <p></p>
+
+    <p>
+        1.border-radius:设置边框 上右下左的 半径
+        <br>
+        2.border-image-source：指定边框图片的资源路径
+        <br>
+        如果值是none 会被设置成默认边框的样式
+        <br>
+        如果设置的是 url 图片的路径 边框就显示图片
+        <br>
+        3.border-image-slice:切割图片 可以指定 切割图片参考线所在图片的内边距位置 上右下左
+        <br>
+        比如 宽高为81的图片 上右下左都切27
+        <br>
+        4.border-image-width:指定边框图片的宽度
+        <br>
+        5.border-image-outset:指定边框图片向外偏移的位置
+        <br>
+        6.border-image-repeat:图片重复的样式
+        repeat(平铺)、round(铺满)、stretch(拉伸)
+    </p>
+
+</section>
+
+<section class="background">
+
+    <p>
+        background-clip: padding-box; 显示的区域范围
+        <br>
+        border-box、padding-box、content-box
+        <br>
+        background-origin: border-box;显示位置的原点
+        <br>
+        border-box、padding-box、content-box
+        <br>
+        background-size: 200px 200px;设置 显示图片的宽高
+    </p>
+
+</section>
+
+<section class="gradients">
+
+    <p>
+        linear-gradient:线性渐变 设置渐变的角度 或者方向（谷歌浏览器需要添加to）
+        <br>
+        radial-gradient：径向渐变 设置径向渐变的尺寸 形状 颜色
+    </p>
+
+</section>
+
+
+<section class="textEffect">
+    <p>你好！</p>
+
+    box-shadow:设置 盒子的阴影 阴影的偏移量x正数向右 y正数向下 阴影的颜色
+</section>
+
+
+<section class="animation">
+    <!--<p></p>-->
+</section>
+
+
+<!--<script>-->
+    <!--document.querySelector(".animation p").onclick = function () {-->
+        <!--this.className = "startMove";-->
+    <!--};-->
+<!--</script>-->
+
+
+
+<section class="coloumn">
+
+    <h3>通过column-span设置标题横跨的列数 可以是数字 也可是all</h3>
+    <p>
+        设置列数column-count 需要设置在 父容器中
+        <br>
+        column-width:设置列的宽度
+        <br>
+        column-rule-style:设置分割线的样式
+        <br>
+        column-rule-color:设置分割线的颜色
+        <br>
+        column-rule-width:设置分割线的宽度
+        <br>
+        column-rule:上面的简写
+        <br>
+        column-gap:设置列与列之间的间距
+    </p>
+
+</section>
+
+</body>
+</html>

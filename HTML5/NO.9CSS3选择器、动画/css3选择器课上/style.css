@@ -1,0 +1,166 @@
+
+section {
+    width: 50%;
+    margin: 0 auto;
+}
+
+/*p ul {*/
+    /*list-style: none;*/
+/*}*/
+
+/*p~ul {*/
+    /*list-style: none;*/
+/*}*/
+
+.select-after:nth-of-type(1) h3~p{
+    color: #ff5831;
+}
+
+
+.att-selecter:nth-of-type(2) input[type]{
+    color: #ff004c;
+}
+
+.att-selecter:nth-of-type(3) input[type="password"] {
+    border: 1px solid #03a4ff;
+}
+
+section:nth-of-type(4) p[class~="num"] {
+    color: #ff004c;
+}
+
+section:nth-of-type(5) p[class|="num"] {
+    color: #ffb100;
+}
+
+section:nth-of-type(6) p[class*="num"] {
+    color: #b634ff;
+}
+
+section:nth-of-type(7) p[class^="num"] {
+    color: #898989;
+}
+
+section:nth-of-type(8) p[class$="num"] {
+    color: #ffb100;
+}
+
+/*section:nth-of-type(9) mark:only-of-type {*/
+    /*color: #ff004c;*/
+/*}*/
+
+section:nth-of-type(9) :only-of-type {
+    color: #ff004c;
+}
+
+section:nth-of-type(10) :first-of-type {
+    color: brown;
+}
+
+section:nth-of-type(11) :last-of-type {
+    color: #03a4ff;
+}
+
+section:nth-of-type(12) p:nth-of-type(2) {
+    color: #ff5831;
+}
+
+/*section:nth-of-type(13) :only-child {*/
+    /*color: #ff5831;*/
+/*}*/
+
+section:nth-of-type(13) section :only-child {
+    color: #ff5831;
+}
+
+section:nth-of-type(14) section :nth-child(3) {
+    color: cadetblue;
+}
+
+/*css2.0*/
+/*section:nth-of-type(15) section :first-child {*/
+    /*color: #ffb100;*/
+/*}*/
+
+section:nth-of-type(15) section :last-child {
+    color: #ffb100;
+}
+
+section:nth-of-type(16) section :nth-last-child(2) {
+    color: #b634ff;
+}
+
+section:nth-of-type(17) section :empty {
+    width: 200px;
+    height: 30px;
+    background-color: #1cbbff;
+}
+
+:root {
+    background-color: rgba(204, 204, 204, 0.5);
+}
+
+:target {
+    border: 1px solid rgb(255, 0, 76);
+}
+
+/*section:nth-of-type(20) :enabled {*/
+    /*color: #03a4ff;*/
+/*}*/
+
+/*section:nth-of-type(20) :disabled {*/
+    /*color: cadetblue;*/
+/*}*/
+
+
+/*:enabled {*/
+    /*color: #ffb100;*/
+/*}*/
+
+:disabled {
+    color: brown;
+}
+
+section:nth-of-type(21) :checked {
+    transform: scale(1.5);
+}
+
+section:nth-of-type(22) :not(.ttt) {
+    color: chocolate;
+}
+
+::selection {
+    color: chartreuse;
+}
+
+section:nth-of-type(24) :out-of-range {
+    color: red;
+}
+
+section:nth-of-type(24) :in-range {
+    color: forestgreen;
+}
+
+section:nth-of-type(25) :read-only {
+    border: 1px solid rgba(255, 0, 76, 0.5);
+}
+
+section:nth-of-type(25) :read-write {
+    border: 2px solid rgb(255, 119, 66);
+}
+
+section:nth-of-type(26) :optional {
+    border: 1px solid #ff0004;
+}
+
+section:nth-of-type(26) :required {
+    border: 1px solid #0575f0;
+}
+
+section:nth-of-type(26) :valid {
+    color: forestgreen;
+}
+
+section:nth-of-type(26) :invalid{
+    color: red;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="header">
+
+    <button id="menu-button" onclick="showList()">列表</button>
+
+    <ul class="ul1">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <ul class="ul2">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+</div>
+
+<div class="content"></div>
+
+<script>
+
+    function showList() {
+        var listView = document.querySelector(".header .ul2");
+        listView.style.display = listView.style.display==="block"?"none":"block";
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container1 ul {
+    width: 90%;
+    min-height: 60px;
+    border: 2px solid #cccccc;
+    list-style: none;
+    margin: 0 auto;
+}
+
+.container1 ul li {
+    width: 100px;
+    height: 44px;
+    background-color: #ff7742;
+    float: left;
+    margin: 5px;
+}
+
+
+.container2 ul {
+    width: 90%;
+    min-height: 60px;
+    border: 2px solid #cccccc;
+    list-style: none;
+    margin: 5px auto;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.container2 ul li {
+    width: 100px;
+    height: 44px;
+    background-color: #ff7742;
+    margin: 5px;
+    text-align: center;
+    line-height: 44px;
+}
+
+@media (min-width: 1024px) {
+    .container2 ul {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container2 ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .container2 ul {
+        align-items: flex-start;
+        flex-direction: column-reverse;
+    }
+}
+
+
+
+.container3 ul {
+    width: 600px;
+    height: 400px;
+    margin: 5px auto;
+    border: 2px solid #cccccc;
+    list-style: none;
+
+    display: flex;
+    /*justify-content: space-between;*/
+}
+
+.container3 ul li {
+    width: 150px;
+    min-height: 44px;
+    background-color: #ff7742;
+    margin: 5px;
+}
+
+.container3 ul li:first-child {
+    align-self: flex-start;
+}
+
+.container3 ul li:nth-child(2) {
+    align-self: center;
+}
+
+.container3 ul li:nth-child(3) {
+    align-self: flex-end;
+}
+
+.container3 ul li:nth-child(4) {
+    align-self: stretch;
+}
+.container3 ul li:last-child {
+    align-self: baseline;
+}
+
+
+.container4 ul {
+    width: 80%;
+    border: 2px solid #cccccc;
+    list-style: none;
+    margin: 5px auto;
+
+    display: flex;
+}
+
+.container4 ul li {
+    width: 200px;
+    height: 400px;
+    margin: 5px;
+    background-color: #0575f0;
+}
+
+
+.container4 ul li:first-child {
+    flex: 2;
+}
+
+.container4 ul li:nth-child(2) {
+    flex: 6;
+}
+
+.container4 ul li:last-child {
+    flex: 1;
+}
+
+
+.container5 ul {
+    width: 90%;
+    list-style: none;
+    margin: 5px auto;
+    border: 2px solid #cccccc;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+}
+
+.container5 ul li {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    background-color: #103e6c;
+}
+
+.container6 ul {
+    width: 90%;
+    list-style: none;
+    margin: 5px auto;
+    border: 2px solid #cccccc;
+
+    display: flex;
+    justify-content: center;
+}
+
+.container6 ul li {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    background-color: #ff3d46;
+}
+
+.container6 ul li:first-child {
+    order: 3;
+}
+
+.container6 ul li:nth-child(2) {
+    order: 4;
+}
+
+.container6 ul li:nth-child(3) {
+    order: 2;
+}
+
+.container6 ul li:last-child {
+    order: 1;
+}

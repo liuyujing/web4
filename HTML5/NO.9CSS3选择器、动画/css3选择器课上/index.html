@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!--input[type]-->
+<!--input[type=""text]-->
+<!--input[class*="www"]-->
+<!--input-->
+<!--input[class]-->
+<!--<input type="text" class="www-22">-->
+<!--<input type="text" class="www1">-->
+<!--<input type="text" class="www">-->
+<!--<input type="text" class="dd-www">-->
+<!--<input type="text" class="www-tt">-->
+
+<!--<p></p>-->
+<!--<ul>-->
+    <!--<li>1111</li>-->
+    <!--<li>2222</li>-->
+    <!--<li>333</li>-->
+    <!--<li>33333</li>-->
+<!--</ul>-->
+
+<!--<ul>-->
+    <!--<li>1111</li>-->
+    <!--<li>2222</li>-->
+    <!--<li>333</li>-->
+    <!--<li>33333</li>-->
+<!--</ul>-->
+
+<!--<ul>-->
+    <!--<li>1111</li>-->
+    <!--<li>2222</li>-->
+    <!--<li>333</li>-->
+    <!--<li>33333</li>-->
+<!--</ul>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="select-after">
+    <h3>选择某个元素 之后的 指定类型某些元素</h3>
+    <p>：使用公式：<mark>Element~Element</mark></p>
+    <p>
+        h3~p{color: #ff5831;}
+    </p>
+</section>
+
+<hr>
+
+<section class="att-selecter">
+
+    <h3>选择 所有包含 某个属性 元素</h3>
+
+    <p>使用公式：<mark>Element[属性名]</mark></p>
+
+    <p>
+        input[type]{color: #ff004c;}
+    </p>
+
+    <input type="text">
+    <input type="password">
+
+</section>
+
+<hr>
+
+<section class="att-selecter">
+
+    <h3>指定属性值的 选择器</h3>
+    <p>公式:<mark>Element[属性名="属性值"]</mark></p>
+    <p>
+        input[type="password"] {border: 1px solid #03a4ff;}
+    </p>
+
+    <label for="username">用户名:</label>
+    <input id="username" type="text">
+
+    <label for="password">密码:</label>
+    <input id="password" type="password">
+
+    <label for="again-password">确认密码:</label>
+    <input id="again-password" type="password">
+
+</section>
+
+<hr>
+
+<section>
+
+    <h3>选择 所有属性包含某个值的 所有元素</h3>
+    <p>公式:<mark>Element:[属性名~="属性值"]</mark></p>
+    <p>
+        p[class~="num"] {color: #ff004c;}
+    </p>
+
+    <p class="num one">111111</p>
+    <p class="num-two">222222</p>
+    <p class="numthr">333333</p>
+    <p class="num for">444444</p>
+</section>
+
+<hr>
+
+<section>
+
+    <h3>选择 指定的属性值 或者 属性值包含"-" 所有元素</h3>
+    <p>公式:<mark>Element[属性名|="属性值"]</mark></p>
+    <p>
+        p[class|="num"]{color: #ffb100;}
+    </p>
+
+    <p class="num">11111</p>
+    <p class="num-two">22222</p>
+    <p class="num-www">wwwww</p>
+    <p class="numthr">333333</p>
+    <p class="for num">44444</p>
+</section>
+
+<hr>
+
+<section>
+
+    <h3>选择 属性值 只要包含某个字符串的 所有元素</h3>
+    <p>公式：<mark>p[属性名*="属性值"]</mark></p>
+    <p>
+        p[class*="num"] {color: #b634ff;}
+    </p>
+
+    <p class="num">11111</p>
+    <p class="num-two">22222</p>
+    <p class="num-www">wwwww</p>
+    <p class="numthr">333333</p>
+    <p class="for num">44444</p>
+</section>
+
+<hr>
+
+<section>
+
+    <h3>选择 属性值 开头 是某个字符串的 所有元素</h3>
+    <p>公式:<mark>p[属性名^="字符串"]</mark></p>
+    <p>
+        p[class^="num"] {color: #898989;}
+    </p>
+
+    <p class="num">11111</p>
+    <p class="num-two">22222</p>
+    <p class="num-www">wwwww</p>
+    <p class="numthr">333333</p>
+    <p class="for num">44444</p>
+</section>
+
+<hr>
+
+<section>
+
+    <h3>选择 所有 从后面数， 只要包含某个字符串的 所有元素</h3>
+    <p>公式:<mark>Element[属性名$="字符串"]</mark></p>
+    <p>
+        p[class$="num"] {color: #ffb100;}
+    </p>
+
+    <p class="num">11111</p>
+    <p class="num-two">22222</p>
+    <p class="num-www">wwwww</p>
+    <p class="numthr">333333</p>
+    <p class="for num">44444</p>
+</section>
+
+<hr>
+
+<section>
+
+    <h3>选择某个父元素中  唯一的元素</h3>
+    <p>公式:<mark>:only-of-type</mark></p>
+    <p>
+        <p>
+    :only-of-type {color: #ff004c;}
+        </p>
+        <p>
+            mark:only-of-type {color: #ff004c;}
+        </p>
+    </p>
+
+    <input type="text">
+    <p>123124</p>
+    <mark>12321</mark>
+    <input type="password">
+    <p>asdfdd</p>
+
+</section>
+
+<hr>
+
+<section>
+
+    <h3>选择某个父元素中 子类里面每一种类型相同的第一个元素</h3>
+    <p>公式：<mark>:first-of-type</mark></p>
+    <p>
+        :first-of-type {color: brown;}
+    </p>
+
+    <input type="text">
+    <p>123124</p>
+    <mark>12321</mark>
+    <input type="password">
+    <p>asdfdd</p>
+
+</section>
+
+<hr>
+
+<section>
+
+    <h3>选择某个父元素中 子类里面每一种类型相同的最后一个元素</h3>
+    <p>公式：<mark>:last-of-type</mark></p>
+    <p>
+        :last-of-type {color: #03a4ff;}
+    </p>
+
+    <input type="text">
+    <p>123124</p>
+    <mark>12321</mark>
+    <input type="password">
+    <p>asdfdd</p>
+</section>
+
+<hr>
+
+<section>
+
+    <h3>选择 父容器中 第几个某种类型的元素</h3>
+    <p>公式:<mark>:nth-of-type(num)</mark></p>
+    <p>
+        :nth-of-type(2) {color: #ff5831;}
+    </p>
+
+    <p>12345678</p>
+    <p>wertyu</p>
+    <p>zxcvb</p>
+    <p>23456789875643</p>
+</section>
+
+<hr>
+
+<section>
+
+    <h3>选择父元素中  唯一的 一个子类</h3>
+    <p>公式: <mark>:only-child</mark></p>
+    <p>
+        :only-child {color: #ff5831;}
+    </p>
+
+    <section>
+        <p>1231312</p>
+    </section>
+
+    <section>
+        <h3>ttttt</h3>
+        <p>3435465</p>
+    </section>
+
+    <section>wertyrrty</section>
+
+</section>
+
+<hr>
+
+<section>
+
+    <h3>选择某个父元素中  第几个子元素</h3>
+    <p>公式:<mark>:nth-child(第几个子元素)</mark></p>
+    <p>
+        :nth-child(3) {
+        color: cadetblue;
+        }
+    </p>
+
+    <section>
+        <p>1111</p>
+        <p>2222</p>
+        <p>3333</p>
+        <p>4444</p>
+    </section>
+</section>
+
+<hr>
+
+<section>
+
+    <h3>选择 父元素中 最后一个子元素</h3>
+    <p>公式:<mark>:last-child</mark></p>
+    <p>
+        :last-child {
+        color: #ffb100;
+        }
+    </p>
+
+    <section>
+        <p>1111</p>
+        <p>2222</p>
+        <p>3333</p>
+        <p>4444</p>
+    </section>
+</section>
+
+<hr>
+
+
+<section>
+
+    <h3>选择父元素中 倒数第几个子元素</h3>
+    <p>公式:<mark>:nth-last-child(数字)</mark></p>
+    <p>
+        :nth-last-child(2) {
+        color: #b634ff;
+        }
+    </p>
+
+    <section>
+
+        <p>1111</p>
+        <p>2222</p>
+        <p>3333</p>
+        <p>4444</p>
+    </section>
+
+</section>
+
+<hr>
+
+<section>
+
+    <h3>选择空的元素 完全闭合的元素、文本节点、子元素中不为空的元素都算有内容</h3>
+    <p>公式:<mark>:empty</mark></p>
+    <p>
+        :empty {
+        width: 200px;
+        height: 30px;
+        background-color: #1cbbff;
+        }
+    </p>
+
+    <section>
+        <h3>标题</h3>
+        <div><input type="text"></div>
+        <div><p>234567</p></div>
+        <div><p></p></div>
+        <div>12321312312</div>
+        <div></div>
+    </section>
+</section>
+
+<hr>
+
+<section>
+    <h3>选择 文档的根元素</h3>
+    <p>公式:<mark>:root</mark></p>
+    <p>
+        :root {
+        background-color: rgba(204, 204, 204, 0.5);
+        }
+    </p>
+</section>
+
+<hr>
+
+<section>
+    <h3>选择 当指向某个锚点时候 的元素</h3>
+    <p>公式:<mark>:target</mark></p>
+    <p>
+        :target {
+        border: 1px solid rgb(255, 0, 76);
+        }
+    </p>
+    <a href="#username">username</a>
+</section>
+
+<hr>
+
+<section>
+
+    <h3>选择 被禁用 和 启用 的元素</h3>
+    <p>公式:<mark>:enabled :disabled</mark></p>
+    <p>
+        :enabled {
+        color: #ffb100;
+        }
+        <br>
+        :disabled {
+        color: brown;
+        }
+    </p>
+
+    <button disabled="disabled">注册</button>
+    <button>登录</button>
+</section>
+
+<hr>
+
+<section>
+
+    <h3>选择所有 被选中的元素 （checked）</h3>
+    <p>公式:<mark>:checked</mark></p>
+    <p>
+        :checked {
+        transform: scale(1.5);
+        }
+    </p>
+
+    <label for="boy">男:</label>
+    <input id="boy" type="radio" name="sex" checked="checked">
+
+    <label for="girl">女:</label>
+    <input id="girl" type="radio" name="sex">
+
+</section>
+
+<hr>
+
+<section>
+
+    <h3>选择 除去哪一个元素的 所有元素</h3>
+    <p>公式:<mark>:not(选择器)</mark></p>
+    <p>
+        :not(.ttt) {
+        color: chocolate;
+        }
+    </p>
+
+
+    <p>11111</p>
+    <p>1232312</p>
+    <p class="ttt">ertyu</p>
+    <p>43wedsb</p>
+    <p>#$%^sdfds</p>
+
+</section>
+
+<hr>
+
+<section>
+
+    <h3>选择选中部分</h3>
+    <p>公式:<mark>::selection</mark></p>
+    <p>
+        ::selection {
+        color: chartreuse;
+        }
+    </p>
+
+</section>
+
+<hr>
+
+<section>
+
+    <h3>选择 区间 范围内 或超出 区间范围部分</h3>
+    <p>公式:
+        <mark>:out-of-range </mark>
+        <mark>:in-range </mark>
+    </p>
+    <p>
+        :out-of-range {
+        color: red;
+        }
+        <br>
+        :in-range {
+        color: forestgreen;
+        }
+    </p>
+
+    <input type="number" min="0" max="10" value="50">
+</section>
+
+<hr>
+
+
+<section>
+
+    <h3>选择 只读 或者 可读写 的元素</h3>
+    <p>公式:
+        <mark>:read-only</mark>
+        <mark>:read-write</mark>
+    </p>
+    <p>
+        :read-only {
+        border: 1px solid rgba(255, 0, 76, 0.5);
+        }
+        <br>
+        :read-write {
+        border: 2px solid rgb(255, 119, 66);
+        }
+    </p>
+
+    <input type="text" readonly="readonly" value="1234567">
+    <input type="text" value="wertyui">
+</section>
+
+<hr>
+
+<section>
+
+    <h3>选择必须输入 和选择有效内容</h3>
+    <p>公式:
+        <mark>:optional</mark>
+        <mark>:required</mark>
+        <mark>:valid</mark>
+        <mark>:invalid</mark>
+    </p>
+    <p>
+        :optional {
+        border: 1px solid #ff0004;
+        }
+        <br>
+        :required {
+        border: 1px solid #0575f0;
+        }
+        <br>
+        :valid {
+        color: forestgreen;
+        }
+        <br>
+        :invalid{
+        color: red;
+        }
+    </p>
+
+    <input type="text" required="required">
+    <input type="email">
+
+</section>
+
+</body>
+</html>

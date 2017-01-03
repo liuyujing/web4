@@ -1,0 +1,103 @@
+CSS3
+边框
+	border-image-source 用在边框的图片的路径  值：URL 或者none 如果设置的是none 就显示 默认的border 
+
+	border-image-slice 图片边框向内偏移    
+	border-image-width图片边框的宽度    
+	border-image-outset边框图像区域超出边框的量    
+	border-image-repeat 图像边框是否应平铺(repeat)、铺满(round)或拉伸(stretch)
+	border-radius 指定边框半径
+背景
+	background-clip	规定背景的绘制区域
+		content-box
+		border-box
+		padding-box
+	background-origin	规定背景图片的定位区域
+	background-size	规定背景图片的尺寸
+渐变
+	线性渐变（Linear Gradients）
+	径向渐变（Radial Gradients）
+	公式：background: linear-gradient(direction/angle, color-stop1, color-stop2, ...);
+	径向渐变
+	公式： background: radial-gradient(scale, shape size, start-color, ..., last-color);
+字体效果
+	text-shadow 文本阴影
+	box-shadow 盒子阴影
+动画
+多列
+	column-count 列数
+	column-gap 列与列间的间隙
+	column-fill 如何填充列
+		balance 长短平衡
+		auto自动
+	column-rule-style 列与列间的边框样式 dotted点 solid实 double双 dashed虚
+	column-rule-width 两列的边框厚度
+	column-rule-color 两列的边框颜色
+	column-rule 简写
+	column-span 横跨的列数
+	column-width 列的宽度
+弹性盒
+	简介：
+		1.Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。任何一个容器都可以指定为Flex布局
+		2.弹性盒子由弹性容器(Flex container)和弹性子元素(Flex item)组成。
+	设置
+		1.弹性容器通过设置 display 属性的值为 flex 或 inline-flex将其定义为弹性容器
+		2.flex-direction 调整子元素的排列方式
+			row：横向
+			row-reverse：横向翻转
+			column：纵向排列。
+			column-reverse：纵向反转。
+		3.justify-content内容对齐方式
+			flex-start：以起始点对其
+			flex-end：已结束点对其
+			center：一中心点对其
+			space-between：起始点和结束点对其 中间平均分
+			space-around：起始点和结束点 是间距的一半 其他平均分
+			
+		4.align-items 设置或检索弹性盒子元素在侧轴（纵轴）方向上的对齐方式
+			flex-start：
+			flex-end：
+			center：
+			baseline：
+			stretch：拉伸
+		5.flex-wrap 属性用于指定弹性盒子的子元素换行方式
+			nowrap - 默认， 弹性容器为单行。该情况下弹性子项可能会溢出容器。
+			wrap - 弹性容器为多行。该情况下弹性子项溢出的部分会被放置到新行，子项内部会发生断行
+			wrap-reverse -反转 wrap 排列。
+		6.align-content 属性用于修改 flex-wrap 属性的行为。类似于 align-items, 但它不是设置弹性子元素的对齐，而是设置各个行的对齐
+			 flex-start
+			 flex-end 
+			 center 
+			 space-between
+			 space-around 
+			 stretch
+		7.order：弹性容器内弹性子元素的顺序 用整数值来定义排列顺序，数值小的排在前面。可以为负值
+		8.align-self设置弹性元素自身在侧轴（纵轴）方向上的对齐方式
+			flex-start
+			 flex-end 
+			 center  
+			 stretch
+		9.flex用于指定弹性子元素如何分配空间 值为数字比例
+媒体查询
+	帮咱们 查询媒体
+	适配 PC 和 移动端 设备
+
+	<meta name="viewport" content="width=device-width;initial-scale=1.0;minimum-scale=1.0;maximum-scale=1.0;user-scalable=no">
+
+	@media (min-width: 1200px) {}
+
+
+作业：
+	显示一篇文章
+	1.标题永远是 独占一行
+	2.里面的内容 
+		屏幕小于640 分两列 
+		大于640 小于960 分五列
+		超过960 分9列
+	3.不同屏幕的宽区分分割线的颜色 
+		屏幕越宽 分割线的宽度越宽
+	4.在不同屏幕的宽度下  显示 不同的 背景图片
+
+
+商城接口：http://datainfo.duapp.com/shopdata/datainfo.html
+

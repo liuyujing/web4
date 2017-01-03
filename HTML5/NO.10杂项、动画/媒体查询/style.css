@@ -1,0 +1,33 @@
+
+
+section {
+    width: 100%;
+    min-height: 400px;
+}
+
+/*640 < width < 960 ->*/
+/*width > 640 -> 宽度 最大 不能超过 640*/
+/*960 < width -> 宽度 最小是  960*/
+
+
+/*当浏览器的宽度 最小是640 最大是960的时候 设置这个条件下的样式*/
+@media (min-width: 640px) and (max-width: 960px){
+
+    section {
+        background-color: #103e6c;
+    }
+}
+
+@media (max-width: 640px) {
+    section {
+        background-color: #0575f0;
+    }
+}
+
+@media (min-width: 960px) {
+    section {
+        background-color: #9835ff;
+    }
+}
+/*最大640  最小960*/
+

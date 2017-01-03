@@ -1,0 +1,170 @@
+
+.border p:first-child{
+    width: 100px;
+    height: 100px;
+    background-color: #0575f0;
+    /*border-radius: 35px 20px 15px 30px;*/
+
+    border: 10px solid #cccccc;
+    border-image-source: url("border.png");
+    /*通过指定 图片上 右 下 左  向图片内部偏移的位置，  通过这个位置去切割*/
+    border-image-slice: 27 27 27 27;
+    /*border-image-width: 50px;*/
+    border-image-outset: 10px;
+    border-image-repeat: round;
+}
+
+.background {
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    background-image: url("border.png");
+    background-clip: content-box;
+    background-origin: border-box;
+    background-size: 200px 200px;
+}
+
+.gradients {
+    color: white;
+    width: 200px;
+    height: 300px;
+    /*background: linear-gradient(red,blue);*/
+    /*background: linear-gradient(30deg,red,blue);*/
+    /*background: linear-gradient(to right,red,blue,#29ff55,#ff7742);*/
+    
+    /*background: radial-gradient(red,blue);*/
+    /*background: radial-gradient(circle,red,blue);*/
+    background: radial-gradient(at 30px 100px,red,blue);
+}
+
+.textEffect p {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    line-height: 300px;
+    background-color: #378bff;
+    font-size: 50px;
+    text-shadow: 5px 5px #cccccc;
+    box-shadow: 10px -10px #cccccc;
+}
+
+
+.animation {
+    position: relative;
+}
+
+.animation p {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 0;
+    top:0;
+    background-color: #ff3d46;
+}
+
+/*.animation p:hover {*/
+    /*!*animation-name: changeColor;*!*/
+    /*!*animation-name: changeColor2;*!*/
+    /*animation-name: move;*/
+    /*animation-duration: 3s;*/
+/*}*/
+
+.startMove {
+    animation-name: move;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-timing-function: cubic-bezier(0.5,1,0.8,0.6);
+    animation-iteration-count: 10;
+    animation-direction: alternate;
+}
+
+@keyframes changeColor {
+
+    from {
+        background-color: #ff3d46;
+    }
+
+    to {
+        background-color: #cccccc;
+    }
+
+}
+
+/*帧动画*/
+@keyframes changeColor2 {
+    0% {
+        background-color: #ff3d46;
+    }
+    30% {
+        background-color: #ff7742;
+    }
+    70% {
+        background-color: #9749ff;
+    }
+    90%{
+        background-color: #103e6c;
+    }
+}
+
+@keyframes move {
+
+    0% {
+        left: 20px;
+        transform: rotate(0deg) scale(1);
+    }
+    10% {
+        left: 40px;
+        border-radius: 10px;
+        transform: rotate(10deg) scale(1.1);
+        /*transform: scale(1.1);*/
+    }
+    30% {
+        /*left: 60px;*/
+        border-radius: 20px;
+        transform: rotate(60deg);
+        /*transform: scale(0.8);*/
+    }
+    60% {
+        /*left: 150px;*/
+        border-radius: 40px;
+        transform: rotate(80deg);
+        /*transform: scale(0.7);*/
+    }
+    90% {
+        left: 250px;
+        border-radius: 50px;
+        transform: rotate(180deg);
+        /*transform: scale(0.6);*/
+    }
+
+    100% {
+        left: 350px;
+        border-radius: 50px;
+        transform: rotate(360deg);
+    }
+
+}
+
+.coloumn {
+    min-height: 40px;
+    width: 500px;
+    border: 1px solid #cccccc;
+
+    -webkit-column-count: 3;
+    column-count: 3;
+    column-width: 100px;
+    /*column-rule-style: solid;*/
+    /*column-rule-color: #cccccc;*/
+    /*column-rule-width: 1px;*/
+    column-gap:5px;
+    column-rule: 1px solid #cccccc;
+    column-fill:balance;
+}
+
+.coloumn h3 {
+    -webkit-column-span: 3;
+    column-span: all;
+}
+
+

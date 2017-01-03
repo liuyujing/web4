@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h3>普通布局</h3>
+<section class="container1">
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</section>
+
+<hr>
+
+<h3>伸缩布局</h3>
+<p>
+    弹性盒的组成：
+    <br>
+    1.弹性盒的容器
+    <br>
+    2.弹性盒中的元素
+    <br>
+    如果需要使用 弹性盒布局 需要在 弹性盒容器中 添加
+    <br>
+    <mark>display: flex;</mark>
+    <br>
+
+    如果想去设置 弹性盒元素 <mark>水平方向</mark>的排布方式 可使用
+    <br>
+    <mark>justify-content:</mark>
+    <br>
+    flex-start：以起始点对其
+    flex-end：已结束点对其
+    center：一中心点对其
+    space-between：起始点和结束点对其 中间平均分
+    space-around：起始点和结束点 是间距的一半 其他平均分
+    <br>
+
+    如果想设置 弹性盒元素 <mark>垂直方向</mark> 的排布 可以使用
+    <br>
+    <mark>align-items:</mark>
+    <br>
+    flex-start|flex-end|center|baseline:基于基线|stretch:拉伸
+    <br>
+
+    如果想 设置 弹性盒中元素 整体的排布方式 可以使用
+    <br>
+    <mark>flex-direction:</mark>
+    <br>
+    row：横向
+    row-reverse：横向翻转
+    column：纵向排列。
+    column-reverse：纵向反转
+</p>
+
+
+<section class="container2">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</section>
+
+<hr>
+
+
+<p>
+    <mark>单独</mark>设置 某一个 弹性盒元素 垂直方向的 排布方式
+    <br>
+    <mark>align-self:</mark>
+    <br>
+    flex-start
+    flex-end
+    center
+    stretch
+</p>
+<section class="container3">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</section>
+
+<hr>
+
+<p>
+    单独 分配弹性盒元素 所占的比例
+    <br>
+    <mark>flex:</mark>
+    数字
+</p>
+<section class="container4">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</section>
+
+<hr>
+
+
+<p>
+    设置 弹性盒元素的换行
+    <br>
+    <mark>flex-wrap:</mark>
+    <br>
+    nowrap - 默认， 弹性容器为单行。该情况下弹性子项可能会溢出容器。
+    wrap - 弹性容器为多行。该情况下弹性子项溢出的部分会被放置到新行，子项内部会发生断行
+    wrap-reverse -反转 wrap 排列
+</p>
+<section class="container5">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+</section>
+
+<hr>
+
+<p>
+    调整弹性盒元素的顺序
+    <br>
+    <mark>order:</mark>
+    <br>
+    值是数字
+</p>
+<section class="container6">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</section>
+
+
+<script src="jquery-3.1.1.js"></script>
+<script>
+    $.get("http://datainfo.duapp.com/shopdata/getclass.php").done(function (data) {
+        console.log($.toJSON(data));
+    });
+</script>
+</body>
+</html>

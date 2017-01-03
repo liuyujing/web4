@@ -1,0 +1,44 @@
+选择某个元素之后的每一个元素
+	Element~Element
+属性选择器
+	Element[att] 选择所有带有att元素
+	Element[att=value] 选择所有属性值为value的元素
+	Element[att~=value] 选择属性包含单词value的所有元素
+	Element[att|=value] 选择属性的值是value或者以value开始并立即跟上一个“-”字符，也就是“value-”的所有元素
+	Element[att*=value] 选择每一个属性值包含子字符串value的元素
+	Element[att^=value] 选择每一个属性值以什么开头的元素
+	Element[att$=value] 选择每一个属性值以什么结尾的元素
+伪类选择器
+	Element:only-of-type 选择父元素中 只有一个 这种类型的元素
+	Element:first-of-type 选择每个元素是其父级的第一个元素
+	Element:last-of-type 选择每个元素是其父级的最后一个元素
+	:nth-of-type(n) 选择某个父元素 父选择器的第几个元素 （不是下标）
+	:nth-last-of-type(n) 选择从最后面子元素开始 某个元素是其父级的第二个元素
+
+	Element:only-child 选择某个元素是其父级的唯一子元素
+	Element:nth-child(n) 从前面数 哪个位置的子元素
+	Element:nth-last-child(n) 从后面数最后哪个位置的子元素
+
+Element:empty 任何没有 子集的元素 也包含文本节点
+:root 找到文档的根元素
+:target 用于当前活动的target元素的样式 定位到的那个元素
+:enabled 已启用的  元素
+:disabled 已禁用的  元素
+:checked 选择每个选中的元素 仅适用于单选按钮或复选框
+:not(selector) 选择不是某个选择器的元素
+
+::selection 被用户选中的部分
+
+:out-of-range 选择超过 这个区间范围的部分
+
+:in-range 选择范围之内的部分
+
+:read-write 用于匹配可读及可写的元素
+:read-only 用于匹配设置 "readonly"（只读） 属性的元素
+
+:optional 用于匹配可选的输入元素
+:required 用于匹配设置了 "required" 属性的元素
+
+:valid 选择合法的值
+:invalid 用于匹配输入值为非法的元素
+
