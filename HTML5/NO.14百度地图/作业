@@ -1,0 +1,8 @@
+
+作业：
+Marker
+	openInfoWindow(infoWnd: InfoWindow)
+	closeInfoWindow()
+	getTitle()
+	设置覆盖物可拖拽
+	设置覆盖物掉落的动画效果

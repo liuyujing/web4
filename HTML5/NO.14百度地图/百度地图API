@@ -1,0 +1,193 @@
+百度地图API http://developer.baidu.com/
+	基础地图
+		构造方法 Map（地图容器的id，。。。）
+			创建Map实例 同时设置地图允许的最小/大级别{minZoom:4,maxZoom:8}
+			构造底图时，关闭底图可点功能 var map = new BMap.Map("allmap", {enableMapClick:false});
+		地图对象的操作方法
+			设置中心 和 缩放比例 centerAndZoom（）✭✭✭✭✭
+				center
+					经纬度：Point（）
+					城市名：字符串
+				Zoom：数字
+			移动地图 panTo（Point（））
+				Point:关于位置的类
+			缩放地图 setZoom(14); 
+			启用滚轮放大缩小 map.enableScrollWheelZoom(); 
+			拖拽地图
+				enableDragging(); 可以拖拽
+				disableDragging(); 禁止拖拽
+			固定地图显示的范围
+				需要导入另一个文件http://api.map.baidu.com/library/AreaRestriction/1.2/src/AreaRestriction_min.js
+				设置：BMapLib.AreaRestriction.setBounds(map, Bounds对象);
+					Bounds（经纬度的区域）
+					new BMap.Bounds(new BMap.Point(116.027143, 39.772348),new BMap.Point(116.832025, 40.126349));
+			获得可视区域 getBounds（）得到可视区域对象
+				getSouthWest();   //可视区域左下角 经纬度
+				getNorthEast();   //可视区域右上角 经纬度
+			获取两点之间的距离
+				获取地图上的经纬度
+					给地图添加点击事件 获取点击事件中的point
+				getDistance(两个位置)
+					toFixed(数字)精确到小数点的位置
+	地图控件
+		创建 new 控件
+			比例尺 ScaleControl({anchor: 方向})
+				ControlAnchor
+					BMAP_ANCHOR_TOP_LEFT 控件将定位到地图的左上角
+					BMAP_ANCHOR_TOP_RIGHT
+					BMAP_ANCHOR_BOTTOM_LEFT
+					BMAP_ANCHOR_BOTTOM_RIGHT
+			缩放平移控件:NavigationControl()
+				anchor: 
+					同上
+				type: 
+					BMAP_NAVIGATION_CONTROL_LARGE 标准的平移缩放控件(包括平移、缩放按钮和滑块)。
+					BMAP_NAVIGATION_CONTROL_SMALL 仅包含平移和缩放按钮。
+					BMAP_NAVIGATION_CONTROL_PAN 仅包含平移按钮。
+					BMAP_NAVIGATION_CONTROL_ZOOM 仅包含缩放按钮。
+			地图类型：MapTypeControl({mapTypes/type: [BMAP_NORMAL_MAP,BMAP_HYBRID_MAP],anchor:...})
+				mapTypes:地图类型的数组
+				type:地图类型
+					BMAP_NORMAL_MAP 此地图类型展示普通街道视图。
+					BMAP_PERSPECTIVE_MAP 此地图类型展示透视图像视图。
+					BMAP_SATELLITE_MAP
+					此地图类型展示卫星视图。(自 1.2 新增)
+					BMAP_HYBRID_MAP
+					此地图类型展示卫星和路网的混合视图。(自 1.2 新增)
+			缩略图控件：OverviewMapControl
+				isOpen Boolean 缩略地图添加到地图后的开合状态，默认为关闭。
+				anchor
+				changeView() 切换缩略地图控件的开合状态
+			定位控件 GeolocationControl
+				enableGeolocation：boolean 启用显示定位
+				anchor
+				type
+				可添加响应事件
+					locationSuccess
+					locationError
+			版权控件 CopyrightControl
+				addCopyright(copyright:Copyright) 添加版权信息。
+				removeCopyright(id) 移除版权信息。
+				getCopyright(id) 返回单个版权信息。
+				getCopyrightCollection() 返回版权信息列表。
+			城市列表控件 CityListControl
+			自定义控件：需要继承Control类
+		添加 map.addControl(控件对象)
+		删除 removeControl(控件对象)
+	Marker
+		创建：Marker（point）
+			可选参数
+				offset Size 标注的位置偏移值。
+				icon Icon 标注所用的图标对象。
+				enableMassClear Boolean 是否在调用 map.clearOverlays 清除此覆盖物，默认为 true。
+				enableDragging Boolean 是否启用拖拽，默认为 false。
+				title鼠标移到 marker 上的显示内容。
+				shadow 阴影图标（图片）
+				raiseOnDrag Boolean 拖拽标注时，标注是否开启离开地图表面效果。默认为 false。
+				enableClicking Boolean 是否响应点击事件。默认为 true。
+		添加：map.addOverlay(marker)
+		添加信息窗口 InfoWindow
+		方法
+			设置动画marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+				BMAP_ANIMATION_DROP
+				BMAP_ANIMATION_BOUNCE
+			setIcon(icon:Icon)设置图标
+			setPosition(position:Point) 设置地理坐标
+			setOffset(offset:Size) 设置标注的偏移值。
+			setTitle(title:String) 设置标注的标题，当鼠标移至标注上时显示此标题
+			setTop(isTop:Boolean) 将标注置于其他标注之上。默认情况下，纬度较低的标注 会覆盖在纬度较高的标注之上，从而形成一种立体效果。 通过此方法可使某个标注覆盖在其他所有标注之上。注意: 如果在多个标注对象上调用此方法，则这些标注依旧按照 纬度产生默认的覆盖效果。
+			enableDragging() 开启标注拖拽功能。
+			disableDragging() 关闭标注拖拽功能。
+			addEventListener(event:String, handler:Function) 添加事件监听函数
+				常用的事件
+				click
+				remove
+				infowindowclose
+				infowindowopen
+				dragstart
+				dragging
+				dragend
+				rightclick
+			removeEventListener(event:String, handler:Function) 移除
+	定位
+		浏览器定位 Geolocation
+			构造函数 Geolocation()
+			开始定位 getCurrentPosition(回调函数)
+				Eh
+					accuracy 精准度
+					address 地理编码的地址
+						city 城市名
+						city_code 城市代码
+						district 去域名
+						province 省、直辖市名
+						street 街道名
+						street_number 街道号
+					altitude 海拔
+					altitudeAccuracy 海拔的精准度
+					heading 航向
+					latitude 纬度
+					longitude 经度
+					point 包含经纬度的对象
+						latitude 纬度
+						longitude 经度
+						equals(另外一个位置) 判断两个坐标是否相同
+					speed 速度
+					timestamp 时间戳
+			获取状态 getStatus()
+				BMAP_STATUS_SUCCESS	检索成功。对应数值“0”。
+				//BMAP_STATUS_CITY_LIST 城市列表。对应数值“1”。
+				//BMAP_STATUS_UNKNOWN_LOCATION	位置结果未知。对应数值“2”。
+				//BMAP_STATUS_UNKNOWN_ROUTE	导航结果未知。对应数值“3”。
+				//BMAP_STATUS_INVALID_KEY	非法密钥。对应数值“4”。
+				//BMAP_STATUS_INVALID_REQUEST	非法请求。对应数值“5”。
+				//BMAP_STATUS_PERMISSION_DENIED	没有权限。对应数值“6”。(自 1.1 新增)
+				//BMAP_STATUS_SERVICE_UNAVAILABLE	服务不可用。对应数值“7”。(自 1.1 新增)
+				//BMAP_STATUS_TIMEOUT	超时。对应数值“8”。(自 1.1 新增)
+		IP定位 LocalCity
+			开始定位 get(回调函数)
+				Object 
+					center
+						lat
+						lng
+					level: 
+					name: 
+					code:
+		城市定位
+			map.centerAndZoom(city,11); 
+	地理编解码Geocoder ✭✭✭✭✭
+		地理编码getPoint
+		地理解码getLocation
+	检索LocalSearch
+		LocalSearch(location:Map|Point|String[, opts:LocalSearchOptions]) （RenderOptions）
+		创建一个搜索类实例，其中location 表示检索区域，其类 型可为地图实例、坐标点或城市名称的字符串。当参数为 地图实例时，检索位置由当前地图中心点确定，且搜索结 果的标注将自动加载到地图上，并支持调整地图视野层 级;当参数为坐标时，检索位置由该点所在位置确定;当 参数为城市名称时，检索会在该城市内进行。
+		search("景点");
+		searchInBounds("银行", bs)
+		searchNearby()
+		结果面板 renderOptions: {map: map, panel: "r-result"}
+		获得检索完成的结果onSearchComplete：function
+			wr:搜索到的结果数组
+				具体结果详情
+	公交检索TransitRoute
+		TransitPolicy
+			BMAP_TRANSIT_POLICY_LEAST_TIME 最少时间。
+			BMAP_TRANSIT_POLICY_LEAST_TRANSFER 最少换乘。
+			BMAP_TRANSIT_POLICY_LEAST_WALKING 最少步行。
+			BMAP_TRANSIT_POLICY_AVOID_SUBWAYS 不乘地铁。
+	路线规划
+		驾车路线规划 DrivingRoute
+		步行规划 WalkingRoute
+	全景图Panorama
+
+
+作业：移动版地图
+	获取用户的位置 地图的中心是用户的位置
+
+	点击地图上的位置  计算 用户与点击位置的距离  同时添加marker 计算完成之后  清除上面的marker
+
+	点击两点  选取路线位置  按用户选择方案  去导航
+	点击两点  选取公交路线  按用户选择方案  去导航
+	
+	输入查询内容  查询指定内容所在位置
+	拖动地图后   3秒后自动返回用户所在位置
+
+
