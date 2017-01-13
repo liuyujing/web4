@@ -1,0 +1,209 @@
+//@size: 50px;
+//@color: red;
+//
+//@height: @size * 10;
+
+//div {
+  //font-size: @size;
+  //background-color: @color;
+  //height: @height;
+//}
+
+//@width:100px;
+//@height: @width;
+//@radius: @width / 2;
+
+//.box {
+//  width: @width;
+//  height: @height;
+//  border-radius: @radius;
+//  border: 2px solid #173050;
+//}
+//
+//.message {
+//  .box;
+//}
+
+.circle(@width:100px,@border-width:1px,@border-color:#205680) {
+  width: @width;
+  height: @width;
+  border-radius: @width / 2;
+  border: @border-width solid @border-color;
+}
+
+.box {
+  .circle();
+}
+
+.message {
+  .circle(200px,3px, #ff7f0d);
+}
+
+.border(@width,@type,@color) {
+    border: @arguments;
+}
+
+section .color-function:first-child {
+  width: 200px;
+  height: 200px;
+  background-color: lighten(#ff7f0d,10%);
+}
+
+section .color-function:nth-child(2) {
+  width: 200px;
+  height: 200px;
+  background-color: saturate(#ff7f0d,10%);
+}
+
+section .color-function:nth-child(3) {
+  width: 200px;
+  height: 200px;
+  background-color: darken(#ff7f0d,10%);
+}
+section .color-function:nth-child(4) {
+  width: 200px;
+  height: 200px;
+  background-color: desaturate(#ff7f0d,10%);
+}
+
+section .color-function:nth-child(5) {
+  width: 200px;
+  height: 200px;
+  background-color: fadein(#ff7f0d,10%);
+}
+
+section .color-function:nth-child(6) {
+  width: 200px;
+  height: 200px;
+  background-color: fadeout(#ff7f0d,10%);
+}
+
+section .color-function:nth-child(7) {
+  width: 200px;
+  height: 200px;
+  background-color: fade(#ff7f0d,50%);
+}
+
+section .color-function:nth-child(8) {
+  width: 200px;
+  height: 200px;
+  background-color: spin(#ff7f0d,10);
+}
+
+section .color-function:nth-child(9) {
+  width: 200px;
+  height: 200px;
+  background-color: spin(#ff7f0d,-10);
+}
+
+section .color-function:last-child {
+  width: 200px;
+  height: 200px;
+  background-color: mix(#ff7f0d,red);
+}
+
+//.show-color(@width) when (@width = 100px){
+//  background-color: #ff3783;
+//  height: 200px;
+//}
+
+//.when-show {
+  //.show-color(100px);
+//}
+
+
+//.show-color(@width,@color) when (@width >= 100px) , (@width <= 500px){
+//  width: @width;
+//  background-color: @color;
+//}
+//
+//.show-color(@width,@color) when (@width >= 100px) and (@width <= 500px){
+//  width: @width;
+//  background-color: @color;
+//}
+
+.show-color(@width,@color) when not (@width >= 100px){
+  width: @width;
+  background-color: @color;
+}
+
+@height:10px;
+
+.when-show {
+  @height:500px;
+  height: @height;
+  .show-color(80px,red);
+}
+
+
+//.vvv {
+//  @space:30px;
+//}
+//
+//.aaa {
+//  //找不到@space
+//  //变量的作用域
+//  padding-left: @space;
+//}
+
+.background-image(@name) {
+  @url:"@{name}.png";
+  background-image: url(@url);
+  background-size:100px 100px;
+  background-repeat: no-repeat;
+  height: 100px;
+}
+
+.image {
+  .background-image("11");
+}
+
+@message: "hello";
+
+@newMessage:`window.parseFloat("12334")+""`;
+
+.image:before {
+  content: @newMessage;
+}
+
+.show-bgcolor(@color) when (iscolor(@color) = true){
+  background-color: @color;
+  color: lighten(@color,50%);
+}
+
+nav {
+  ul {
+    list-style: none;
+    li {
+      a {
+        text-decoration: none;
+        width: 100px;
+        height: 44px;
+        display: block;
+      }
+      a:hover {
+        .show-bgcolor(#205680);
+      }
+    }
+  }
+}
+
+#messaeg-content {
+  .target {
+    text-decoration: none;
+    width: 100px;
+    height: 44px;
+    display: block;
+  }
+  .target:hover {
+    .show-bgcolor(#205680);
+  }
+}
+
+
+.target-ele {
+    #messaeg-content > .target;
+    #messaeg-content > .target:hover{
+      .show-bgcolor(#205680);
+    }
+}
