@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.js"></script>
+
+    <style>
+        .test {
+            width: 300px;
+            height: 200px;
+        }
+
+        .scroll-content,.test-contener {
+            height:200px;
+            overflow:auto;
+            position: relative;
+        }
+        .container{
+            background-color: #ff394c;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="carousel slide" id="carousel-content">
+
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="1.png" alt="" class="img-responsive">
+            </div>
+            <div class="item">
+                <img src="2.png" alt="" class="img-responsive">
+            </div>
+            <div class="item">
+                <img src="3.png" alt="" class="img-responsive">
+            </div>
+            <div class="item">
+                <img src="4.png" alt="" class="img-responsive">
+            </div>
+        </div>
+
+        <a class="carousel-control left" href="#carousel-content" data-slide="prev">上一页</a>
+        <a class="carousel-control right" href="#carousel-content" data-slide="next">下一页</a>
+
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-content" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-content" data-slide-to="1"></li>
+            <li data-target="#carousel-content" data-slide-to="2"></li>
+            <li data-target="#carousel-content" data-slide-to="3"></li>
+        </ol>
+    </div>
+</div>
+
+
+
+<div class="panel-group" id="show-super">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="#show-first" data-toggle="collapse" data-parent="#show-super">标题1</a>
+            </h4>
+        </div>
+        <div id="show-first" class="panel-collapse collapse in">
+            <div class="panel-body">标题1中的内容</div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="#show-two" data-toggle="collapse" data-parent="#show-super">标题2</a>
+            </h4>
+        </div>
+        <div id="show-two" class="panel-collapse collapse">
+            <div class="panel-body">标题2中的内容</div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="#show-third" data-toggle="collapse" data-parent="#show-super">标题3</a>
+            </h4>
+        </div>
+        <div id="show-third" class="panel-collapse collapse">
+            <div class="panel-body">标题3中的内容</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="alert alert-warning">警告框</div>
+
+<button class="btn btn-default popover-button" data-toggle="popover" data-placement="bottom" data-title="标题" data-content="内容" data-container="body">弹出框</button>
+
+<button class="btn btn-default popover-button" data-toggle="popover" data-placement="right" data-title="标题" data-content="内容" data-container="body">弹出框</button>
+
+<p class="test"></p>
+
+<section class="container tip" data-toggle="tooltip" data-placement="top" title="提示的内容">内容</section>
+
+<button class="btn btn-default tip" data-toggle="tooltip" data-placement="right" title="右面提示">按钮</button>
+
+<ul class="nav nav-tabs" id="tabs">
+    <li class="active"><a href="">国内</a></li>
+    <li><a href="">国外</a></li>
+    <li><a href="">资讯</a></li>
+</ul>
+
+<!--<nav id="top-navbar" class="navbar navbar-fixed-top">-->
+    <!--<ul class="nav nav-pills">-->
+        <!--<li><a href="#inhouse">国内</a></li>-->
+        <!--<li><a href="#outhouse">国外</a></li>-->
+        <!--<li><a href="#message">资讯</a></li>-->
+    <!--</ul>-->
+<!--</nav>-->
+
+<!--<section class="test-contener" data-target="#top-navbar" data-spy="scroll">-->
+    <!--<p id="inhouse" class="test">国内111</p>-->
+    <!--<p class="test">国内222</p>-->
+    <!--<p id="outhouse" class="test">国外333</p>-->
+    <!--<p id="message" class="test">资讯444</p>-->
+    <!--<p class="test">资讯555</p>-->
+<!--</section>-->
+
+
+<!--把导航里面的锚点 和内容里面的 id相对应-->
+<section id="scroll" class="navbar">
+    <ul class="nav nav-pills">
+        <li><a href="#ww">首页</a></li>
+        <li><a href="#ee">新闻</a></li>
+        <li><a href="#qq">内容</a></li>
+        <li><a href="#rr">设置</a></li>
+    </ul>
+</section>
+
+<!--需要把滚动的容器 设置成相对定位的-->
+<div class="container scroll-content" data-spy="scroll" data-target="#scroll">
+    <p class="test" id="ww"></p>
+    <p class="test" id="ee"></p>
+    <p class="test" id="qq"></p>
+    <p class="test" id="rr"></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+    <li><a href="">首页</a></li>
+    <li><a href="">详情</a></li>
+    <li><a href="">内容</a></li>
+</ol>
+
+<ul class="pagination">
+    <li>
+        <a href="">&laquo;</a>
+    </li>
+    <li class="active">
+        <a href="">1</a>
+    </li>
+    <li>
+        <a href="">2</a>
+    </li>
+    <li>
+        <a href="">3</a>
+    </li>
+    <li>
+        <a href="">4</a>
+    </li>
+    <li>
+        <a href="">&raquo;</a>
+    </li>
+</ul>
+
+<section class="container">
+    <ul class="pager">
+        <li class="previous"><a href="">上一页</a></li>
+        <li class="next"><a href="">下一页</a></li>
+    </ul>
+</section>
+
+<span class="label label-info">标签</span>
+
+<button class="btn btn-default">按钮<span class="badge">1</span></button>
+
+<ul class="nav nav-justified">
+    <li><a href="">首页</a></li>
+    <li><a href="">发现</a></li>
+    <li><a href="">设置<span class="badge">1</span></a></li>
+</ul>
+
+<section class="container">
+    <section class="jumbotron">
+        <h1>巨幕</h1>
+        <p>不错。。。。。。。。。。</p>
+        <button class="btn">进入了解</button>
+    </section>
+</section>
+
+<section class="container">
+    <section class="page-header">
+        <h1>页头</h1>
+    </section>
+</section>
+
+<a href="" class="thumbnail">
+    <img src="icon.png" alt="" data-src="holder.js/100%x180">
+</a>
+
+<section class="container">
+    <section class="row">
+        <section class="col-md-3">
+            <a href="" class="thumbnail">
+                <img src="icon.png" alt="" data-src="holder.js/100%x180">
+            </a>
+        </section>
+        <section class="col-md-3">
+            <a href="" class="thumbnail">
+                <img src="icon.png" alt="" data-src="holder.js/100%x180">
+            </a>
+        </section>
+        <section class="col-md-3">
+            <a href="" class="thumbnail">
+                <img src="icon.png" alt="" data-src="holder.js/100%x180">
+            </a>
+        </section>
+        <section class="col-md-3">
+            <a href="" class="thumbnail">
+                <img src="icon.png" alt="" data-src="holder.js/100%x180">
+            </a>
+        </section>
+    </section>
+</section>
+
+<section class="container" id="goods-container"></section>
+
+<p class="alert alert-danger">
+    注意
+    <button class="close" data-dismiss="alert">关闭</button>
+</p>
+
+<section class="progress">
+    <section class="progress-bar progress-bar-striped active"; aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%; min-width:20px;">60%</section>
+</section>
+
+<section class="media">
+    <a class="media-left" href=""><img src="icon.png" alt=""></a>
+    <div class="media-body media-middle">
+        <h4 class="media-heading">兔斯基</h4>
+        <p class="media-object">很好啊 很棒啊</p>
+    </div>
+</section>
+
+<ul class="media-list">
+    <li class="media">
+        <a class="media-left" href=""><img src="icon.png" alt=""></a>
+        <div class="media-body media-middle">
+            <h4 class="media-heading">兔斯基</h4>
+            <p class="media-object">很好啊 很棒啊</p>
+        </div>
+    </li>
+    <li class="media">
+        <a class="media-left" href=""><img src="icon.png" alt=""></a>
+        <div class="media-body media-middle">
+            <h4 class="media-heading">兔斯基</h4>
+            <p class="media-object">很好啊 很棒啊</p>
+        </div>
+    </li>
+    <li class="media">
+        <a class="media-left" href=""><img src="icon.png" alt=""></a>
+        <div class="media-body media-middle">
+            <h4 class="media-heading">兔斯基</h4>
+            <p class="media-object">很好啊 很棒啊</p>
+        </div>
+    </li>
+    <li class="media">
+        <a class="media-left" href=""><img src="icon.png" alt=""></a>
+        <div class="media-body media-middle">
+            <h4 class="media-heading">兔斯基</h4>
+            <p class="media-object">很好啊 很棒啊</p>
+        </div>
+    </li>
+</ul>
+
+<ul class="list-group">
+    <li class="list-group-item">1111</li>
+    <li class="list-group-item">222</li>
+    <li class="list-group-item">3333</li>
+    <li class="list-group-item">444</li>
+</ul>
+
+<section class="container">
+    <section class="list-group">
+        <a href="" class="list-group-item">111</a>
+        <a href="" class="list-group-item">222</a>
+        <a href="" class="list-group-item">1131</a>
+        <a href="" class="list-group-item">111</a>
+        <a href="" class="list-group-item">222</a>
+        <a href="" class="list-group-item">1131</a>
+    </section>
+</section>
+
+<section class="container">
+    <section class="list-group">
+        <a href="" class="list-group-item media">
+            <img src="icon.png" alt="">
+            <div class="media-body media-middle">
+                <h4 class="media-heading">兔斯基</h4>
+                <p class="media-object">很好啊 很棒啊</p>
+            </div>
+        </a>
+        <a href="" class="list-group-item media">
+            <img src="icon.png" alt="">
+            <div class="media-body media-middle">
+                <h4 class="media-heading">兔斯基</h4>
+                <p class="media-object">很好啊 很棒啊</p>
+            </div>
+        </a>
+        <a href="" class="list-group-item media">
+            <img src="icon.png" alt="">
+            <div class="media-body media-middle">
+                <h4 class="media-heading">兔斯基</h4>
+                <p class="media-object">很好啊 很棒啊</p>
+            </div>
+        </a>
+        <a href="" class="list-group-item media">
+            <img src="icon.png" alt="">
+            <div class="media-body media-middle">
+                <h4 class="media-heading">兔斯基</h4>
+                <p class="media-object">很好啊 很棒啊</p>
+            </div>
+        </a>
+        <a href="" class="list-group-item media">
+            <img src="icon.png" alt="">
+            <div class="media-body media-middle">
+                <h4 class="media-heading">兔斯基</h4>
+                <p class="media-object">很好啊 很棒啊</p>
+            </div>
+        </a><a href="" class="list-group-item media">
+        <img src="icon.png" alt="">
+        <div class="media-body media-middle">
+            <h4 class="media-heading">兔斯基</h4>
+            <p class="media-object">很好啊 很棒啊</p>
+        </div>
+    </a>
+        <a href="" class="list-group-item list-group-item-info">
+            <div class="media">
+                <img src="icon.png" alt="" class="media-left">
+                <div class="media-body media-middle">
+                    <h4 class="media-heading">兔斯基</h4>
+                    <p class="media-object">很好啊 很棒啊</p>
+                </div>
+            </div>
+        </a>
+    </section>
+</section>
+
+
+<section class="panel panel-default">
+    <h4 class="panel-heading"></h4>
+    <section class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">相册</li>
+            <li class="list-group-item">收藏</li>
+            <li class="list-group-item">钱包</li>
+            <li class="list-group-item">卡包</li>
+        </ul>
+    </section>
+    <!--<h4 class="panel-footer">诶呀呀</h4>-->
+</section>
+
+<section class="panel panel-default">
+    <h4 class="panel-heading"></h4>
+    <section class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">表情</li>
+        </ul>
+    </section>
+</section>
+
+<section class="panel panel-default">
+    <h4 class="panel-heading"></h4>
+    <section class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">设置</li>
+        </ul>
+    </section>
+    <h4 class="panel-footer">
+        <button class="btn btn-default">退出</button>
+    </h4>
+</section>
+
+<section class="embed-responsive embed-responsive-16by9">
+    <iframe src="20170111103431引入插件.webm" class="embed-responsive-item"></iframe>
+</section>
+
+<button class="btn btn-default" data-toggle="modal" data-target="#show-content">打开</button>
+
+<div class="modal fade" id="show-content">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--data-dismiss 让某个内容的模块 消失-->
+                <button class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+            <div class="modal-body">
+                你好啊 我被弹出来了！
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

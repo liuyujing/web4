@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--width:可以看到的视口的宽度：device-width设备的宽度-->
+    <!--initial-scale 初始化时候的缩放比例-->
+    <!--maximum-scale=1：在移动端不可以进行缩放-->
+    <!--user-scalable=no：禁止用户缩放-->
+    <!--为了模拟原生的应用程序-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Title</title>
+
+    <!--<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">-->
+
+    <!--&lt;!&ndash; 可选的Bootstrap主题文件（一般不用引入） &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">-->
+
+    <!--&lt;!&ndash; jQuery文件。务必在bootstrap.min.js 之前引入 &ndash;&gt;-->
+    <!--<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>-->
+
+    <!--&lt;!&ndash; 最新的 Bootstrap 核心 JavaScript 文件 &ndash;&gt;-->
+    <!--<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>-->
+
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+    <style>
+        p {
+            border: 1px solid #ff3a3d;
+            height: 100px;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<section class="container">
+
+    <!--每一行 都包含12列-->
+    <!--<section class="row">-->
+        <!--<p class="col-xs-1"></p>-->
+        <!--<p class="col-xs-1"></p>-->
+        <!--<p class="col-xs-1"></p>-->
+        <!--<p class="col-xs-1"></p>-->
+        <!--<p class="col-xs-1"></p>-->
+        <!--<p class="col-xs-1"></p>-->
+        <!--<p class="col-xs-1"></p>-->
+        <!--<p class="col-xs-1"></p>-->
+        <!--<p class="col-xs-1"></p>-->
+        <!--<p class="col-xs-1"></p>-->
+        <!--<p class="col-xs-1"></p>-->
+        <!--<p class="col-xs-1"></p>-->
+    <!--</section>-->
+    <!---->
+    <!--<section>-->
+        <!--<p class="col-lg-1"></p>-->
+        <!--<p class="col-lg-1"></p>-->
+        <!--<p class="col-lg-1"></p>-->
+        <!--<p class="col-lg-1"></p>-->
+        <!--<p class="col-lg-1"></p>-->
+        <!--<p class="col-lg-1"></p>-->
+        <!--<p class="col-lg-1"></p>-->
+        <!--<p class="col-lg-1"></p>-->
+        <!--<p class="col-lg-1"></p>-->
+        <!--<p class="col-lg-1"></p>-->
+        <!--<p class="col-lg-1"></p>-->
+        <!--<p class="col-lg-1"></p>-->
+    <!--</section>-->
+
+
+    <section class="row">
+        <p class="col-xs-6 col-sm-4 col-md-2"></p>
+        <p class="col-xs-6 col-sm-4 col-md-2"></p>
+        <p class="col-xs-6 col-sm-4 col-md-2"></p>
+        <p class="col-xs-6 col-sm-4 col-md-2"></p>
+        <p class="col-xs-6 col-sm-4 col-md-2"></p>
+        <p class="col-xs-6 col-sm-4 col-md-2"></p>
+    </section>
+
+</section>
+
+
+<p><span class="glyphicon glyphicon-th"></span></p>
+
+<button class="btn btn-default">按钮</button>
+<a href="">12345</a>
+
+<section class="btn-group">
+    <button class="btn btn-default">前端</button>
+    <button class="btn btn-default">Java</button>
+    <button class="btn btn-default">移动端</button>
+</section>
+
+<section class="btn-toolbar">
+    <section class="btn-group">
+        <button class="btn btn-default">前端</button>
+        <button class="btn btn-default">Java</button>
+        <button class="btn btn-default">移动端</button>
+    </section>
+    <section class="btn-group">
+        <button class="btn btn-default">前端</button>
+        <button class="btn btn-default">Java</button>
+        <button class="btn btn-default">移动端</button>
+    </section>
+    <section class="btn-group">
+        <button class="btn btn-default">前端</button>
+        <button class="btn btn-default">Java</button>
+        <button class="btn btn-default">移动端</button>
+    </section>
+</section>
+
+
+<!--下拉列表-->
+<section class="dropdown">
+    <button class="btn btn-default" data-toggle="dropdown" id="dropdown">
+        分类<span class="caret"></span>
+    </button>
+
+    <ul class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdown">
+        <li class="dropdown-header">标题</li>
+        <li role="presentation"><a role="menuitem" href="">前端</a></li>
+        <li class="divider"></li>
+        <li role="presentation"><a role="menuitem" href="">后端</a></li>
+        <li class="divider"></li>
+        <li role="presentation" class="disabled"><a role="menuitem" href="">移动端</a></li>
+    </ul>
+
+    <ul class="dropdown-menu" role="menu">
+        <li>123456</li>
+        <li>123456</li>
+    </ul>
+
+</section>
+
+<section class="btn-group btn-group-vertical">
+    <button class="btn btn-danger">国内</button>
+    <button class="btn btn-default">国外</button>
+    <button class="btn btn-default">娱乐</button>
+    <section class="btn-group">
+        <button class="btn btn-default" data-toggle="dropdown" id="dropdown-in-group">娱乐<span class="caret"></span></button>
+        <ul class="dropdown-menu" aria-labelledby="dropdown-in-group">
+            <li><a href="">电视剧</a></li>
+            <li><a href="">电影</a></li>
+            <li><a href="">音乐</a></li>
+            <li><a href="">体育</a></li>
+        </ul>
+    </section>
+</section>
+
+<section class="btn-group btn-group-justified">
+    <section class="btn-group">
+        <button class="btn btn-default">国内</button>
+    </section>
+    <section class="btn-group">
+        <button class="btn btn-default">国外</button>
+    </section>
+    <section class="btn-group">
+        <button class="btn btn-default">娱乐</button>
+    </section>
+</section>
+
+<section class="btn-group dropup">
+    <button type="button" class="btn btn-danger">Action</button>
+    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+        </button>
+
+    <ul class="dropdown-menu" role="menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+    </ul>
+</section>
+
+<section class="input-group input-group-sm">
+    <span class="input-group-addon">用户名:</span>
+    <input type="text" class="form-control" placeholder="请输入用户名">
+</section>
+
+<ul class="nav nav-tabs nav-justified">
+    <li class="active"><a href="">国内</a></li>
+    <li><a href="">国外</a></li>
+    <li><a href="">地区</a></li>
+</ul>
+
+<ul class="nav nav-pills nav-stacked">
+    <li class="active"><a href="">国内</a></li>
+    <li><a href="">国外</a></li>
+    <li><a href="">地区</a></li>
+</ul>
+
+<ul class="nav nav-tabs nav-justified">
+    <li class="active dropdown">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown">国内<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="">电视</a></li>
+            <li><a href="">电影</a></li>
+        </ul>
+    </li>
+    <li><a href="">国外</a></li>
+    <li><a href="">地区</a></li>
+</ul>
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+<!--navbar-static-top-->
+<section class="navbar navbar-default navbar-fixed-top">
+    <section class="container">
+
+        <section class="navbar-header">
+            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#openList">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+        </section>
+
+        <!--折叠部分的内容-->
+        <section class="collapse navbar-collapse" id="openList">
+            <ul class="nav nav-justified">
+                <li><a href="">国内</a></li>
+                <li><a href="">国外</a></li>
+                <li><a href="">地区</a></li>
+            </ul>
+        </section>
+    </section>
+</section>
+
+
+<!--navbar-inverse-->
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <ul class="nav nav-pills nav-justified">
+        <li><a href="">首页</a></li>
+        <li><a href="">发现</a></li>
+        <li><a href="">设置</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>
