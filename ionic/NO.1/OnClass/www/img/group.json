@@ -1,0 +1,45 @@
+[
+  {
+    "groupName":"分组1",
+    "dataList":[
+      {
+        "icon":"icon ion-ionic",
+        "message":"ionic"
+      },
+      {
+        "icon":"icon ion-star",
+        "message":"收藏"
+      }
+    ]
+  },
+  {
+  "groupName":"分组2",
+  "dataList":[
+    {
+      "icon":"icon ion-heart",
+      "message":"喜欢"
+    },{
+      "icon":"icon ion-gear-a",
+      "message":"设置"
+    },{
+      "icon":"icon ion-location",
+      "message":"定位"
+    }
+  ]
+  },
+  {
+  "groupName":"分组3",
+  "dataList":[
+    {
+      "icon":"icon ion-share",
+      "message":"分享"
+    },{
+      "icon":"icon ion-key",
+      "message":"密码"
+    },{
+      "icon":"icon ion-camera",
+      "message":"相机"
+    }
+  ]
+}
+]

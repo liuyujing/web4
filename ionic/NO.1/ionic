@@ -1,3 +1,7 @@
+混合app:外面是原生的壳  里面用前端的技术实现
+原生app:纯使用原生技术 开发的应用程序
+webapp:就是一个网页 
+
 ionic
 	介绍
 		1.ionic是一个轻量的手机UI库，具有速度快，界面现代化、美观等特点。为了解决其他一些UI库在手机上运行缓慢的问题，它直接放弃了IOS6和Android4.1以下的版本支持，来获取更好的使用体验
@@ -7,16 +11,17 @@ ionic
 			3.ionic 完美的融合下一代移动框架，支持 Angularjs 的特性， MVC ，代码易维护。
 			4.ionic 提供了漂亮的设计，通过 SASS 构建应用程序，它提供了很多 UI 组件来帮助开发者开发强大的应用。
 			5.ionic 专注原生，让你看不出混合应用和原生的区别
-			6.ionic 提供了强大的命令行工具。
+			6.ionic Cordova(phoneGap)提供了强大的命令行工具。
 			7.ionic 性能优越，运行速度快。
 		3.官网地址
 			ionic 官方网站：http://ionicframework.com/
 			ionic 官方文档：http://ionicframework.com/docs/
 			Github 地址：https://github.com/driftyco/ionic
-			中文：http://www.ionic.wang/js_doc-index.html
+			中文：http://www.ionic.wang/js_doc-index.html 
+			GUI工具：http://lab.ionic.io/
 	安装使用：
 		1.安装ionic和cordova $ npm install -g ionic cordova
-		2.创建工程ionic start 工程名 也可使用界面化工具创建 http://lab.ionic.io/
+		2.创建工程ionic start 工程名 模板名  也可使用界面化工具创建 http://lab.ionic.io/
 			tabs 选项卡
 			sidemenu 侧边栏
 			blank 单个页面

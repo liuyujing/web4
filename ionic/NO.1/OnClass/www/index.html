@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+
+  <link rel="manifest" href="manifest.json">
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+  <script src="js/app.js"></script>
+</head>
+<body>
+
+<!--<div class="bar bar-header bar-dark"></div>-->
+
+<ion-header-bar class="bar bar-dark">
+  <button class="button button-clear ion-navicon-round"></button>
+  <h1 class="title">首页</h1>
+  <button class="button button-clear ion-android-add ion-plus"></button>
+</ion-header-bar>
+
+<!--<div class="bar bar-header item-input-inset">-->
+  <!--<label class="item-input-wrapper">-->
+    <!--<i class="icon ion-ios-search placeholder-icon"></i>-->
+    <!--<input type="search" placeholder="Search">-->
+  <!--</label>-->
+  <!--<button class="button button-clear button-dark">-->
+    <!--Cancel-->
+  <!--</button>-->
+<!--</div>-->
+
+<!--<ion-header-bar class="bar bar-subheader">-->
+  <!--<div class="button-bar bar-assertive" ng-init="list = ['川菜','豫菜','鲁菜']">-->
+    <!--<a href="#" class="button" ng-repeat="item in list" ng-bind="item"></a>-->
+  <!--</div>-->
+<!--</ion-header-bar>-->
+
+<!--<div class="content"></div>-->
+<!--<ion-content>-->
+
+  <!--<ion-list class="list" ng-init="contentList = ['不错','非常好','很好很不错的','很好很不错的wet','很好很不错的hfg','很好很不错的etw','不错342','非常好234','很好很不错的456','很好很不错的rty','很好很不错的vbc','很好很不错的3464','不错fjyt','非常好dfgs','很好很不错的tiytu','很好很不错的twe','很好很不错的r','很好很不错的ret']">-->
+    <!--&lt;!&ndash;<ion-item class="item" ng-repeat="object in contentList" ng-bind="object"></ion-item>&ndash;&gt;-->
+  <!--&lt;!&ndash;</ion-list>&ndash;&gt;-->
+    <!--<div class="item item-divider">分组</div>-->
+    <!--<a href="#" class="item" ng-repeat="object in contentList" ng-bind="object"></a>-->
+
+<!--</ion-content>-->
+
+<!--<ion-content>-->
+  <!--<div ng-controller="controller">-->
+    <!--<ion-list>-->
+      <!--<a href="#" class="item item-icon-left" ng-repeat="settingItem in settingList"><span ng-class="settingItem.icon"></span>{{settingItem.message}}</a>-->
+    <!--</ion-list>-->
+  <!--</div>-->
+
+  <!--<div ng-controller="settingController">-->
+
+    <!--<ion-list>-->
+      <!--<div ng-repeat="groupItem in settingList">-->
+
+        <!--<div class="item item-divider" ng-bind="groupItem.groupName"></div>-->
+
+        <!--<a href="#" class="item item-icon-left" ng-repeat="info in groupItem.dataList">-->
+          <!--<span ng-class="info.icon"></span>-->
+          <!--<span ng-bind="info.message"></span>-->
+        <!--</a>-->
+
+      <!--</div>-->
+    <!--</ion-list>-->
+
+  <!--</div>-->
+
+<!--</ion-content>-->
+
+
+<!--<ion-content>-->
+
+  <!--&lt;!&ndash;<ion-list>&ndash;&gt;-->
+    <!--&lt;!&ndash;<a href="#" class="item item-button-right">&ndash;&gt;-->
+      <!--&lt;!&ndash;vv&ndash;&gt;-->
+      <!--&lt;!&ndash;<button class="button button-clear button-dark">&ndash;&gt;-->
+        <!--&lt;!&ndash;<span class="icon ion-compose"></span>&ndash;&gt;-->
+      <!--&lt;!&ndash;</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;</a>&ndash;&gt;-->
+  <!--&lt;!&ndash;</ion-list>&ndash;&gt;-->
+
+
+  <!--&lt;!&ndash;<ion-list>&ndash;&gt;-->
+    <!--&lt;!&ndash;<ion-item class="item-avatar">&ndash;&gt;-->
+      <!--&lt;!&ndash;<img src="img/ben.png" alt="头像">&ndash;&gt;-->
+      <!--&lt;!&ndash;<h2>benDan</h2>&ndash;&gt;-->
+      <!--&lt;!&ndash;<p>ionic大牛</p>&ndash;&gt;-->
+    <!--&lt;!&ndash;</ion-item>&ndash;&gt;-->
+    <!--&lt;!&ndash;<ion-item class="item-avatar">&ndash;&gt;-->
+      <!--&lt;!&ndash;<img src="img/adam.jpg" alt="头像">&ndash;&gt;-->
+      <!--&lt;!&ndash;<h2>adam</h2>&ndash;&gt;-->
+      <!--&lt;!&ndash;<p>angular大牛</p>&ndash;&gt;-->
+    <!--&lt;!&ndash;</ion-item>&ndash;&gt;-->
+    <!--&lt;!&ndash;<ion-item class="item-avatar">&ndash;&gt;-->
+      <!--&lt;!&ndash;<img src="img/mike.png" alt="头像">&ndash;&gt;-->
+      <!--&lt;!&ndash;<h2>mike</h2>&ndash;&gt;-->
+      <!--&lt;!&ndash;<p>js大牛</p>&ndash;&gt;-->
+    <!--&lt;!&ndash;</ion-item>&ndash;&gt;-->
+  <!--&lt;!&ndash;</ion-list>&ndash;&gt;-->
+
+  <!--<ion-list>-->
+  <!--<ion-item class="item-thumbnail-left">-->
+    <!--<img src="img/ben.png" alt="头像">-->
+    <!--<h2>benDan</h2>-->
+    <!--<p>ionic大牛</p>-->
+  <!--</ion-item>-->
+  <!--<ion-item class="item-thumbnail-left">-->
+    <!--<img src="img/adam.jpg" alt="头像">-->
+    <!--<h2>adam</h2>-->
+    <!--<p>angular大牛</p>-->
+  <!--</ion-item>-->
+  <!--<ion-item class="item-thumbnail-left">-->
+    <!--<img src="img/mike.png" alt="头像">-->
+    <!--<h2>mike</h2>-->
+    <!--<p>js大牛</p>-->
+  <!--</ion-item>-->
+<!--</ion-list>-->
+
+
+  <!--<div class="list list-inset">-->
+    <!--<ion-item class="item">11111</ion-item>-->
+    <!--<ion-item class="item">11111</ion-item>-->
+    <!--<ion-item class="item">11111</ion-item>-->
+    <!--<ion-item class="item">11111</ion-item>-->
+  <!--</div>-->
+
+<!--</ion-content>-->
+
+
+<ion-content>
+
+  <label class="toggle">
+    <input type="checkbox">
+    <div class="track">
+      <div class="handle"></div>
+    </div>
+  </label>
+
+  <div class="list">
+    <ion-checkbox>1111</ion-checkbox>
+    <ion-checkbox>222</ion-checkbox>
+    <ion-checkbox>333</ion-checkbox>
+  </div>
+
+  <ion-list>
+    <ion-radio ng-model="choice" ng-value="'A'">Choose A</ion-radio>
+    <ion-radio ng-model="choice" ng-value="'B'">Choose B</ion-radio>
+  </ion-list>
+
+
+  <div class="item range">
+    <input type="range" name="volume">
+  </div>
+
+  <label class="item item-input item-select">
+    选择
+    <select>
+      <option>Blue</option>
+      <option selected>Green</option>
+      <option>Red</option>
+    </select>
+  </label>
+
+  <div class="card">
+    <div class="item">内容</div>
+  </div>
+
+  <div class="card">
+    <div class="item item-divider">头部</div>
+    <div class="item item-text-wrap">内容</div>
+    <div class="item item-divider">底部</div>
+  </div>
+
+  <div class="list card">
+    <div class="item item-avatar">
+      <img src="img/mike.png" alt="头像">
+      <h2>mike</h2>
+      <p>js大牛</p>
+    </div>
+    <div class="item item-avatar">
+      <img src="img/mike.png" alt="头像">
+      <h2>mike</h2>
+      <p>js大牛</p>
+    </div>
+    <div class="item item-avatar">
+      <img src="img/mike.png" alt="头像">
+      <h2>mike</h2>
+      <p>js大牛</p>
+    </div>
+  </div>
+
+  <div class="list card">
+    <div class="item item-avatar">
+      <img src="img/mike.png" alt="头像">
+      <h2>mike</h2>
+      <p>js大牛</p>
+    </div>
+
+    <div class="item item-image">
+      <img src="img/mike.png" alt="头像">
+    </div>
+
+  </div>
+
+  <div class="list card">
+    <div class="item item-avatar">
+      <img src="img/mike.png" alt="头像">
+      <h2>mike</h2>
+      <p>js大牛</p>
+    </div>
+
+    <div class="item item-body">
+      <img src="img/mike.png" alt="头像" class="full-image">
+      <p>This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+        the content is from a card-body consisting of an image and paragraph text. The footer
+        consists of tabs, icons aligned left, within the card-footer.</p>
+      <a href="#" class="subdued"><span class="ion-heart"></span>5</a>
+      <a href="#" class="subdued">
+        <span class="ion-chatbox-working"></span>10
+      </a>
+    </div>
+  </div>
+
+  <div class="list">
+
+    <label class="item item-input">
+      <input type="text" placeholder="用户名">
+    </label>
+
+    <label class="item item-input">
+      <input type="password" placeholder="密码">
+    </label>
+
+  </div>
+
+  <button class="button button-balanced button-full">登录</button>
+
+  <div class="list">
+    <label class="item item-input item-icon-left item-floating-label">
+      <span class="ion-android-contact input-label"></span>
+      <input type="text" placeholder="用户名">
+    </label>
+    <label class="item item-input item-floating-label">
+      <span class="input-label">密码</span>
+      <input type="password" placeholder="密码">
+    </label>
+  </div>
+
+  <div class="list">
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">用户名</span>
+      <input type="text">
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">密码</span>
+      <input type="password">
+    </label>
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">确认密码</span>
+      <input type="password">
+    </label>
+  </div>
+  <button class="button button-assertive button-full">注册</button>
+</ion-content>
+
+<ion-footer-bar class="bar bar-footer bar-dark">
+
+  <div class="tabs tabs-icon-top">
+    <a href="#" class="tab-item tab-item-active">
+      <span class="icon ion-home"></span>
+      <span>首页</span>
+    </a>
+    <a href="#" class="tab-item">
+      <span class="icon ion-ios-paw"></span>
+      <span>发现</span>
+    </a>
+    <a href="#" class="tab-item">
+      <span class="icon ion-social-chrome"></span>
+      <span>圈子</span>
+    </a>
+    <a href="#" class="tab-item">
+      <span class="icon ion-ios-cog"></span>
+      <span>设置</span>
+    </a>
+  </div>
+
+</ion-footer-bar>
+
+</body>
+</html>
