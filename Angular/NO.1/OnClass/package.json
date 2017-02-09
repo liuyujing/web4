@@ -1,0 +1,22 @@
+{
+  "data":[
+    {
+      "name":"小明",
+      "icon":"https://www.google.co.jp/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+      "sex":0
+    },{
+      "name":"小红",
+      "icon":"https://www.google.co.jp/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+      "sex":1
+    },{
+      "name":"大白",
+      "icon":"https://www.google.co.jp/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+      "sex":0
+    },{
+      "name":"葫芦娃",
+      "icon":"https://www.google.co.jp/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+      "sex":0
+    }
+  ]
+
+}

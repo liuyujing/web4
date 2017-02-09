@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.js"></script>
+</head>
+<body>
+
+<div ng-controller="controller">
+    <p ng-bind="name"></p>
+</div>
+
+<script>
+    var app = angular.module("app",[]);
+    app.controller("controller",function ($scope) {
+        $scope.name = "123";
+
+        setTimeout(function () {
+            $scope.$apply(function () {
+                $scope.name = "小明";
+            });
+        },3000);
+        $scope.$watch("name",function (oldName,newName) {
+            console.log(oldName,newName);
+        });
+    });
+</script>
+</body>
+</html>

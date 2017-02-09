@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="homePage">
+    <div data-role="header">
+        <h1>页面标题</h1>
+    </div>
+
+    <div data-role="main">
+        <p>页面内容</p>
+        <a href="#findPage" data-transition="flip">下一页</a>
+        <a href="#findPage" class="ui-btn ui-btn-inline">返回第一个页面</a>
+        <a href="#findPage" class="ui-btn ui-btn-inline">返回第一个页面</a>
+        <a href="#findPage" class="ui-btn ui-btn-inline">返回第一个页面</a>
+
+        <div data-role="controlgroup" data-type="horizontal">
+            <p>水平组合按钮:</p>
+            <a href="#" class="ui-btn">按钮 1</a>
+            <a href="#" class="ui-btn">按钮 2</a>
+            <a href="#" class="ui-btn">按钮 3</a>
+        </div><br>
+
+        <div data-role="controlgroup" data-type="vertical">
+            <p>垂直组合按钮 (默认):</p>
+            <a href="#" class="ui-btn">按钮 1</a>
+            <a href="#" class="ui-btn">按钮 2</a>
+            <a href="#" class="ui-btn ui-corner-all">按钮 3</a>
+        </div>
+
+    </div>
+
+    <div data-role="footer">
+        <a href="#" class="ui-btn ui-icon-home ui-btn-icon-top">首页</a>
+    </div>
+</div>
+
+<div data-role="page" id="findPage">
+    <div data-role="header">
+        <a href="#" data-role="button" data-rel="back">返回</a>
+        <h1>find</h1>
+    </div>
+
+    <div data-role="main">
+
+        <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all" data-position-to="#xxx">显示弹窗</a>
+        <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all" data-position-to="window" data-transition="fade">显示弹窗</a>
+
+        <div data-role="popup" id="myPopup" data-arrow="l">
+            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">关闭</a>
+            <p>这是一个简单的弹窗</p>
+        </div>
+
+        <button id="xxx" class="ui-btn">XXXX</button>
+        <button class="ui-corner-all">圆角按钮</button>
+        <input type="button" value="按钮">
+        <a href="#homePage" data-role="button" >按钮</a>
+        <a href="#" class="ui-btn ui-mini">按钮</a>
+    </div>
+</div>
+
+</body>
+</html>

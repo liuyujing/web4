@@ -1,0 +1,73 @@
+angularJS介绍https://angularjs.org/
+	1.诞生于2009年，由Misko Hevery 等人创建，后为Google所收购。是一款优秀的前端JS框架，被用于Google的多款产品中。可以构建单一页面应用程序(SPAs:Single Page Applications) 强制使用MVC的框架
+		M:model 数据模型
+		V:view 界面
+		C:controller 逻辑控制 
+	2.AngularJS有着诸多特性 最为核心的是：MVC、模块化、自动化双向数据绑定、指令与UI控件、依赖注入等等
+		注意：一个页面只能有一个应用程序 如果有多个应用程序 下面的不起作用
+angularJS基本使用
+	1.导入angularJS文件
+	2.通过指令ng-app来指定应用程序起始和结束的位置 一般放到html中
+angularJS表达式
+	{{}}
+	或者使用ng-bind
+angularJS中常用的指令
+	ng-app:可以指定 应用程序的入口 在指定的开始标签和结束标签之内 可以angularJS的语法
+	ng-init:初始化数据 ;
+	ng-bind:绑定数据模型 
+	ng-model:数据模型 
+	ng-value:可以指定输入框的值
+	ng-repeat:重复执行 可以直接通过这个指令遍历数组
+	ng-checked:通过 绑定一个变量 来更改 checked的状态
+	ng-show:通过 绑定一个变量 来显示或隐藏元素
+	ng-hide:通过 绑定一个变量 来显示或隐藏元素
+	ng-class:可以通过这个指令  动态更改class的值
+	ng-href:可以通过这个指令  动态更改href的值 {{}}
+	ng-src:可以通过这个指令  动态更改src的值 {{}}
+
+	ng-if:只有两个值 是或者否判断 根据条件  确定 要选择的内容
+	ng-switch:根据条件  确定 要选择的内容
+
+
+	ng-controller
+	ng-click
+angularJS中的模块moudle
+	1.为防止污染全局变量 angularJS通过模块来划分模块
+	2.模块化 也让代码更加清晰
+
+angularJS中的控制器
+	1.控制器控制应用程序的数据
+	2.在HTML通过ng-controller指定控制器
+	3.$scope是连接模板、控制器、模型的纽带
+	4.使用控制器的注意事项
+		1.一个控制器一般只负责一个视图 这个控制器中还有模型与视图的逻辑和行为 所以不要复用控制器
+		2.不要在控制器中操作dom，可以在directive中操作 可以通过 指令 进行操作
+		3.控制器中不需要过滤数据 可使用过滤的服务去过滤$filter
+		4.控制器之间 通过事件进行交互
+angularJS中的模型
+	1.在HTML中 通过ng-model指令设置 或者通过ng-init初始化
+	2.绑定在$scope上
+angularJS中的模板directive
+$apply、$watch
+	$apply：直接修改Model中的内容 不会被同步的 可以使用$apply来传播model中的内容 
+	$watch：检测观察model中内容的改变 
+
+
+作业：
+	1.写一个用户信息界面
+		>头像
+		>用户名
+		>性别 通过选择性别 更新男头像 或女头像
+		>个人状态
+		>更改个人信息的按钮 默认状态下 个人信息不许修改  点击按钮后才可以修改
+	2.通过json文件 模拟新闻数据 0显示新闻内容
+		图片 标题 内容
+	3.随机抽选的应用  已经选好的移除 全部选择完毕后 重置数据 数据需要本地化
+
+
+-----------
+0.$apply、$watch
+1.服务 自定义服务
+2.依赖注入
+3.路由与视图
+4.集合jqueryMobile实现小功能

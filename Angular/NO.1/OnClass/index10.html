@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="angular.js"></script>
+</head>
+<body>
+
+<!--2. 通过  ng-controller 的指令  指定视图对应的控制器-->
+<div ng-controller="homeController">
+
+    {{name}}
+
+    <button ng-click="waring()">点击</button>
+
+    <button ng-click="loadData()">获取数据</button>
+
+    <ul ng-repeat="info in list">
+        <li>
+            <h4 ng-bind="info.name"></h4>
+            <h5 ng-if="info.sex == 0">男</h5>
+            <h5 ng-if="info.sex == 1">女</h5>
+            <img ng-src="{{info.icon}}" alt="头像">
+        </li>
+    </ul>
+
+</div>
+
+<script src="app10.js"></script>
+</body>
+</html>

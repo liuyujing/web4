@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+
+
+<div data-role="page">
+
+    <div data-role="panel" id="revealPanel" data-display="reveal">
+        <h2>侧边内容</h2>
+        <form method="post">
+            <label for="switch">切换开关:</label>
+            <input type="checkbox" data-role="flipswitch" name="switch" id="switch">
+            <br>
+            <input type="submit" data-inline="true" value="提交">
+        </form>
+        <ul data-role="listview">
+            <li data-icon="false"><a href="#">列表项</a></li>
+            <li data-icon="false"><a href="#">列表项</a></li>
+            <li data-icon="false"><a href="#">列表项</a></li>
+        </ul>
+    </div>
+
+    <div data-role="header">
+        <a href="#revealPanel" class="btn">left</a>
+        <h1>首页</h1>
+    </div>
+
+    <div data-role="main">
+        <h2>我的通讯录</h2>
+        <form class="ui-filterable">
+            <input id="myFilter" data-type="search" placeholder="根据名称搜索..">
+        </form>
+        <ul data-role="listview" data-filter="true" data-input="#myFilter" data-autodividers="true" data-inset="true">
+            <li><a href="#">Adele</a></li>
+            <li><a href="#">Agnes</a></li>
+            <li><a href="#">Albert</a></li>
+            <li><a href="#">Billy</a></li>
+            <li><a href="#">Bob</a></li>
+            <li><a href="#">Calvin</a></li>
+            <li><a href="#">Cameron</a></li>
+            <li><a href="#">Chloe</a></li>
+            <li><a href="#">Christina</a></li>
+            <li><a href="#">Diana</a></li>
+            <li><a href="#">Gabriel</a></li>
+            <li><a href="#">Glen</a></li>
+            <li><a href="#">Ralph</a></li>
+            <li><a href="#">Valarie</a></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+$apply、$watch
+	$apply：直接修改Model中的内容 不会被同步的 可以使用$apply来传播model中的内容 
+	$watch：检测观察model中内容的改变 
+service:抽取出来的一些特定功能
+	$http:用于HTTP请求的一个方法 不需手动再去写$apply
+		get
+		post
+	$filter:过滤器
+		lowercase：转成小写
+		uppercase：转成大写
+		currency：在数字的前面 添加一个 货币符号
+		orderBy：通过某个key（是一个 表示 属性名的 字符串） 进行排序
+		filter：过滤数据 通过变量的值 过滤数据
+	$timeout 不需手动再去写$apply
+	$interval 不需手动再去写$apply
+	$rootScope
+	自定义服务
+依赖注入
+	1.类似导入插件
+	2.引入完  可以调用 服务中的方法
+视图和路由:
+	路由介绍：通过一个口  分发几个内容
+	路由的使用步骤：
+		1.引入angular-rote.js
+		2.需要在创建模块的时候 注入ngRoute
+		3.设置模块的配置信息 配置路由
+		4.$routeProvider.when()设置路由的每一种条件
+			》路由的名字
+			》配置信息的对象
+		5.$routeProvider.otherwise()如果不满足其他条件 执行
+		6.显示路由中 内容的容器ng-view 把按钮和路由关联
+		7.1.6 !# 可以$locationProvider 修复
+	$routeProvider：路由配置 
+	
+	ng-view：路由中的内容 
+	

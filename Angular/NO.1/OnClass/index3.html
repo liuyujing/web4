@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="angular.js"></script>
+</head>
+<body>
+
+<div ng-init="list = ['小晃人','小白人','灰人']">
+    <!--item 是 遍历出来的 元素-->
+    <!--<ul ng-repeat="item in list">-->
+        <!--<li ng-bind="item"></li>-->
+    <!--</ul>-->
+
+    <div ng-repeat="name in list">
+        <p ng-bind="name"></p>
+    </div>
+</div>
+
+</body>
+</html>

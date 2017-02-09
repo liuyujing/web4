@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .red {
+            width: 100px;
+            height: 100px;
+            background-color: #c50007;
+        }
+        .yellow {
+            width: 200px;
+            height: 100px;
+            border: 2px solid #ffec27;
+        }
+
+        .content {
+            width: 300px;
+            height: 200px;
+            background-color: #1c9aff;
+        }
+    </style>
+
+    <script src="angular.js"></script>
+</head>
+<body>
+
+<input type="text" ng-model="className">
+<div ng-class="className"></div>
+{{className}}
+
+</body>
+</html>

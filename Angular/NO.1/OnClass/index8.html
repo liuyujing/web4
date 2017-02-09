@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="angular.js"></script>
+</head>
+<body>
+<!--ng-switch-->
+    <!--ng-switch-default-->
+    <!--ng-switch-when-->
+
+<div ng-init="job = '老师'" ng-switch="job">
+
+    <input type="text" ng-model="job">
+
+    <p ng-switch-default="老师">说说说说~</p>
+    <p ng-switch-when="司机">开车开车开车</p>
+    <p ng-switch-when="财务">钱钱钱</p>
+
+</div>
+
+</body>
+</html>

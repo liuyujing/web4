@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="angular.js"></script>
+</head>
+
+<!--ng-init 用于初始化数据 -->
+<!--name的初始值 是 小黄人-->
+<!--name 是数据模型里面的变量-->
+<body ng-init="name = '小黄人'; age = 20; list=[1234,2234,3234]; userName = '默认值'">
+    {{name}}
+    {{age}}
+
+    <!--ng-bind 用来绑定数据模型-->
+    <!--用来 绑定之后 呈现数据内容-->
+    <!--ng-bind 输出口-->
+    <p ng-bind="name"></p>
+    <p ng-bind="age"></p>
+
+    <!--ng-model 用来关联数据模型 -->
+    <!--用于 初始化 声明 模型 并且与输入控件 进行关联-->
+    <!--ng-model 输入口-->
+    <input type="text" ng-model="userName">
+    <p>{{userName}}</p>
+    <p ng-bind="userName"></p>
+
+    <!--给设置默认值 类似 通过ng-init初始化数据的值 并且 通过ng-model与输入框进行绑定-->
+    <input type="text" ng-value="value = '值'">
+    {{value}}
+
+</body>
+</html>

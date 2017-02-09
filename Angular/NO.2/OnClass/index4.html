@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="angular.js"></script>
+</head>
+<body>
+
+<div ng-controller="homeController">
+
+    <input type="text" ng-model="name">
+
+    <!--输入过滤 是通过  值进行过滤-->
+    <p ng-repeat="item in list | filter:name" ng-bind="item | uppercase"></p>
+    <!--uppercase 把字符串转成大写-->
+
+    {{100 | currency}}
+    <!--currency 给数字 添加一个货币符号-->
+
+</div>
+
+<hr>
+
+<div ng-controller="findController">
+    <p ng-bind="name"></p>
+    <p ng-bind="time"></p>
+    <p ng-repeat="item in list" ng-bind="item"></p>
+</div>
+
+<div ng-controller="settingController">
+
+</div>
+
+<script src="app4.js"></script>
+</body>
+</html>

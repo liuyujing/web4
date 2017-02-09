@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="angular.js"></script>
+</head>
+<body>
+
+<div ng-controller="controller">
+
+    <input type="text" ng-model="message">
+    <p ng-bind="message | uppercase"></p>
+    <ul>
+        <li ng-repeat="item in list | filter:message | orderBy:item" ng-bind="item"></li>
+    </ul>
+</div>
+
+<script>
+    var app = angular.module("app",[]);
+    app.controller("controller",function ($scope,$timeout) {
+        $scope.list = ["wwww","eeee","tttt","yyyyy"];
+        $timeout(function () {
+            $scope.list.push("uuu");
+        },3000);
+//        setTimeout(function () {
+//            $scope.list.push("uuu");
+//        },3000)
+    });
+</script>
+</body>
+</html>

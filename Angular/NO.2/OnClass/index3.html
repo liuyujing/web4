@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="angular.js"></script>
+</head>
+<body>
+
+<div ng-controller="homeController">
+
+    <!--<p ng-repeat="obj in list | orderBy:'name'" ng-bind="obj.name"></p>-->
+
+    <div ng-repeat="obj in list | orderBy:'age'">
+        <p ng-bind="obj.name"></p>
+        <p ng-bind="obj.age"></p>
+    </div>
+
+</div>
+
+<script src="app3.js"></script>
+</body>
+</html>

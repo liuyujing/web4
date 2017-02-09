@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="angular.js"></script>
+
+
+    <style>
+        .red {
+            background-color: #c50007;
+            width: 400px;
+            height: 400px;
+        }
+        .blue {
+            background-color: #1171ff;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<p>{{123}}</p>
+
+<div ng-controller="homeController" ng-init="name = '小明'; sex='0'">
+    <p ng-bind="name"></p>
+
+    <label for="message-input">输入:</label>
+    <input id="message-input" type="text" ng-model="message">
+    <p class="message-view">内容:{{message}}</p>
+    <button ng-click="deleteMessageLast(message)">删除</button>
+
+
+    <form>
+        <div ng-form="userInfo">
+            <label for="user-name">用户名:</label>
+            <input type="text" id="user-name" ng-required="true" minlength="3">
+            <br>
+            性别:
+            <label for="user-boy">男</label>
+            <input type="radio" id="user-boy" name="sex" ng-checked="true" value="0" ng-model="sex">
+            <label for="user-girl">女</label>
+            <input type="radio" id="user-girl" name="sex" value="1" ng-model="sex">
+            <br>
+            <p ng-if="sex==0">男</p>
+            <p ng-if="sex==1">女</p>
+
+            <div ng-switch="sex">
+                <img src="images/0.jpg" alt="" ng-switch-default="0">
+                <img src="images/1.jpg" alt="" ng-switch-when="1">
+            </div>
+        </div>
+
+        <div ng-form="cardInfo">
+
+            <label for="card-num-input">身份证:</label>
+            <input id="card-num-input" type="text" minlength="10" ng-required="true">
+        </div>
+
+        <button>提交</button>
+    </form>
+
+    <button ng-click="start($event.target)">显示</button>
+    <img ng-show="show==true" src="images/0.jpg" alt="">
+
+    <br>
+    <input type="text" ng-model="path">
+    <a ng-href={{path}}>跳转</a>
+
+
+    <br>
+    <input type="text" ng-model="className">
+    <div ng-class="className"></div>
+
+</div>
+
+
+<!--<ucai></ucai>-->
+
+<!--<ul>-->
+    <!--<li><a href="#home"></a></li>-->
+    <!--<li><a href="#find"></a></li>-->
+    <!--<li><a href="#setting"></a></li>-->
+<!--</ul>-->
+
+<script src="app.js"></script>
+</body>
+</html>

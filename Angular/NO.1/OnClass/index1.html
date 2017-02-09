@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<!--一般 应用程序的入口 放在html标签里面-->
+<!--作用范围 从指定元素的开始到结束-->
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="angular.js"></script>
+</head>
+<body>
+
+<div ng-app>
+    <!--表达式-->
+    {{1+1}}
+</div>
+
+<!--如果有多个应用程序 第一个之后的不再起作用-->
+<div ng-app>
+    {{1+1}}
+</div>
+
+
+</body>
+</html>

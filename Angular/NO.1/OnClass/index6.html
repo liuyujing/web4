@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        li {
+            width: 300px;
+            height: 1200px;
+        }
+    </style>
+    <script src="angular.js"></script>
+</head>
+<body>
+
+<input type="text" ng-model="link">
+
+<img ng-src="{{link}}" alt="图片">
+
+<!--ng-href 不能直接指定 变量名 要通过 双花括号的方式 指定-->
+<a ng-href="{{link}}">跳转</a>
+<ul>
+    <li id="num1">1111</li>
+    <li id="num2">2222</li>
+    <li id="num3">3333</li>
+    <li id="num4">4444</li>
+    <li id="num5">5555</li>
+</ul>
+
+
+
+</body>
+</html>
