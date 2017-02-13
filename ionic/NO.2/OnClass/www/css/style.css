@@ -1,0 +1,16 @@
+/* Empty. Add your own CSS if you like */
+.tabs-home {
+  background:url(../img/tab-home.png) no-repeat center;
+}
+
+.tabs-circle {
+  background:url(../img/tab-cilcy.png) no-repeat center;
+}
+
+.tabs-message {
+  background:url(../img/tab-message.png) no-repeat center;
+}
+
+.tabs-user {
+  background:url(../img/tab-user.png) no-repeat center;
+}
