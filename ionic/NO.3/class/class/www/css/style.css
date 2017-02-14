@@ -1,0 +1,103 @@
+/* Empty. Add your own CSS if you like */
+.tab-home-nor-icon {
+  background: url("../img/tabs/z_home_menu_ico_index.png") no-repeat center;
+  background-size:30px 30px;
+}
+
+.tab-home-selected-icon {
+  background: url("../img/tabs/z_home_menu_ico_index_active.png") no-repeat center;
+  background-size:30px 30px;
+}
+
+.tab-circle-nor-icon {
+  background: url("../img/tabs/z_home_menu_ico_find.png") no-repeat center;
+  background-size:30px 30px;
+}
+
+.tab-circle-selected-icon {
+  background: url("../img/tabs/z_home_menu_ico_find_active.png") no-repeat center;
+  background-size:30px 30px;
+}
+
+
+.tab-message-nor-icon {
+  background: url("../img/tabs/z_home_menu_ico_xiaoxi.png") no-repeat center;
+  background-size:30px 30px;
+}
+
+.tab-message-selected-icon {
+  background: url("../img/tabs/z_home_menu_ico_xiaoxi_active.png") no-repeat center;
+  background-size:30px 30px;
+}
+
+.tab-user-nor-icon {
+  background: url("../img/tabs/z_home_menu_ico_me.png") no-repeat center;
+  background-size:30px 30px;
+}
+
+.tab-user-selected-icon {
+  background: url("../img/tabs/z_home_menu_ico_me_active.png") no-repeat center;
+  background-size:30px 30px;
+
+}
+
+.user-header img:first-child, .item-image .list-img{
+  max-width: 60px;
+  vertical-align: middle;
+}
+
+.user-button {
+  text-align: center;
+  text-decoration: none;
+}
+
+.user-item-avatar {
+  padding-left: 112px;
+  min-height: 112px;
+}
+.user-item-avatar > img:first-child{
+  position: absolute;
+  top: 26px;
+  left: 16px;
+  max-width: 80px;
+  max-height: 80px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.user-padding-right{
+  padding-right: 30px;
+}
+.user-padding-left{
+  padding-left: 30px;
+}
+
+.user-font-color h2,.user-font-color p {
+  color: white;
+}
+
+.user-kinds-background {
+  text-align: center;
+  background-color: #eeeeee;
+  color: #868686;
+}
+
+.selected-kinds-button p{
+  color: #fb523b;
+}
+
+.nor-kinds-button p{
+  color: #868686;
+}
+
+body > ion-nav-bar > div:nth-child(4) > ion-header-bar > div.title.title-center.header-item > span > .cricle-top-buttons {
+  font-weight: bold;
+  padding: 5px;
+  color: #e7e7e7;
+}
+
+body > ion-nav-bar > div:nth-child(4) > ion-header-bar > div.title.title-center.header-item > span > .cricle-top-buttons-actived {
+  color: #fdfefe;
+  border-bottom: 2px solid #fdfefe;
+}

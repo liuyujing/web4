@@ -1,0 +1,20 @@
+模块注入
+	在定义模块的第二个参数中  引入需要引用的模块名
+	例如：angular.module("app",["ionic","app.getDataServices","app.controller"])
+配置路由：通过config()函数进行配置 需要一个回调函数
+	每一种状态 都通过$stateProvider
+		每一种状态 都是一个state
+			路由名字：字符串
+			路由配置的对象
+				url:路径
+				template/templateUrl:定义视图的模板 如果是导航视图中的内容 需要定义在views里面
+				views:用于定义视图
+					name:视图的名字  需要跟ion-nav-view 里面的name对应
+						视图的对象
+							controller:控制器
+							template/templateUrl：视图的模板
+	$urlRouterProvider 可以通过他 来去设置 所有条件 都不满足时候的路由
+		otherwise("默认的路径")
+	同一个路由有多级视图的情况
+		只需要把视图的名字 和 它上一级页面的名字 定义相同了 即可
+		如果想传参数可通过 路由路径添加: 来指定一个变量 例如：url:"/home/:id"
