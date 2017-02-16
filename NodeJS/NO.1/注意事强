@@ -1,0 +1,14 @@
+后台：
+	1.连接数据库
+		var sql = require("mysql");
+		var connection = sql.createConnection("mysql://root@localhost/cooks");
+		注意数据库的名字 不要写错
+	2.操作数据库
+		1.sql语句 尽量拷贝 不要写错
+		2.每一个值 都需要有一个单引号
+		3.在服务端 需要 把字符串 进行解码
+前台：
+	1.绑定数据模型 需要在控制器中 提前初始化
+	2.需要设置header 'Content-Type': 'application/x-www-form-urlencoded'
+	3.body体中的数据 需要转成 key=value&key=value这种类型的字符串
+	

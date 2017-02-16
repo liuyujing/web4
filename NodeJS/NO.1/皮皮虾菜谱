@@ -1,0 +1,16 @@
+皮皮虾菜谱
+
+在传中文字符的时候  需要 使用 encodeURICompent进行编码
+数据加密的方式
+header中的参数设置
+主机地址：host:http://localhost:3000/
+
+用户注册
+	api:users/register
+	method:post
+	body:{name:"xiaoming",age:18,sex:0,phone:13370116152}
+	response:{code:200,message:"",userInfo:{name:"xiaoming",age:18,sex:0,phone:13370116152}}
+		code是200的时候 为注册成功
+		300的时候 注册失败
+		userInfo 是返回给前台的 初始化信息
+
