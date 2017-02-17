@@ -1,0 +1,21 @@
+<ion-view view-title="Account">
+  <ion-content>
+
+    <ion-list>
+
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" placeholder="要查询的名字" ng-model="searchMessage.name">
+        </label>
+        <button class="button button-small ion-search placeholder-icon" ng-click="searchUser()"></button>
+      </div>
+
+      <ion-item class="item-button-right" ng-repeat="user in users">
+
+        <h2 ng-bind="user.username"></h2>
+        <button class="button button-small button-balanced" ng-click="deleteUser(user)">删除</button>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,27 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          <input type="text" ng-model="user.name" placeholder="用户名">
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <input type="password" ng-model="user.password1" placeholder="密码">
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <input type="password" ng-model="user.password" placeholder="确认密码">
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-label ng-if="user.password1 != user.password" class="assertive">两次输入密码不相同</ion-label>
+
+    <button class="button button-full button-balanced" ng-disabled="!user.password1.length || user.password1 != user.password" ng-click="register()">注册</button>
+
+  </ion-content>
+</ion-view>
