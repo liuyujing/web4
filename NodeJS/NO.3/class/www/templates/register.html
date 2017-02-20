@@ -1,0 +1,37 @@
+
+<ion-view view-title="注册">
+  <ion-content>
+
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" placeholder="用户名" ng-model="user.userInput">
+      </label>
+      <label class="item item-input">
+        <input type="password" placeholder="密码" ng-model="user.passwordInput">
+      </label>
+      <label class="item item-input">
+        <input type="password" placeholder="确认密码" ng-model="user.passwordInputAgain">
+      </label>
+      <label class="item item-input">
+        <span>生日:</span>
+        <input type="date" ng-model="user.birthdayInput">
+      </label>
+      <label class="item item-input">
+        <span>手机:</span>
+        <input type="text" ng-model="user.phoneInput">
+      </label>
+      <label class="item item-toggle" ng-init="user.sex=false">
+        <span ng-if="user.sex==true">男</span>
+        <span ng-if="user.sex==false">女</span>
+        <label class="toggle toggle-assertive">
+          <input type="checkbox" ng-model="user.sex">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </label>
+    </div>
+    <button ng-click="toRegister()" class="buttton button-balanced button-full">注册</button>
+  </ion-content>
+</ion-view>
+
