@@ -1,0 +1,44 @@
+<ion-view view-title="圈子">
+
+  <ion-nav-title>
+    <button class="button button-clear cricle-top-buttons">关注</button>
+    <button class="button button-clear cricle-top-buttons cricle-top-buttons-actived">发现</button>
+    <button class="button button-clear cricle-top-buttons">最新</button>
+  </ion-nav-title>
+
+  <ion-nav-buttons side="right">
+    <button class="button button-clear"><span class="icon ion-ios-search-strong"></span></button>
+  </ion-nav-buttons>
+
+  <ion-content>
+    <ion-list class="card">
+
+      <ion-item ng-repeat="cook in cookList">
+        <ion-item class="item item-avatar item-button-right">
+          <img src="http://img2.imgtn.bdimg.com/it/u=1886788019,3761437645&fm=21&gp=0.jpg" alt="">
+          <h2>葫芦娃</h2>
+          <p>5分钟前</p>
+          <button class="button button-outline button-assertive">+关注</button>
+        </ion-item>
+
+        <ion-item class="item item-body">
+          <p ng-bind="cook.title"></p>
+          <div class="row">
+            <img class="col-33" ng-src="{{imageURL}}" alt="" ng-repeat="imageURL in cook.images">
+          </div>
+          <p><span class="icon ion-ios-location-outline"></span>北京</p>
+          <hr>
+          <div class="row">
+            <button class="button button-clear button-dark col-25" ng-click="good(cook.id)">{{goodNum}}赞</button>
+            <button class="button button-clear button-dark col-25">评论</button>
+            <button class="button button-clear button-dark col-25">收藏</button>
+            <button class="button button-clear button-dark col-25">分享</button>
+          </div>
+        </ion-item>
+
+        <ion-item class="item item-divider"></ion-item>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-view>
