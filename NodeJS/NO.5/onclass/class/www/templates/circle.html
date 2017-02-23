@@ -24,21 +24,26 @@
         <ion-item class="item item-body">
           <p ng-bind="cook.title"></p>
           <div class="row">
-            <img class="col-33" ng-src="{{imageURL}}" alt="" ng-repeat="imageURL in cook.images">
+            <div class="col-33" ng-repeat="imageURL in cook.images">
+              <img ng-src="{{imageURL}}" alt="">
+            </div>
+
           </div>
           <p><span class="icon ion-ios-location-outline"></span>北京</p>
           <hr>
           <div class="row">
             <button class="button button-clear button-dark col-25" ng-click="good(cook.id)">{{goodNum}}赞</button>
-            <button class="button button-clear button-dark col-25">评论</button>
+            <button class="button button-clear button-dark col-25" ng-click="showkboard(cook.id)">评论</button>
             <button class="button button-clear button-dark col-25">收藏</button>
             <button class="button button-clear button-dark col-25">分享</button>
           </div>
         </ion-item>
-
         <ion-item class="item item-divider"></ion-item>
       </ion-item>
 
     </ion-list>
+
+    <input ng-if="isShowKeyboard" type="text" placeholder="内容" ng-model="comment.content">
+    <button ng-if="isShowKeyboard" class="button" ng-click="toComment()">发送</button>
   </ion-content>
 </ion-view>

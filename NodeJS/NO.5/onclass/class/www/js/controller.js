@@ -23,7 +23,7 @@ angular.module("app.controller",[])
     })
 
   })
-  .controller("circleController",function ($scope,cookPage) {
+  .controller("circleController",function ($scope,cookPage,$ionicPopup) {
 
     $scope.userID = window.localStorage.getItem("id");
 
@@ -43,10 +43,6 @@ angular.module("app.controller",[])
       console.log($scope.cookList);
     });
 
-    // $scope.user = {
-    //
-    // };
-
     $scope.good = function (pageID,userID) {
 
       $scope.goodNum = 0;
@@ -58,7 +54,33 @@ angular.module("app.controller",[])
           $scope.goodNum = result.data.data.length;
         });
       });
-    }
+    };
+
+    $scope.cook = {};
+
+    $scope.comment = {};
+    $scope.showkboard = function (pageID) {
+      $scope.cook.id = pageID;
+      //显示/隐藏 键盘
+      $scope.isShowKeyboard = !$scope.isShowKeyboard;
+      console.log($scope.cook.id,$scope.isShowKeyboard);
+    };
+
+    $scope.toComment = function () {
+      // cordova.plugins.Keyboard.show();
+
+      cookPage.comment($scope.cook.id,$scope.comment.content,function (result) {
+        console.log("评论的结果",result);
+        $ionicPopup.alert({
+          template: "提交成功"
+        }).then(function () {
+          $scope.isShowKeyboard = !$scope.isShowKeyboard;
+        });
+      });
+
+    };
+
+
   })
   .controller("messageController",function ($scope) {
 

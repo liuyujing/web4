@@ -101,4 +101,93 @@ router.get("/searchGoods",function (req,res) {
     }
 });
 
+router.post("/comment",function (req,res) {
+
+    //判断用户 是否登录
+    if (req.body.userID){
+
+                dbManager.insertData("INSERT INTO `comment` (`id`, `pageID`, `userID`, `date`, `content`) VALUES (NULL, '"+req.body.pageID+"', '"+req.body.userID+"', CURRENT_TIMESTAMP, '"+req.body.content+"');",function (result) {
+
+            res.send(result);
+
+        });
+
+    }else {
+        res.send({
+            code:201,
+            message:"未登录不可评论！",
+            data:[]
+        });
+    }
+
+});
+
+router.get("/cooks",function (req,res) {
+    dbManager.searchData("SELECT * FROM cookPage LEFT JOIN user ON cookPage.user = user.id LEFT JOIN good ON cookPage.id = good.page LEFT JOIN comment ON cookPage.id = comment.pageID",function (result) {
+
+        if (result.data.length){
+
+            var cooks = [];
+
+            //获取所有菜谱的信息
+            var cook = {};
+            for (var i = 0;i<result.data.length;i++){
+                console.log(result.data[i]);
+
+                if(cook.id == result.data[i].id){
+                    continue;
+                }
+                cook.id = result.data[i].id;
+                cook.title = result.data[i].title;
+                cook.des = result.data[i].des;
+                cook.images = result.data[i].images;
+
+                //发布文章的用户信息
+                var user = {};
+                user.id = result.data[i].user;
+                user.date = result.data[i].date;
+                user.username = result.data[i].username;
+                user.birthday = result.data[i].birthday;
+                user.sex = result.data[i].sex;
+
+                cook.userInfo = user;
+
+                cooks.push(cook);
+            }
+
+            //点赞的数组
+            var goods = [];
+
+            for (var i=0;i<cooks.length;i++){
+
+                for (var j=0;j<result.data.length;j++){
+
+                    console.log(result.data);
+                    if (result.data[j].isgood == 1){
+                        var good = {
+                            isgood:result.data[j].isgood,
+                            cookPageInfo:cook[i],
+                            userID:user
+                        };
+                        goods.push(good);
+
+                    }
+
+                }
+
+                cook.goods = goods;
+            }
+
+            console.log("最终的菜谱数组",cooks);
+
+        }else {
+            res.send({
+                code:200,
+                message:"没有相关内容",
+                data:[]
+            });
+        }
+    });
+});
+
 module.exports = router;

@@ -2,12 +2,22 @@
  * Created by liuyujing on 2017/2/13.
  */
 
+//主机地址
 var HOST = "http://localhost:3006";
+//注册
 var REGISTER = "/users/register";
+//登录
 var LOGIN = "/users/login";
-var ALL_COOKPAGE = "/cookPage/getCook";
+//获取所有菜谱
+// var ALL_COOKPAGE = "/cookPage/getCook";
+var ALL_COOKPAGE = "/cookPage/cooks";
+//点赞
 var TACK_GOOD = "/cookPage/good";
+//查询点赞
 var SEARCH_GOODS = "/cookPage/searchGoods";
+//评论
+var COMMENT = "/cookPage/comment";
+
 
 angular.module("app.getDataServices",[])
   .service("getHomeList",function ($http) {
@@ -107,4 +117,36 @@ angular.module("app.getDataServices",[])
         callback(result);
       });
     };
+
+    this.comment = function (pageID,content,callback) {
+      $http({
+        method:"POST",
+        url:HOST+COMMENT,
+        data:{
+          pageID:pageID,
+          userID:window.localStorage.getItem("id"),
+          content:content
+        },
+        headers:{
+          "Content-Type":"application/x-www-form-urlencoded"
+        },
+        transformRequest:function (obj) {
+
+          var valueList = [];
+
+          for (key in obj){
+
+            var keyString = encodeURIComponent(key);
+            var valueString = encodeURIComponent(obj[key]);
+            var resultString = keyString+"="+valueString;
+
+            valueList.push(resultString);
+          }
+
+          return valueList.join("&");
+        }
+      }).then(function (result) {
+          callback(result);
+      });
+    }
   });
