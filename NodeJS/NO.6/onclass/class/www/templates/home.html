@@ -1,0 +1,14 @@
+<ion-view view-title="首页">
+  <ion-content>
+
+  <ion-list>
+    <ion-item class="item item-avatar" ng-repeat="obj in list" ng-href="#/tab/home/{{obj.id}}">
+      <img ng-src="{{obj.headerIcon}}" alt="头像">
+      <h2 ng-bind="obj.name"></h2>
+      <p ng-bind="obj.time"></p>
+      <p ng-bind="obj.des"></p>
+    </ion-item>
+  </ion-list>
+
+  </ion-content>
+</ion-view>

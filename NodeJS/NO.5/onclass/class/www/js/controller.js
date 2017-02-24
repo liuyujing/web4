@@ -40,7 +40,7 @@ angular.module("app.controller",[])
       }
 
       $scope.cookList = list;
-      console.log($scope.cookList);
+      console.log("cookList:",$scope.cookList);
     });
 
     $scope.good = function (pageID,userID) {
