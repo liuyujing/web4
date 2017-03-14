@@ -1,0 +1,12 @@
+<ion-view view-title="Account">
+  <ion-content>
+
+    <button class="button" ng-click="openPhothLibary()">打开相册</button>
+    <button class="button" ng-click="send()">发送</button>
+
+    <div>
+      <img ng-src="{{imagePath}}" alt="" ng-repeat="imagePath in imageList">
+    </div>
+
+  </ion-content>
+</ion-view>

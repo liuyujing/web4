@@ -1,0 +1,22 @@
+Angular
+	简介：
+		SPAs:Single Page Applications
+		MVC
+	指令：在HTML中书写的指令 
+		ng-app:用来指定应用程序的入口 一般写在html部分
+		ng-init:用于初始化数据模型的
+		ng-controller：控制器的位置
+		ng-bind：绑定数据模型
+		ng-model：绑定输入内容的 数据模型
+		ng-repeat:用于遍历数组
+		ng-if:
+		ng-switch:
+	内置服务
+		$http
+		$scope
+		$timeout
+	自定服务
+		主要可以用来 抽取相同的功能、逻辑、模型
+	路由的使用
+		ngRouler
+		uiRouler

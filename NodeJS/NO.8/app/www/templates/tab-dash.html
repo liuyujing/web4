@@ -1,0 +1,25 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <button class="button button-assertive" ng-click="pictureLibrary()">
+      相册
+    </button>
+
+    <ion-list>
+      <div class="row row-wrap">
+        <img id="myImage" alt="">
+        <div class="col col-20" ng-repeat="image in image_list">
+          <img src={{image}} width="100%"/>
+        </div>
+        <input type="text">
+        <button class="button button-full button-assertive diy-button" ng-click="filePicture()">
+          选择文件
+        </button>
+        <p>上传进度{{uploadProgress}}%</p>
+        <button class="button button-full button-assertive diy-button" ng-click="uploadFile()">
+          上传文件
+        </button>
+      </div>
+    </ion-list>
+
+  </ion-content>
+</ion-view>
